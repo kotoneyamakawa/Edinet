@@ -1,0 +1,2 @@
+# Edinet
+Edinet情報

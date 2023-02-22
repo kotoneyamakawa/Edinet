@@ -23,7 +23,7 @@ class extractionEdinetData:
 
     def __init__(self):
          #dbパス設定
-        self._dbPath = "D:/教育/財務/Template/EdinetData.db"
+        self._dbPath = "D:/教育/Edinet/Template/EdinetData.db"
         print(self._dbPath) 
 
         self.extractBSPL()
@@ -48,12 +48,12 @@ class extractionEdinetData:
 
     #BS,PLの値抽出
     def extractBSPL(self):
-        df有価証券 = self.executeSelectQuery("Select * FROM [有価証券リスト]")
+        df有価証券 = self.executeSelectQuery("Select * FROM [View提出者有価証券リスト]")
         df分析項目 = self.executeSelectQuery("Select [プレフィックス] || ':' || [要素名] as name, [大項目],[項目名] From [分析項目Detail]")
         name_list = df分析項目['name'].tolist()
 
         for index, row有価証券 in df有価証券.iterrows():
-            dfDetail = self.executeSelectQuery("Select * From [有価証券リスト詳細] where DocID like '" + row有価証券["DocID"] + "'")
+            dfDetail = self.executeSelectQuery("Select * From [有価証券リストALL] where DocID like '" + row有価証券["DocID"] + "'")
             if len(dfDetail) > 0:
                 continue
             
@@ -78,8 +78,12 @@ class extractionEdinetData:
                 # ファイルリスト取得
                 infos = zip_obj.infolist()
 
-                sqlTemplateDetail = "INSERT into [有価証券リスト詳細] ([DocID],[分析項目大分類],[分析項目項目],[Value],[scale]) VALUES ('{DocID}','{分析項目大分類}','{分析項目項目}',{Value},{scale})"
+                sqlTemplateDetail = "INSERT into [有価証券リストALL] ([EDINETCODE],[Year],[DocID],[提出者名],[提出者業種],[分析項目大分類],[分析項目項目],[Value]) VALUES ('{EDINETCODE}',{Year},'{DocID}','{提出者名}','{提出者業種}','{分析項目大分類}','{分析項目項目}',{Value})"
                 sqlTemplateDetail = sqlTemplateDetail.replace("{DocID}", row有価証券['DocID'])
+                sqlTemplateDetail = sqlTemplateDetail.replace("{EDINETCODE}", row有価証券["EDINETCODE"])
+                sqlTemplateDetail = sqlTemplateDetail.replace("{Year}", str(row有価証券["Year"]))
+                sqlTemplateDetail = sqlTemplateDetail.replace("{提出者名}", row有価証券["提出者名"])
+                sqlTemplateDetail = sqlTemplateDetail.replace("{提出者業種}", row有価証券["提出者業種"])
 
                 # zipアーカイブから対象ファイルを読み込む
                 bfind = False
@@ -106,8 +110,9 @@ class extractionEdinetData:
                             sqlTemplateDetailTmp = sqlTemplateDetail
                             sqlTemplateDetailTmp = sqlTemplateDetailTmp.replace("{分析項目大分類}",row分析項目['大項目'])
                             sqlTemplateDetailTmp = sqlTemplateDetailTmp.replace("{分析項目項目}",row分析項目['項目名'])
-                            sqlTemplateDetailTmp = sqlTemplateDetailTmp.replace("{Value}",result.text.replace(",",""))
-                            sqlTemplateDetailTmp = sqlTemplateDetailTmp.replace("{scale}",result.get('scale'))
+                            nValue = int(result.text.replace(",",""))
+                            nScale = int(result.get('scale'))
+                            sqlTemplateDetailTmp = sqlTemplateDetailTmp.replace("{Value}",str(nValue * pow(10, nScale)))
                             self.executeInsertQuery(sqlTemplateDetailTmp)
                             break
 

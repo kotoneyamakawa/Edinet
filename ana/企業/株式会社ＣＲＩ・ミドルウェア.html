@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,1641250000,2742939000.0,7174986000.0,19368338500.0],[2019,2349739000,2850965500.0,6729846000.0,20747120250.0],[2020,2892550000,2617526000.0,6525920000.0,20868118000.0],[2021,2840897000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,291253000,246323000.0,508480000.0,1285449000.0],[2019,373765000,222781750.0,543709500.0,1308375750.0],[2020,238840000,227411000.0,583122000.0,1569382000.0],[2021,336418000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,4260794000,3028000000.0,6976213000.0,20664790000.0],[2019,5236711000,3104853250.0,7586630500.0,22460925250.0],[2020,5532311000,3119784000.0,7470900000.0,23359865000.0],[2021,5016660000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.17745803503427265,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.15906660271630169,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.08257074207878862,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.11841963999398782,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.38519815790202483,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,0.4487051128084021,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.5228466006339846,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.5662925133455327,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５ 【研究開発活動】
+研究開発をベースに許諾製品を開発することが当社の主要ビジネスであるため、新技術の検証や研究には柔軟に工数を割りあてております。
+(1) 研究開発方針について
+音声・映像・画像分野の最新技術動向を把握しつつ、実際の開発環境やユーザー環境に適用できるようなテーマの研究開発を行います。
+また、顧客や見込み顧客と接する中で、必要とされる技術、必要とされそうな技術テーマについて取り組みます。
+ 
+(2) 研究開発分野について
+音声・映像・画像にかかわる技術を核として、ウェブブラウザ向けやIoT関連向け、VR向け等の研究開発を進めております。
+既に提供中のツール・ミドルウェアについても、新規プラットフォームの対応や、機種固有機能の活用などの研究開発を行います。
+ 
+(3) 研究開発体制について
+各開発チームが担当する顧客分野において、必要とされる技術を中心に研究開発本部長が方針を決定し、研究開発を進めております。開発チーム間での情報共有を行い、研究成果は他分野への活用も模索します。製品化の目途が立った段階で、経営判断を行い製品開発にシフトします。また、研究開発の後に顧客との受託契約を締結し、受託開発に移行する場合もあります。
+ 
+(4) 研究開発活動の主な成果
+ゲーム分野においては、スマホ向け動画ミドルウェアの新コーデック対応版をリリースし、データサイズ削減を実現しました。また、音声や映像のいくつかの関連技術を一部のタイトルで実際に利用していただき、今後の製品化に向けて調整を進めております。
+組込み分野においては、「D-Amp Driver」の省電力化など性能向上を進めた結果、適用分野が拡大しております。
+新規分野においては、「LiveAct PRO」の各種機能強化に取り組み、動画生成時の画像調整機能などを追加いたしました。
+ 
+　その他の分野における2Dアニメーション作成ツール「OPTPiX SpriteStudio」においては、より多彩な表現を可能にするデフォーム機能をサポートしました。画像軽量化ソリューション「SmartJPEG」は、継続的に機能強化を行いました。
+
+ 
+なお、当連結会計年度の研究開発費総額は、76,808千円であります。
+ </div><h2>2019</h2><div> 
+５ 【研究開発活動】研究開発をベースに許諾製品を開発することが当社の主要ビジネスであるため、新技術の検証や研究には柔軟に工数を割りあてております。
+(1) 研究開発方針について音声・映像・画像分野の最新技術動向を把握しつつ、実際の開発環境やユーザー環境に適用できるようなテーマの研究開発を行っております。また、顧客や見込み顧客と接する中で、必要とされる技術、必要とされそうな技術テーマについて取り組んでおります。 
+(2) 研究開発分野について音声・映像・画像にかかわる技術を核として、ゲーム向けやウェブブラウザ向け、IoT関連向け等の研究開発を進めております。既に提供中のツール・ミドルウェアについても、新規プラットフォームの対応や、機種固有機能の活用などの研究開発を行っております。 
+(3) 研究開発体制について各開発チームが担当する顧客分野において、必要とされる技術を中心に最高技術責任者が方針を決定し、研究開発を進めております。開発チーム間での情報共有を行い、研究成果は他分野への活用も模索いたします。製品化の目途が立った段階で、経営判断を行い製品開発にシフトいたします。また、研究開発の後に顧客との受託契約を締結し、受託開発に移行する場合もあります。 
+(4) 研究開発活動の主な成果①ゲーム事業ゲーム分野においては、据置ゲーム機の新機種となる「PlayStation 5」「XBOX Series X|S」にミドルウェア対応を完了いたしました。また、音声解析リップシンクミドルウェア「CRI ADX LipSync」はゲームソフトやバーチャルキャラクターイベントなどに採用されております。ウェブテクノロジの製品分野においては、画像減色・圧縮ツール「OPTPiX ImageStudio」は、Windowsに加えMacにも対応した新バージョンをリリースいたしました。2Dアニメーション作成ツール「OPTPiX SpriteStudio」は、より多彩な表現を可能にするカスタムシェーダーやアニメーションシーケンス機能をサポートいたしました。画像軽量化ソリューション「OPTPiX SmartJPEG」は、WebPアニメーション対応、画質向上などの機能強化を行い、導入先も広がっております。②エンタープライズ事業組込み分野においては、クリエイティブUIミドルウェアのAeropointをルネサスエレクトロニクス株式会社製RXマイコンに最適化し、動画再生も可能にした「Aeropoint GUI for RX」を発表いたしました。新規分野においては、Web動画ソリューションLiveAct PROを中核技術とした「スマート入社式」「スマート授業」「デジタル展示会プラットフォーム DXExpo」を発表し、世の中の変化に合わせた製品を素早く展開しております。 なお、当連結会計年度の研究開発費総額は、71,254千円であります。 </div><h2>2020</h2><div> 
+５ 【研究開発活動】研究開発をベースに許諾製品を開発することが当社の主要ビジネスであるため、新技術の検証や研究には柔軟に工数を割りあてております。
+(1) 研究開発方針について音声・映像・画像分野の最新技術動向を把握しつつ、実際の開発環境やユーザー環境に適用できるようなテーマの研究開発を行っております。また、顧客や見込み顧客と接する中で、必要とされる技術、必要とされそうな技術テーマについて取り組んでおります。 
+(2) 研究開発分野について音声・映像・画像にかかわる技術を核として、ゲーム向けや、ネットワーク通信関連の研究開発を進めております。既に提供中のツール・ミドルウェアについても、新規プラットフォームの対応や、機種固有機能の活用などの研究開発を行っております。 
+(3) 研究開発体制について各開発チームが担当する顧客分野において、必要とされる技術を中心に最高技術責任者が方針を決定し、研究開発を進めております。開発チーム間での情報共有を行い、研究成果は他分野への活用も模索いたします。製品化の目途が立った段階で、経営判断を行い製品開発にシフトいたします。また、研究開発の後に顧客との受託契約を締結し、受託開発に移行する場合もあります。 
+(4) 研究開発活動の主な成果①ゲーム事業ゲーム分野においては、サウンドミドルウェアCRI ADXのスマートフォン用に、サウンド再生遅延を無くす新機能 SonicSYNCをリリースしました。リリース後は既存の音楽ゲームにもアップデートで導入いただいています。また、独自に開発したボイスチャット技術を、iOS用カラオケアプリで採用いただきました。　OPTPiX(オプトピクス)ブランド製品においては、減色テクスチャの活用手段として「OPTPiX IndexColorShader for Unity」を公開しました。②エンタープライズ事業組込み分野においては、車載用サウンドミドルウェアCRI ADX Automotiveを採用いただいた車両が実際に販売開始となりました。　新規分野においては、デジタル展示会プラットフォーム DXExpo を実際の展示会でご利用いただきました。　OPTPiX(オプトピクス)ブランド製品においては、画像軽量化ソリューション「OPTPiX SmartJPEG」のサーバーレス対応を行い、導入先の広がりに貢献しています。 なお、当連結会計年度の研究開発費総額は、73,973千円であります。 </div><h2>2021</h2><div>
+５ 【研究開発活動】研究開発をベースに許諾製品を開発することが当社の主要ビジネスであるため、新技術の検証や研究には柔軟に工数を割りあてております。
+(1) 研究開発方針について音声・映像・画像分野の最新技術動向を把握しつつ、実際の開発環境やユーザー環境に適用できるようなテーマの研究開発を行っております。また、顧客や見込み顧客と接する中で、必要とされる技術、必要とされそうな技術テーマについて取り組んでおります。 
+(2) 研究開発分野について音声・映像・画像にかかわる技術を核として、ゲーム向けや、ネットワーク通信関連の研究開発を進めております。既に提供中のツール・ミドルウェアについても、新規プラットフォームの対応や、機種固有機能の活用などの研究開発を行っております。 
+(3) 研究開発体制について各開発チームが担当する顧客分野において、必要とされる技術を中心に最高技術責任者が方針を決定し、研究開発を進めております。開発チーム間での情報共有を行い、研究成果は他分野への活用も模索いたします。製品化の目途が立った段階で、経営判断を行い製品開発にシフトいたします。また、研究開発の後に顧客との受託契約を締結し、受託開発に移行する場合もあります。 
+(4) 研究開発活動の主な成果動画関連技術については、Nintendo Switch™用の動画視聴アプリ「ABEMA」に、ネットワーク動画再生機能を提供しました。また、iOS用カラオケアプリにビデオチャット機能を提供しました。スマートフォンゲーム向けには、ダウンロード時間を高速化する機能をCRIWAREに追加し、ゲームの待ち時間削減に貢献しました。 なお、当連結会計年度の研究開発費総額は、76,946千円であります。 </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,30393669000,2742939000.0,7174986000.0,19368338500.0],[2018,23641590000,3037116500.0,8593534000.0,26552707000.0],[2019,23560971000,2850965500.0,6729846000.0,20747120250.0],[2020,22499749000,2617526000.0,6525920000.0,20868118000.0],[2021,23218882000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,4718230000,246323000.0,508480000.0,1285449000.0],[2018,2273628000,228386500.0,578979000.0,1692422500.0],[2019,1099208000,222781750.0,543709500.0,1308375750.0],[2020,2531815000,227411000.0,583122000.0,1569382000.0],[2021,2062463000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,21727403000,3028000000.0,6976213000.0,20664790000.0],[2018,21277835000,3175141500.0,8093000000.0,24401691500.0],[2019,19587776000,3104853250.0,7586630500.0,22460925250.0],[2020,20499729000,3119784000.0,7470900000.0,23359865000.0],[2021,20833742000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.15523726339192548,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2018,0.09617068902726085,0.03877421033147174,0.06133828996282528,0.1193959476792288],[2019,0.04665376482149229,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.11252636640524301,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.08882697280601193,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,1.3988634076516187,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2018,1.1110900145621019,0.6667319029191288,0.9877678356794964,1.4165269135225755],[2019,1.2028405368736093,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,1.0975632409579659,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,1.1144844742725526,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５ 【研究開発活動】
+当社グループは、中期経営計画において、「New Businessの創出」を重点施策として掲げております。当社グループの強みである“つなぐ”技術と、「IoT」や「ブロックチェーン」等の先端技術を掛け合わせ、新たなビジネスモデルの創出を推進しております。
+当連結会計年度における当社グループが支出した研究開発費の総額は596百万円であります。
+ＨＵＬＦＴ事業においては、グローバル展開による事業の成長加速をすべく北米向け新製品の技術研究やプロトタイプの作成等を行っております。
+
+流通・ＩＴソリューション事業においては、「IoT」「統計解析によるデータ分析ツール」「ブロックチェーン」の技術を利用し、小売実店舗における顧客セグメント分析・購買行動分析等のサービスを商用化するための技術研究や、宅配ボックスの実証実験等を行っております。
+
+カードシステム事業においては、高セキュリティなクラウドサービス基盤の研究等を行っております。顧客ニーズが「所有から利用へ」変化するなか、サービス基盤を、自社運用（オンプレミス）からクラウドに移行することで、お客様に提供できるサービスの幅を広げることを目的としております。
+
+また、各報告セグメントに属さないテクノベーションセンターにおいては、ブロックチェーン技術を応用したソリューションの研究・開発の推進を目的とした「ブロックチェーンラボ」やRPAへの取り組みを強化し、より付加価値の高いRPAソリューションサービスを実現するため「RPA InnovationInitiative」を設立し、各種サービスやシステム構築、応用的実証実験等を推進しております。
+ </div><h2>2018</h2><div>
+５【研究開発活動】
+
+　当社グループは、中期経営計画において、「New Businessの創出」を重点施策として掲げております。当社グループの強みである“つなぐ”技術と先端技術を掛け合わせ、新たなビジネスモデルの創出を推進しております。
+
+
+　当連結会計年度における当社グループが支出した研究開発費の総額は632百万円であります。
+
+
+　ＨＵＬＦＴ事業においては、安心安全を製品コアとしつつ、DX領域での活用実績を拡大すべく、グローバル製品開発を視野に新製品の技術研究等を行っております。当事業に係る研究開発費は300百万円であります。
+　Fintechプラットフォーム事業においては、利便性を追求した決済サービスの拡充、パブリッククラウド化によるシステム運用等の新技術への展開を目指します。当事業に係る研究開発費は48百万円であります。
+　流通ＩＴサービス事業においては、ブロックチェーンを活用した宅配ボックスの商用化に向けた実証実験等を行い、お客様のDXを支援する各種データ連携サービスの提供を推進しています。当事業に係る研究開発費は19百万円であります。
+
+　また、各報告セグメントに属さないテクノベーションセンターにおいては、「クラウド」、「ブロックチェーン」、「RPA」、「AI」等の技術を応用した各種サービス、システム構築や応用的実証実験並びに、モダンインフラ開発の研究等を推進しており、データセンターにおいては、お客様の運用課題解決をスピードアップさせるマルチクラウド運用を推進しております。これら各セグメントに帰属していない研究開発費は263百万円であります。
+
+ 
+</div><h2>2019</h2><div>
+５【研究開発活動】
+
+　当社グループは、中期経営計画において、「New Businessの創出」を重点施策として掲げております。当社グループの強みである“つなぐ”技術と先端技術を掛け合わせ、新たなビジネスモデルの創出を推進しております。
+
+
+　当連結会計年度における当社グループが支出した研究開発費の総額は571百万円であります。
+
+
+　ＨＵＬＦＴ事業においては、安心安全を製品コアとしつつ、DX領域での活用実績を拡大すべく、グローバル製品開発を視野に新製品の技術研究等を行っております。当事業に係る研究開発費は248百万円であります。
+　Fintechプラットフォーム事業においては、利便性を追求した決済サービスの拡充、パブリッククラウド化によるシステム運用等の新技術への展開を目指します。当事業に係る研究開発費は28百万円であります。
+
+　また、各報告セグメントに属さないテクノベーションセンターにおいては、「クラウド」、「ブロックチェーン」、「RPA」、「AI」等の技術を応用した各種サービス、システム構築や応用的実証実験並びに、モダンインフラ開発の研究等を推進しており、データセンターにおいては、お客様の運用課題解決をスピードアップさせるマルチクラウド運用を推進しております。これら各セグメントに帰属していない研究開発費は290百万円であります。
+
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+　当社グループは、中期経営計画において「New Businessの創出」を重点施策の一つとして掲げております。当社グループの強みである“つなぐ”技術をキーにした新技術・新市場への新たな製品・サービスの創出を推進しております。リンケージビジネス、HULFT製品及びクラウド技術の活用を通じた、次世代グローバルリンケージサービスプラットフォーム「HULFT Square」をはじめとした新たなサービス構築に取り組んでおります。
+　当連結会計年度における当社グループが支出した研究開発費の総額は1,370百万円であります。
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+　当社グループは、強みである“つなぐ”技術をキーにした新技術・新市場への新たな製品・サービスの創出を推進しており、データプラットフォームビジネス、HULFT製品及びクラウド技術の活用を通じた、次世代クラウド型データ連携プラットフォーム「HULFT Square」をはじめとした新たなサービス構築に取り組んでおります。
+　当連結会計年度における当社グループが支出した研究開発費の総額は1,743百万円であります。
+ 
+</div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,50616139000,19019000000.0,52629034000.0,149649000000.0],[2018,49839715000,28828000000.0,74634000000.0,186874000000.0],[2019,47940352000,18644394750.0,56724571500.0,174331250000.0],[2020,54952417000,14885341250.0,54665500000.0,172926500000.0],[2021,42748375000,16839280000.0,60103000000.0,179846000000.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,4462237000,861545000.0,2307000000.0,6546000000.0],[2018,3630210000,951389000.0,3086451000.0,7918000000.0],[2019,2598343000,789313750.0,2314500000.0,7458000000.0],[2020,3723628000,652209000.0,2003000000.0,6961500000.0],[2021,2596513000,783216000.0,2106505000.0,7354000000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,68874049000,17175987000.0,48142000000.0,138696000000.0],[2018,69085185000,24506000000.0,64483000000.0,170267000000.0],[2019,69814191000,14489163750.0,52824500000.0,150633750000.0],[2020,76208158000,14476408500.0,53154921000.0,152369500000.0],[2021,73097861000,15975838000.0,60952000000.0,169621000000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.08815838363333087,0.030924349441835856,0.039577014168778825,0.058677855219082094],[2018,0.07283769580143065,0.031072925954035355,0.04161303855176716,0.06319902676296472],[2019,0.054199497742528045,0.028178067669523625,0.04059571508285559,0.05737225684500878],[2020,0.06776095035091904,0.03030438467669186,0.0441683828260139,0.05607611512859936],[2021,0.060739455008523714,0.029102847139656655,0.04053289942031933,0.05916380158074507],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.7349087172151009,0.893641596175952,1.12094166304527,1.2909456612246364],[2018,0.7214240650871818,0.9255580807185754,1.0999100978745782,1.286668754635347],[2019,0.686684917683856,0.9259435944572808,1.1020887324943982,1.3033115108639235],[2020,0.7210831286592703,0.8202071972877718,1.0157665895829968,1.2387227108529704],[2021,0.5848102039538475,0.8194591659988107,1.0289774168992645,1.2068439911605475],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５【研究開発活動】
+（建設事業）
+　土木部門において、コンクリート補修補強技術である「Ｓｔｏ乾式吹付け工法」の品質向上に向けた調査研究を岩手大学と共同で実施しております。また、当社が開発した仮締切り工法であるＤ-flip工法において、更なる作業効率の向上とコストダウンを目指した実験に取り組みました。
+
+　当事業年度における研究開発費は83,647千円であります。
+
+ 
+（不動産事業）
+　研究開発活動は、特段行われておりません。
+</div><h2>2018</h2><div>
+５【研究開発活動】
+　当事業年度における研究開発費の総額は151,356千円であります。セグメントごとの研究開発費は、次のとおりであります。
+（建設事業）
+　土木部門において、コンクリート補修補強技術である「Ｓｔｏ乾式吹付け工法」の品質向上に向けた調査研究を岩手大学と共同で実施しました。また、当社が開発した仮締切り工法であるＤ-flip工法において、更なる作業効率の向上とコストダウンに取り組みました。
+
+　線路部門において、線路メンテナンス工事の効率化及び省力化を図るとともに鉄道の安全・安定輸送を守るため、保線作業における機械化施工及び技術水準の向上を目指した開発に取り組みました。
+
+
+　当事業年度における研究開発費は151,356千円であります。
+
+ 
+（不動産事業）
+　研究開発活動は、特段行われておりません。
+</div><h2>2019</h2><div>
+５【研究開発活動】
+　当事業年度における研究開発費の総額は175,986千円であります。セグメントごとの研究開発費は、次のとおりであります。
+（建設事業）
+　土木部門において、線路上の電線に流れる電気を止める作業の機械化のため、検電接地装置の開発に取り組みました。また、新幹線の補修工事の効率化とコストダウンを目的とした、高架橋外足場の開発に取り組んでおります。
+
+　線路部門において、線路メンテナンス工事の効率化及び省力化を図るとともに鉄道の安全・安定輸送を守るため、保線作業における機械化施工及び技術水準の向上を目指した開発に取り組みました。
+
+
+　当事業年度における研究開発費は175,986千円であります。
+
+ 
+（不動産事業）
+　研究開発活動は、特段行われておりません。
+</div><h2>2020</h2><div>
+５【研究開発活動】
+　当事業年度における研究開発費の総額は１億５千５百万円であります。セグメントごとの研究開発費は、次のとおりであります。
+（建設事業）
+　土木部門において、新幹線高架橋の目地補修の開発に取り組みました。また、将来的な新幹線大規模改修を見据え、高架橋移動式外足場の開発にも取り組んでおります。
+
+　線路部門において、少子高齢化に伴う従事者不足が懸念されるなか、鉄道の安全・安定輸送を確保するため、機械化による保線作業の省力化及び効率化を目指した開発に取り組みました。
+
+
+　当事業年度における研究開発費は１億５千５百万円であります。
+ 
+（不動産事業）
+　研究開発活動は、特段行われておりません。
+</div><h2>2021</h2><div>
+５【研究開発活動】
+　当事業年度における研究開発費の総額は１億４千１百万円であります。セグメントごとの研究開発費は、次のとおりであります。
+（建設事業）
+　土木部門において、将来的な新幹線大規模改修に向け開発した、高架橋移動式外足場の実証実験に取り組みました。また、当社が開発した仮締切り工法であるＤ-flip工法において、更なるコストダウンを目指した実験に取り組みました。
+　線路部門において、少子高齢化に伴う従事者不足が加速するなか、鉄道の安全・安定輸送を確保するため、更なる機械化による保線作業の省力化及び効率化を目指した開発に取り組みました。
+ 
+（不動産事業）
+　研究開発活動は、特段行われておりません。
+</div>
+</body>
+</html>

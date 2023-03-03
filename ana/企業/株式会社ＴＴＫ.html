@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,32479965000,19019000000.0,52629034000.0,149649000000.0],[2018,32479965000,28828000000.0,74634000000.0,186874000000.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,951389000,861545000.0,2307000000.0,6546000000.0],[2018,951389000,951389000.0,3086451000.0,7918000000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,28958578000,17175987000.0,48142000000.0,138696000000.0],[2018,28958578000,24506000000.0,64483000000.0,170267000000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.02929156481541775,0.030924349441835856,0.039577014168778825,0.058677855219082094],[2018,0.02929156481541775,0.031072925954035355,0.04161303855176716,0.06319902676296472],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,1.1216008258416557,0.893641596175952,1.12094166304527,1.2909456612246364],[2018,1.1216008258416557,0.9255580807185754,1.0999100978745782,1.286668754635347],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５ 【研究開発活動】
+当社グループは電気通信工事事業の生産性、品質の向上及び安全確保のため、作業に必要な機械・工具・測定器等各種装置の開発に取り組んでおり、当連結会計年度の研究開発費等として３百万円を投入した。
+　
+支柱の地中埋め込み深度測定ツールの開発
+電柱を支える支柱の地中埋め込み深度測定は、電柱の種類によって異なる工事規格であるが、それを安全かつ効率的に行えるよう測定ツールを開発し測定方法の簡略化を実現した。
+ </div><h2>2018</h2><div>
+５ 【研究開発活動】
+当社グループは電気通信工事事業の生産性、品質の向上及び安全確保のため、作業に必要な機械・工具・測定器等各種装置の開発に取り組んでおり、当連結会計年度の研究開発費等として３百万円を投入した。
+　
+支柱の地中埋め込み深度測定ツールの開発
+電柱を支える支柱の地中埋め込み深度測定は、電柱の種類によって異なる工事規格であるが、それを安全かつ効率的に行えるよう測定ツールを開発し測定方法の簡略化を実現した。
+ </div>
+</body>
+</html>

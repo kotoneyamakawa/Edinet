@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,17219712000,2742939000.0,7174986000.0,19368338500.0],[2019,19859530000,2850965500.0,6729846000.0,20747120250.0],[2020,19377974000,2617526000.0,6525920000.0,20868118000.0],[2021,18639184000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,1478750000,246323000.0,508480000.0,1285449000.0],[2019,2321714000,222781750.0,543709500.0,1308375750.0],[2020,1790898000,227411000.0,583122000.0,1569382000.0],[2021,731317000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,23660876000,3028000000.0,6976213000.0,20664790000.0],[2019,24849985000,3104853250.0,7586630500.0,22460925250.0],[2020,25484119000,3119784000.0,7470900000.0,23359865000.0],[2021,27049447000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.08587541998379532,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.11690679487379611,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.09241925910314464,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.03923546223911948,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.727771533057356,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,0.7991767399457183,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.7603941105439038,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.6890781907667096,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+６【研究開発活動】
+
+当社グループは、産業プラットフォームの拡大へ向けて、顧客の事業創造支援や、顧客取引の迅速化・販売機会の増加等を目的に研究開発を行うことを方針にしており、広範囲にわたる顧客ニーズに対応したITサービスの提供へ向けて研究開発を行っております。なお、当連結会計年度の研究開発費は１億27百万円となりました。
+
+
+当社グループは、産業プラットフォームの拡大を推進する中で、国内自動車アフターマーケット向けシステム販売からの事業ドメイン拡大を掲げ、先端技術を取り入れた革新的な事業を創出する企業への深化を目指しております。
+
+
+産業プラットフォームの分野では、次世代システムとしてクラウド技術を採用し、可用性と拡張性を高め、リアルタイム性が求められる要求にも応えられる処理を実現すべく開発を進めております。また、当社グループの強みである自動車アフターマーケットのデータベースを活用した分析サービスを順次開発してまいります。
+
+
+先端技術の分野では、将来のクラウド事業の本格展開フェーズに備え、個人向けマーケットに関わる多くのパートナーとの関係性を強化し、パートナーとともに技術資産及び新しいマーケットを創出してまいります。
+
+ 
+ 
+</div><h2>2019</h2><div>
+５【研究開発活動】
+
+当社グループは、顧客や市場の広範囲にわたるニーズに対応した競争力のある商品・サービスの提供へ向けて研究開発を行っております。当連結会計年度では、「Broadleaf Cloud Platform」上で稼働する、新しいクラウドサービスである、「Maintenance.c」の提供を開始しました。「Broadleaf Cloud Platform」と「Maintenance.c」は次世代システムとしてクラウド技術を採用し、可用性と拡張性を高め、リアルタイム性が求められる要求にも応えられる処理を実現したものとなります。このような取り組みにより、当連結会計年度の研究開発費は93百万円となりました。
+
+
+今後、当社グループは、「Broadleaf Cloud Platform」の拡大を推進する中で、国内自動車アフターマーケット向けシステム販売からの事業ドメイン拡大を掲げ、当社グループの強みである自動車アフターマーケットのデータベースを活用した分析サービスを順次提供していくことに加え、AI、Fintechやブロックチェーン等の先端技術を取り入れた革新的な事業を創出する企業への進化を目指し、研究開発を進めてまいります。
+
+
+また、連結子会社であるSpiralMind社では、AI、画像・動画解析やアバターといった先端技術において、多くのパートナーとの関係強化を図り、それらパートナーと技術資産や新しいマーケットを協力して創造する研究開発を実行して行くことを目指してまいります。
+
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+
+当社グループは、顧客や市場の広範囲にわたるニーズに対応した競争力のある商品・サービスの提供へ向けて研究開発を行っております。当連結会計年度では、「Broadleaf Cloud Platform」の機能拡張とプラットフォーム上で稼働する新しいクラウドサービスの開発を進めております。また、Zenmov社と連携して行っているMaaS事業を支えるプラットフォームや基本機能・サービスの開発を進めております。このような取り組みにより、当連結会計年度の研究開発費は164百万円となりました。
+
+
+今後、「Broadleaf Cloud Platform」の拡大を推進する中で、国内自動車アフターマーケット向けシステム販売からの事業ドメイン拡大を掲げ、当社グループの強みである自動車アフターマーケットのデータベースを活用した分析サービスを順次提供していくことに加え、AI、Fintechやブロックチェーン等の先端技術を取り入れた革新的な事業を創出する企業への進化を目指し、研究開発を強化してまいります。
+
+
+また、連結子会社であるSpiralMind社では、AI、画像・動画解析といった先端技術において、ブロードリーフグループへの貢献及びシナジーの創出を目指してまいります。
+
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+当社グループは、顧客や市場の広範囲にわたるニーズに対応した競争力のある商品・サービスの提供へ向けて研究開発を行っております。当連結会計年度では、Broadleaf Cloud Platformの機能拡張とプラットフォーム上で稼働する新しいクラウドサービスの開発を進めており、10月には、自動車整備事業者向けクラウドサービスMaintenance.cの機能拡張を実施し本格リリースするとともに、自動車鈑金業向けクラウドサービスRepair.cをリリースいたしました。このような取り組みにより、当連結会計年度の研究開発費は51百万円となりました。
+今後、Broadleaf Cloud Platformの拡大を推進する中で、国内自動車アフターマーケット向けシステム販売からの事業ドメイン拡大を掲げ、当社グループの強みである自動車アフターマーケットのデータベースを活用した分析サービスを順次提供していくことに加え、AI、Fintechやブロックチェーン等の先端技術を取り入れた革新的な事業を創出する企業への進化を目指し、研究開発を強化してまいります。
+また、連結子会社であるSpiralMind社では、AI、画像・動画解析やリモートワーク等を中心とする次世代ライフスタイルを見据えた各種遠隔支援サービスにおけるコミュニケーション促進といった先端技術において、ブロードリーフグループへの貢献及びシナジーの創出を目指してまいります。
+ 
+</div>
+</body>
+</html>

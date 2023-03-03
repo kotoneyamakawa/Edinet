@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,14620682000,2742939000.0,7174986000.0,19368338500.0],[2019,5789403000,2850965500.0,6729846000.0,20747120250.0],[2020,5789403000,2617526000.0,6525920000.0,20868118000.0],[2020,1119525000,2617526000.0,6525920000.0,20868118000.0],[2021,5789403000,2652336500.0,6505502500.0,19927118500.0],[2021,1230638000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,1469263000,246323000.0,508480000.0,1285449000.0],[2019,1154456000,222781750.0,543709500.0,1308375750.0],[2020,1154456000,227411000.0,583122000.0,1569382000.0],[2020,167951000,227411000.0,583122000.0,1569382000.0],[2021,1154456000,217422750.0,573529000.0,1656336000.0],[2021,3801594000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,16729384000,3028000000.0,6976213000.0,20664790000.0],[2019,2525361000,3104853250.0,7586630500.0,22460925250.0],[2020,2525361000,3119784000.0,7470900000.0,23359865000.0],[2020,2720902000,3119784000.0,7470900000.0,23359865000.0],[2021,2525361000,3000754500.0,7803625500.0,24362483000.0],[2021,5383653000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.1004920974274661,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.19940847095978637,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.19940847095978637,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2020,0.15001987450034612,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.19940847095978637,0.04391320201867674,0.07714890633224092,0.13271258411378287],[2021,3.0891245029001215,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.8739522029023902,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,2.2925051111504455,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,2.2925051111504455,0.5965235769806071,0.9009308170378753,1.310139405285049],[2020,0.4114536282453392,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,2.2925051111504455,0.5833868969965725,0.9166717213573184,1.2857667064817404],[2021,0.2285879123338744,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+６【研究開発活動】
+　当連結会計年度における研究開発活動については、以下のとおりです。
+
+　主にICT・IOT・デバイス事業分野において今後の成長が期待される自動車テレマティクス分野への取り組みとして、OBDⅡ型自動車テレマティクスデータ収集ユニット「GX4x0NC」の追加開発に注力してまいりました。本製品の特徴は業界最高レベルの車種対応数（1,000車種以上）とデータ取得数を実現しており、今後より多くのデータ取得を目的とするビッグデータビジネスのニーズに十分応えられる製品となっております。また、モバイルの特徴を最大限に生かし、車種追加をソフトウェアアップデートで実現しますので、毎年リリースされる新型車種、特定用途の車両についても、お客様のご要望により順次ソフトウェアのアップデートを行う事ができるものとなっています。加えて製品単体だけでなく製品を使ったさまざまなソリューションの開発にも注力し、「バスのり（自動車学校や幼稚園などの送迎バスの現在位置、遅延状況などが一目でわかるスマホ版サービス）」、「ヒヤリハットマップ（事故につながるヒヤリハット（急ブレーキ、急発進、急ハンドル）をIoTでデータ化するサービス）」の開発と、サービス提供を開始しております。
+
+
+　また、昨年に引き続き「NCXX Racing」として、鈴鹿８時間耐久ロードレースに参戦、「トラッキングアプリ」を用いて走行中のバイクのデータ収集の試験を行うなど、オートバイ向けGPSデータロガーの製品化に向けた取り組みを進めております。
+
+
+　さらに、農業ICT事業において、農家の方が簡単に収穫や経営数値を把握出来る記録・管理アプリの試作を開発し自社の圃場で試験運用を開始致しました。
+
+
+　以上により当連結会計年度における当社グループの研究開発費は受託開発費24,416千円も含め、145,087千円となりました。
+
+ 
+</div><h2>2019</h2><div>
+５【研究開発活動】
+　　当連結会計年度における研究開発活動の金額は６百万円となりました。
+　　なお、研究開発活動はネクスグループを連結の範囲から除外したことにより、第２四半期連結会計期間までの金額となっております。
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+　　当連結会計年度における研究開発活動の金額は６百万円となりました。
+　　なお、研究開発活動はネクスグループを連結の範囲から除外したことにより、第２四半期連結会計期間までの金額となっております。
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+　　当連結会計年度における研究開発活動の金額は６百万円となりました。
+　　なお、研究開発活動はネクスグループを連結の範囲から除外したことにより、第２四半期連結会計期間までの金額となっております。
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+　　該当事項はありません。
+ 
+ 
+</div><h2>2021</h2><div>
+５ 【研究開発活動】該当事項はありません。 </div>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,2417635000,2742939000.0,7174986000.0,19368338500.0],[2018,2608079000,3037116500.0,8593534000.0,26552707000.0],[2020,1730737000,2617526000.0,6525920000.0,20868118000.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,484231000,246323000.0,508480000.0,1285449000.0],[2018,378930000,228386500.0,578979000.0,1692422500.0],[2020,797796000,227411000.0,583122000.0,1569382000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,5847501000,3028000000.0,6976213000.0,20664790000.0],[2018,6181106000,3175141500.0,8093000000.0,24401691500.0],[2020,4550163000,3119784000.0,7470900000.0,23359865000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.20029119366653775,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2018,0.1452908443340865,0.03877421033147174,0.06133828996282528,0.1193959476792288],[2020,0.46095738405084075,0.045301909529547935,0.07861214036975551,0.14225266733569528],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.4134475564860955,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2018,0.4219437427541285,0.6667319029191288,0.9877678356794964,1.4165269135225755],[2020,0.3803681318669243,0.5965235769806071,0.9009308170378753,1.310139405285049],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５【研究開発活動】
+
+（１）研究開発方針
+
+
+当社グループでは、創業以来、新たなイメージング・テクノロジー（画像処理技術）を創造する集団として、革新的な技術を最適な「かたち」で実用化させ、技術の発展と豊かな文化の実現のために研究開発活動に取り組んでおります。
+
+
+また、当社グループの研究開発活動は、他社との技術的な差異化を強みとした技術開発を基本としていることから、中核技術にかかる研究開発は社内リソースで賄う一方、中核技術に関わらない間接的工程については、信頼のおける外部協力会社を積極的に活用することで、開発リソースの「選択と集中」に努めております。
+
+
+中長期的な経営戦略に基づく研究開発活動では、画像処理技術と画像認識技術の融合による技術・製品開発を積極的に推進しております。
+
+
+　　画像処理技術 …カメラの物理的・光学的な限界から生じる課題を軽減・解決することを目的とした技術
+
+
+　　画像認識技術 …多層構造の最先端ニューラルネットワーク技術による機械学習
+
+ 
+
+（２）研究開発費及び概要
+
+
+当連結会計年度における当社グループの研究開発費の総額は、353,709千円であります。主なセグメントの研究開発活動の状況は、次のとおりであります。
+
+ 
+
+① カメラデバイス事業
+
+
+スマートフォンの高画素化や高速化に合わせた静止画及び動画の補正ソフトウェア製品やパノラマ等画像加工製品の開発、自然なボケを実現するための要素技術の開発、車載カメラモニタシステム向け技術開発、安全運転支援のための要素技術開発等実施いたしました。当事業に係る当連結会計年度の研究開発費は150,114千円であります。
+
+ 
+
+② ネットワークサービス事業
+
+
+ディープラーニング（深層学習）技術を利用したソフトウェア製品やシステム開発、ネットワーク環境における動画ソリューションの製品開発等を実施いたしました。当事業に係る当連結会計年度の研究開発費は72,739千円であります。
+
+ 
+
+③ その他
+
+
+画像処理や画像認識に係る基礎研究や既存技術の効率化のための技術開発等を実施いたしました。各セグメントに属さないその他研究開発費は130,855千円であります。
+
+ 
+
+（３）研究開発活動の成果の権利化
+
+
+当社グループは、研究活動により創出された発明について、国内において特許出願を行う他、特許協力条約に基づく国際出願制度やパリ条約に基づく優先権制度を活用し、海外においても積極的に特許出願を行っております。
+
+
+当連結会計年度末現在における保有特許数は、国内では36件、海外では米国、欧州、中国、韓国などで77件の合計113件を有しております。
+
+ 
+ 
+</div><h2>2018</h2><div>
+５【研究開発活動】
+
+（１）研究開発方針
+
+
+当社グループでは、創業以来、新たなイメージング・テクノロジー（画像処理技術）を創造する集団として、革新的な技術を最適な「かたち」で実用化させ、技術の発展と豊かな文化の実現のために研究開発活動に取り組んでおります。
+
+
+また、当社グループの研究開発活動は、他社との技術的な差異化を強みとした技術開発を基本としていることから、中核技術にかかる研究開発は社内リソースで賄う一方、中核技術に関わらない間接的工程については、信頼のおける外部協力会社を積極的に活用することで、開発リソースの「選択と集中」に努めております。
+
+
+中長期的な経営戦略に基づく研究開発活動では、画像処理技術と画像認識技術の融合による技術・製品開発を積極的に推進しております。
+
+
+　　画像処理技術 …カメラの物理的・光学的な限界から生じる課題を軽減・解決することを目的とした技術
+
+
+　　画像認識技術 …多層構造の最先端ニューラルネットワーク技術による機械学習
+
+ 
+
+（２）研究開発費及び概要
+
+
+当連結会計年度における当社グループの研究開発費の総額は、401,018千円であります。なお、当社グループは単一セグメントであるため、セグメント別の記載を省略しております。
+
+
+主な研究開発活動の状況は、次のとおりであります。
+
+
+スマートフォンの高画素化や高速化に合わせた静止画及び動画の補正ソフトウェア製品やパノラマ等画像加工製品の開発、自然なボケを実現するための要素技術の開発、車載カメラモニタシステム向け技術開発、安全運転支援のための要素技術開発、ディープラーニング（深層学習）技術を利用したソフトウェア製品やシステム開発、ネットワーク環境における動画ソリューションの製品開発等を実施いたしました。
+
+
+その他、画像処理や画像認識に係る基礎研究や既存技術の効率化のための技術開発等を実施いたしました。
+
+ 
+
+（３）研究開発活動の成果の権利化
+
+
+当社グループは、研究活動により創出された発明について、国内において特許出願を行う他、特許協力条約に基づく国際出願制度やパリ条約に基づく優先権制度を活用し、海外においても積極的に特許出願を行っております。
+
+
+当連結会計年度末現在における保有特許数は、国内では43件、海外では米国、欧州、中国、韓国などで89件の合計132件を有しております。
+
+ 
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+（１）研究開発方針
+当社グループでは、創業以来、新たなイメージング・テクノロジー（画像処理技術）を創造する集団として、革新的な技術を最適な「かたち」で実用化させ、技術の発展と豊かな文化の実現のために研究開発活動に取り組んでおります。
+また、当社グループの研究開発活動は、他社との技術的な差異化を強みとした技術開発を基本としていることから、中核技術にかかる研究開発は社内リソースで賄う一方、中核技術に関わらない間接的工程については、信頼のおける外部協力会社を積極的に活用することで、開発リソースの「選択と集中」に努めております。
+中長期的な経営戦略に基づく研究開発活動では、画像処理技術と画像認識技術の融合による技術・製品開発を積極的に推進しております。
+　　画像処理技術 …カメラの物理的・光学的な限界から生じる課題を軽減・解決することを目的とした技術
+　　画像認識技術 …多層構造の最先端ニューラルネットワーク技術による機械学習
+ 
+（２）研究開発費及び概要
+当連結会計年度における当社グループの研究開発費の総額は、553,850千円であります。なお、当社グループは単一セグメントであるため、セグメント別の記載を省略しております。
+主な研究開発活動の状況は、次のとおりであります。
+スマートフォンの高画素化や高速化に合わせた静止画及び動画の補正ソフトウェア製品やパノラマ等画像加工製品の開発、自然なボケを実現するための要素技術の開発、車載カメラモニタシステム向け技術開発、安全運転支援のための要素技術開発を実施いたしました。また、ディープラーニングを利用したセグメンテーションや物体検出等のソフトウェア製品やシステム開発、及びそれらを様々なプラットフォームで高速に動作させるための要素技術開発を実施いたしました。
+その他、画像処理や画像認識及びそれらの組み合わせに係る基礎研究や既存技術の効率化のための技術開発等を実施いたしました。
+ 
+（３）研究開発活動の成果の権利化
+当社グループは、研究活動により創出された発明について、国内において特許出願を行う他、特許協力条約に基づく国際出願制度やパリ条約に基づく優先権制度を活用し、海外においても積極的に特許出願を行っております。
+当連結会計年度末現在における保有特許数は、国内では49件、海外では米国、欧州、中国、韓国などで113件の合計162件を有しております。
+ 
+ 
+</div>
+</body>
+</html>

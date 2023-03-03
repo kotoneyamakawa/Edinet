@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,3773273000,19019000000.0,52629034000.0,149649000000.0],[2018,4282536000,28828000000.0,74634000000.0,186874000000.0],[2019,4030373000,18644394750.0,56724571500.0,174331250000.0],[2020,4623870000,14885341250.0,54665500000.0,172926500000.0],[2021,3594613000,16839280000.0,60103000000.0,179846000000.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,141697000,861545000.0,2307000000.0,6546000000.0],[2018,30069000,951389000.0,3086451000.0,7918000000.0],[2019,39813000,789313750.0,2314500000.0,7458000000.0],[2020,153618000,652209000.0,2003000000.0,6961500000.0],[2021,52066000,783216000.0,2106505000.0,7354000000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,3195447000,17175987000.0,48142000000.0,138696000000.0],[2018,3721812000,24506000000.0,64483000000.0,170267000000.0],[2019,3413371000,14489163750.0,52824500000.0,150633750000.0],[2020,3546922000,14476408500.0,53154921000.0,152369500000.0],[2021,3300862000,15975838000.0,60952000000.0,169621000000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.037552808927421896,0.030924349441835856,0.039577014168778825,0.058677855219082094],[2018,0.007021307001272143,0.031072925954035355,0.04161303855176716,0.06319902676296472],[2019,0.009878242038640097,0.028178067669523625,0.04059571508285559,0.05737225684500878],[2020,0.03322281984571365,0.03030438467669186,0.0441683828260139,0.05607611512859936],[2021,0.014484452151038234,0.029102847139656655,0.04053289942031933,0.05916380158074507],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,1.1808279092095721,0.893641596175952,1.12094166304527,1.2909456612246364],[2018,1.1506588726136624,0.9255580807185754,1.0999100978745782,1.286668754635347],[2019,1.1807603099692356,0.9259435944572808,1.1020887324943982,1.3033115108639235],[2020,1.3036288928823356,0.8202071972877718,1.0157665895829968,1.2387227108529704],[2021,1.0889922087018482,0.8194591659988107,1.0289774168992645,1.2068439911605475],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５ 【研究開発活動】
+当社の研究開発活動は、環境に配慮したインフラを創造するために、新技術と新工法の開発をすることで新しい価値を創造し、顧客に最善を尽くすことを基本方針としております。その主な活動は、原材料である起泡剤の改善・改良、工事施工用機械装置の改良・開発・導入、新グラウト材の開発、需要創出等で、必要に応じ社外の組織と共同で研究開発を行っております。
+当事業年度の調査研究費は、35百万円で、主な研究開発活動は次のとおりであります。
+（１）水に弱いというエアモルタルの弱点を克服するために、過年度より開発していた新グラウト材料（スイムグラウト）の実施工を行いました。
+（２）民間企業のプラント施設の老朽化対策として研究を進めてきた気泡コンクリートを転用した補修技術について、特許を出願いたしました。
+ </div><h2>2018</h2><div>
+５ 【研究開発活動】当社の研究開発活動は、環境に配慮したインフラを創造するために、新技術と新工法の開発をすることで新しい価値を創造し、顧客に最善を尽くすことを基本方針としております。その主な活動は、原材料である起泡剤の改善・改良、工事施工用機械装置の改良・開発・導入、新グラウト材の開発、需要創出等で、必要に応じ社外の組織と共同で研究開発を行っております。当事業年度の調査研究費は、41百万円で、主な研究開発活動は次のとおりであります。(1)非エア系グラウト材を使用し、トンネル等の背面空洞や構造物と地山との充填を目的に長距離圧送を可能にした工法であるNLG工法において使用する「ミキシングユニットおよびグラウト充填方法」の特許を取得いたしました。(2)当社の地盤改良工法のアスコラムTYPEⅡにおいて、施工機・ポンプ・プラントをコンピュータで一括制御し、施工状況をリアルタイムで遠隔地でも確認出来る全自動施工管理制御システムの施工機を導入いたしました。</div><h2>2019</h2><div>
+５ 【研究開発活動】当社の研究開発活動は、環境に配慮したインフラを創造するために、新技術と新工法の開発をすることで新しい価値を創造し、顧客に最善を尽くすことを基本方針としております。その主な活動は、原材料である起泡剤の改善・改良、工事施工用機械装置の改良・開発・導入、新グラウト材の開発、需要創出等であり、必要に応じ社外の組織と共同で研究開発を行っております。当事業年度の調査研究費は、36百万円で、主な研究開発活動は次のとおりであります。(1)気泡コンクリート（エアモルタル）の品質を高めるため、物性についての基礎研究に取組んでおります。(2)気泡コンクリート工事のFCB工法の課題及びエアモルタルの用途拡大のため、各団体との複数のプロジェクトに参画し、基礎実験や試験施工を行いました。</div><h2>2020</h2><div>
+５ 【研究開発活動】当社の研究開発活動は、環境に配慮したインフラを創造するために、新技術と新工法の開発をすることで新しい価値を創造し、顧客に最善を尽くすことを基本方針としております。その主な活動は、原材料である起泡剤の改善・改良、工事施工用機械装置の改良・開発・導入、新グラウト材の開発、需要創出等であり、必要に応じ社外の組織と共同で研究開発を行っております。当事業年度の調査研究費は、40百万円で、主な研究開発活動は次のとおりであります。(1)気泡コンクリート（エアモルタル）の品質を高めるため、引続き物性についての基礎研究に取組んでおります。(2)維持補修や小規模工事での用途開発のため、新たなプレミックスタイプの注入材料の開発に取組んでおります。(3)気泡コンクリート工事のFCB工法の課題及びエアモルタルの用途拡大のため、付帯工を含めた新たな部材及び   施工手法の開発に取組んでおります。(4)気泡コンクリート工事の生産性向上のため、施工管理情報の一元化や各種帳票作成の自動化など、可能なICT   管理システムの開発に取組んでおります。(5)国土交通省が推進するICT地盤改良工に備えるため、深層混合処理工法、中層混合処理工法での機械の位置   誘導、施工記録の見える化、施工機械の自動化などのICT管理装置の適用を進めております。</div><h2>2021</h2><div>
+５ 【研究開発活動】当社の研究開発活動は、環境に配慮したインフラを創造するために、新技術と新工法の開発をすることで新しい価値を創造し、顧客に最善を尽くすことを基本方針としております。その主な活動は、原材料である起泡剤の改善・改良、工事施工用機械装置の改良・開発・導入、新グラウト材の開発、需要創出等であり、必要に応じ社外の組織と共同で研究開発を行っております。当事業年度の調査研究費は、51百万円で、主な研究開発活動は次のとおりであります。(1)気泡コンクリート（エアモルタル）の品質を高めるため、物性についての基礎研究に引き続き取組んでおります。(2)維持補修や小規模工事での用途開発のため、新たなプレミックスタイプの注入材料を開発いたしました。(3)気泡コンクリート工事のFCB工法の課題克服及びエアモルタルの用途拡大のため、付帯工を含めた新たな部材及び施工手法の開発に引き続き取組んでおります。(4)気泡コンクリート工事の生産性向上のため、施工管理情報の一元化や各種帳票作成の自動化など、可能なICT管理システムの開発に引き続き取組んでおります。(5)国土交通省が推進するICT地盤改良工に備えるため、引き続き深層混合処理工法、中層混合処理工法での機械の位置誘導、施工記録の見える化、施工機械の自動化などのICT管理装置の適用を引き続き進めております。</div>
+</body>
+</html>

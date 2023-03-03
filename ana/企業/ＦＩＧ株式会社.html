@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2019,8602361000,2850965500.0,6729846000.0,20747120250.0],[2019,9504615000,2850965500.0,6729846000.0,20747120250.0],[2020,10333000000,2617526000.0,6525920000.0,20868118000.0],[2021,12264000000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2019,384471000,222781750.0,543709500.0,1308375750.0],[2019,78484000,222781750.0,543709500.0,1308375750.0],[2020,213000000,227411000.0,583122000.0,1569382000.0],[2021,439000000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2019,11938976000,3104853250.0,7586630500.0,22460925250.0],[2019,13177338000,3104853250.0,7586630500.0,22460925250.0],[2020,15294000000,3119784000.0,7470900000.0,23359865000.0],[2021,18971000000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2019,0.04469366026373457,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2019,0.00825746229594781,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.020613568179618697,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.03579582517938682,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2019,0.7205275393802617,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2019,0.7212849059498967,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.6756244278802145,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.6464603869063307,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2019</h2><div>
+５ 【研究開発活動】当社グループの研究開発活動は、連結子会社の開発部門を中心に行っております。これは、当社グループが常に既存製品の機能強化版の投入又は新しい切り口での製品・サービスの開発・導入を行っていくことを目的としたものであり、業務用IP無線システムを中心として、さらなる利便性向上等の研究開発を行っております。これらの研究開発活動の結果、当連結会計年度における研究開発費の総額は91,452千円となっております。　セグメントごとの研究開発活動を示すと次のとおりであります。　(1) 情報通信事業情報通信事業では、既存製品である業務用IP無線システム、移動体管理システム、電子決済システムなどにおいて、蓄積した顧客ニーズに応えるための研究開発活動を行いました。当連結会計年度における研究開発費の金額は61,087千円であります。　(2) 装置等関連事業装置等関連事業では、最新技術の開発とコストダウンによる価格競争力の強化を研究の主体としており、当連結会計年度においては、主に半導体・自動車関連事業におけるミニマルファブシステムの研究開発や成長分野であるIoT及びロボット分野の研究開発活動を行いました。当連結会計年度における研究開発費の金額は30,364千円であります。　</div><h2>2019</h2><div>
+５ 【研究開発活動】当社グループの研究開発活動は、連結子会社の開発部門を中心に行っております。これは、当社グループが常に既存製品の機能強化版の投入又は新しい切り口での製品・サービスの開発・導入を行っていくことを目的としたものであり、業務用IP無線システムを中心として、さらなる利便性向上等の研究開発を行っております。これらの研究開発活動の結果、当連結会計年度における研究開発費の総額は54,971千円となっております。 セグメントごとの研究開発活動を示すと次のとおりであります。 (1) 情報通信事業情報通信事業では、主力製品である業務用IP無線システム刷新のための研究開発、移動体管理システム及び電子決済システム等における顧客ニーズに応えるための研究開発を行いました。当連結会計年度における研究開発費の金額は25,167千円であります。 (2) 装置等関連事業装置等関連事業では、最新技術の開発とコストダウンによる価格競争力の強化を研究の主体としており、当連結会計年度においては、主に半導体・自動車関連事業における次世代型プレスヘッドの研究開発、成長分野であるIoT及びロボット分野における自動搬送型ロボットの研究開発を行いました。当連結会計年度における研究開発費の金額は29,804千円であります。 </div><h2>2020</h2><div>
+５ 【研究開発活動】当社グループの研究開発活動は、連結子会社の開発部門を中心に行っております。これは、当社グループが常に既存製品の機能強化版の投入又は新しい切り口での製品・サービスの開発・導入を行っていくことを目的としたものであり、業務用IP無線システムを中心として、さらなる利便性向上等の研究開発を行っております。これらの研究開発活動の結果、当連結会計年度における研究開発費の総額は133百万円となっております。 セグメントごとの研究開発活動を示すと次のとおりであります。 (1) 情報通信事業情報通信事業では、主に主力製品である業務用IP無線システム刷新のための研究開発、移動体管理システム及び電子決済システム等における顧客ニーズに応えるための研究開発を行いました。当連結会計年度における研究開発費の金額は85百万円であります。 (2) 装置等関連事業装置等関連事業では、最新技術の開発とコストダウンによる価格競争力の強化を研究の主体としており、当連結会計年度においては、主に半導体・自動車関連事業における次世代型プレスヘッドの研究開発、成長分野であるIoT及びロボット分野における自動搬送型ロボットの研究開発を行いました。当連結会計年度における研究開発費の金額は47百万円であります。 (3) 新規事業新規事業は、主にマンション等の不動産賃貸事業であり、当連結会計年度において研究開発活動は行っておりません。 </div><h2>2021</h2><div>
+５ 【研究開発活動】当社グループの研究開発活動は、連結子会社の開発部門を中心に行っております。これは、当社グループが常に既存製品の機能強化版の投入又は新しい切り口での製品・サービスの開発・導入を行っていくことを目的としたものであり、業務用IP無線システムを中心として、さらなる利便性向上等の研究開発を行っております。これらの研究開発活動の結果、当連結会計年度における研究開発費の総額は83百万円となっております。 セグメントごとの研究開発活動を示すと次のとおりであります。 (1) 情報通信事業情報通信事業では、主に主力製品である業務用IP無線システム刷新のための研究開発、移動体管理システム及び電子決済システム等における顧客ニーズに応えるための研究開発を行いました。当連結会計年度における研究開発費の金額は64百万円であります。 (2) 装置等関連事業装置等関連事業では、最新技術の開発とコストダウンによる価格競争力の強化を研究の主体としており、当連結会計年度においては、主に半導体・自動車関連事業における熱風炉を使用した搬送式装置の研究開発を行いました。当連結会計年度における研究開発費の金額は19百万円であります。 (3) 新規事業新規事業は、主にマンション等の不動産賃貸事業であり、当連結会計年度において研究開発活動は行っておりません。 </div>
+</body>
+</html>

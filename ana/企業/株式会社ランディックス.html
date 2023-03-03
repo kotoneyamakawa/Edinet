@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2019,8086485000,6850200000.0,18379000000.0,45541961000.0],[2020,8207378000,7442147500.0,19057626000.0,43023500000.0],[2021,11129334000,8933031750.0,20676427000.0,55867250000.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2019,675228000,385000000.0,1156891000.0,3856883000.0],[2020,429454000,418122000.0,1080885000.0,3456724000.0],[2021,937198000,459764750.0,1400043500.0,3532919750.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2019,8157181000,9534735000.0,27434310000.0,86719000000.0],[2020,9021346000,11423026500.0,28702000000.0,85405000000.0],[2021,12768811000,12896184000.0,32099494000.0,97653659750.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2019,0.083500804119466,0.04006133733666391,0.06423297785069729,0.10374635665391298],[2020,0.05232535896360567,0.04028622032346084,0.06341094357072347,0.11189336733559738],[2021,0.08420971102134234,0.03624433826312993,0.06025178246416974,0.0961040601385215],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2019,0.9913332804555888,0.4363990304892891,0.6985047980361526,0.9913332804555888],[2020,0.9097731092455604,0.3370756544816167,0.5897375578916415,0.918520452102126],[2021,0.8716030020336271,0.45191863134019633,0.7133072571432875,0.9655004321173984],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2019</h2><div>
+５ 【研究開発活動】　　当社グループは、主にITプラットフォーム「sumuzu」の研究開発を実施しています。　「不動産を通じて喜び感動を。」という経営理念のもと、顧客にインターネット上で透明性の高い情報を提供し、　快適でスムーズな不動産取引を行っていただくため、より高い技術の実現を目指して日々研究開発に取り組んでい　ます。　　なお、当社グループの研究開発費は、sumuzu事業セグメントでのシステム開発に関するものとなっております。 　①（研究開発活動の目的）　　　お客様にインターネットを通じて透明性の高い不動産情報提供、ならびにＩＴを活用してオーダーメイド住宅　　　の土地探し～住宅完成までをワンストップ提供するプラットフォーム提供、不動産のストックビジネス化に向　　　けて中長期的なロードマップを策定していくことを目標に、不動産テックに関わる最新技術の調査・研究、シ　　　ステム開発およびサービス化による事業化検討を目的としています。 　②（研究成果）　　　当連結会計年度における研究開発活動の主な成果は以下のとおりです。 　・sumuzu Matchingの開発　　　ネットコンペでオーダーメイド住宅をマッチングするサービス「sumuzu Matching」を2019年10月に開始してお　　り土地購入検討者の住宅希望条件と、その希望条件に興味を持ったsumuzu認定の住宅専門家がネット上でコンペ　　に参加して、建築プランを提案するシステムで、さらなる機能追加を行い、オーダーメイド住宅の普及促進を目　　指します。 　・sumuzu 相場ウォッチャーの開発　　　ビジュアライズされた相場データを提供するサービス「sumuzu相場ウォッチャー」の機能追加を2019年11月に　　実施しました。土地を条件から探すという概念ではなく、ビジュアライズされた相場データから土地を探すサー　　ビスで、時系列の坪単価推移データ、期間・エリア別に坪単価が比較検討できる機能を提供しました。 　・価格査定エンジンのPOC（概念実証）　　　AI（人工知能）を活用して土地の価格査定、推定を行うPOC（概念実証）を実施しています。土地情報データセ　　ットの定義、学習・検証データ準備のためのツール開発、アノテーションの実施を行い、回帰モデルの実装と検　　証を行いました。精度向上に向けたPOCを行い、インターネットで土地の価格推定が行えるサービスの提供を目指　　しています。 　以上により、当連結会計年度における研究開発費は34,883千円となりました。</div><h2>2020</h2><div>
+５ 【研究開発活動】　　当社グループは、主にＩＴプラットフォーム「sumuzu」の研究開発を行っています。「不動産を通じて喜び感動を。」という経営理念のもと、顧客にインターネット上で透明性の高い情報を提供し、スムーズで満足度の高い不動産取引を実現できるよう、研究開発に取組んでいます。　　なお、当社グループの研究開発費は、sumuzu事業セグメントでのシステム開発に関するものとなっております。 　①（研究開発活動の目的）お客様にインターネットを通じて透明性の高い不動産情報提供、並びにＩＴを活用してオーダーメイド住宅の土地探し～住宅完成までをワンストップ提供するプラットフォーム提供、不動産のストックビジネス化に向けて中長期的なロードマップを策定していくことを目標に、不動産テックに関わる最新技術の調査・研究、システム開発及びサービス化による事業化検討を目的としています。 　②（研究成果）　　当連結会計年度における研究開発活動の主な成果は以下のとおりです。 　・sumuzu Matchingの開発ネットコンペでオーダーメイド住宅をマッチングするサービス「sumuzu Matching」では、土地購入検討者または土地所有者が住宅希望条件をエントリーすることにより、希望条件に興味を持ったsumuzu認定の住宅専門家がインターネット上でコンペに参加して、建築プランを提案するシステムで、機能追加と利便性向上を図りました。さらなる機能性向上を図りオーダーメイド住宅の普及促進を目指します。 　・土地管理ポータルサイトの開発土地専門のポータルサイトで、様々な検索条件やレコメンドに対応しています。土地に加えてオーダーメイド住宅も検討されているお客様に対して、sumuzu Matchingとの連携も強化し、建物を含む資金計画や建物ボリュームなどの情報も提供することで、情報の見える化とサービス向上に繋げました。 　以上により、当連結会計年度における研究開発費は57,523千円となりました。</div><h2>2021</h2><div>
+５ 【研究開発活動】　　当社グループは、主にＩＴプラットフォーム「sumuzu」の研究開発を行っています。「唯一無二の豊かさを創造する」という経営理念のもと、顧客にインターネット上で透明性の高い情報を提供し、満足度の高い不動産取引を実現できるよう、研究開発に取組んでいます。　　なお、当社グループの研究開発費は、sumuzu事業セグメントでのシステム開発に関するものとなっております。 　(1) 研究開発活動の目的お客様にインターネットを通じて透明性の高い不動産情報提供、並びにＩＴを活用してオーダーメイド住宅の土地探し～住宅完成までをワンストップ提供するプラットフォーム提供、不動産のストックビジネス化に向けて中長期的なロードマップを策定していくことを目標に、不動産テックに関わる最新技術の調査・研究、システム開発及びサービス化による事業化検討を目的としています。 　(2) 研究成果　　当連結会計年度における研究開発活動の主な成果は以下のとおりです。 　・sumuzu Matchingの開発ネットコンペでオーダーメイド住宅をマッチングするサービス「sumuzu Matching」では、土地購入検討者又は土地所有者が住宅希望条件をエントリーすることにより、希望条件に興味を持ったsumuzu認定の住宅専門家がインターネット上でコンペに参加して、建築プランを提案するシステムで、機能追加と利便性向上を図りました。さらなる機能性向上を図りオーダーメイド住宅の普及促進を目指します。 　以上により、当連結会計年度における研究開発費は31,138千円となりました。</div>
+</body>
+</html>

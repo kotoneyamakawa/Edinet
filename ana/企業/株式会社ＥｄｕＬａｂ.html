@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,3968467000,2742939000.0,7174986000.0,19368338500.0],[2019,8252280000,2850965500.0,6729846000.0,20747120250.0],[2020,8252280000,2617526000.0,6525920000.0,20868118000.0],[2020,10090811000,2617526000.0,6525920000.0,20868118000.0],[2021,3849775000,2652336500.0,6505502500.0,19927118500.0],[2021,5897874000,2652336500.0,6505502500.0,19927118500.0],[2021,8048396000,2652336500.0,6505502500.0,19927118500.0],[2021,9758424000,2652336500.0,6505502500.0,19927118500.0],[2022,3424867000,2546049000.0,5562488500.0,17786584750.0],[2022,5670823000,2546049000.0,5562488500.0,17786584750.0],[2022,7890301000,2546049000.0,5562488500.0,17786584750.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,549366000,246323000.0,508480000.0,1285449000.0],[2019,1104748000,222781750.0,543709500.0,1308375750.0],[2020,1104748000,227411000.0,583122000.0,1569382000.0],[2020,5528641000,227411000.0,583122000.0,1569382000.0],[2021,337566000,217422750.0,573529000.0,1656336000.0],[2021,384379000,217422750.0,573529000.0,1656336000.0],[2021,419022000,217422750.0,573529000.0,1656336000.0],[2021,1555486000,217422750.0,573529000.0,1656336000.0],[2022,200074000,173898000.0,381498000.0,1122213250.0],[2022,347563000,173898000.0,381498000.0,1122213250.0],[2022,366234000,173898000.0,381498000.0,1122213250.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,7802013000,3028000000.0,6976213000.0,20664790000.0],[2019,16272704000,3104853250.0,7586630500.0,22460925250.0],[2020,16272704000,3119784000.0,7470900000.0,23359865000.0],[2020,18972760000,3119784000.0,7470900000.0,23359865000.0],[2021,7563091000,3000754500.0,7803625500.0,24362483000.0],[2021,12312171000,3000754500.0,7803625500.0,24362483000.0],[2021,16009126000,3000754500.0,7803625500.0,24362483000.0],[2021,12437892000,3000754500.0,7803625500.0,24362483000.0],[2022,7606571000,2663318500.0,6166607500.0,17227721000.0],[2022,12196286000,2663318500.0,6166607500.0,17227721000.0],[2022,15795959000,2663318500.0,6166607500.0,17227721000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.13843280037354475,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.1338718511732515,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.1338718511732515,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2020,0.5478886682150721,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.0876846049444448,0.04391320201867674,0.07714890633224092,0.13271258411378287],[2021,0.06517246723141254,0.04391320201867674,0.07714890633224092,0.13271258411378287],[2021,0.052062796114902894,0.04391320201867674,0.07714890633224092,0.13271258411378287],[2021,0.15939930464181512,0.04391320201867674,0.07714890633224092,0.13271258411378287],[2022,0.058418034919312196,0.03967641512587309,0.06586391788145754,0.12112679120949958],[2022,0.06128969287174013,0.03967641512587309,0.06586391788145754,0.12112679120949958],[2022,0.04641571975517791,0.03967641512587309,0.06586391788145754,0.12112679120949958],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.5086465505761142,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,0.5071240772277306,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.5071240772277306,0.5965235769806071,0.9009308170378753,1.310139405285049],[2020,0.5318578319654073,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.5090213776351494,0.5833868969965725,0.9166717213573184,1.2857667064817404],[2021,0.4790279472239299,0.5833868969965725,0.9166717213573184,1.2857667064817404],[2021,0.5027380008127864,0.5833868969965725,0.9166717213573184,1.2857667064817404],[2021,0.7845721767000389,0.5833868969965725,0.9166717213573184,1.2857667064817404],[2022,0.45025110526149037,0.588049747991468,0.9378736161788688,1.4148965093543149],[2022,0.46496310434176435,0.588049747991468,0.9378736161788688,1.4148965093543149],[2022,0.4995138946612865,0.588049747991468,0.9378736161788688,1.4148965093543149],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2019</h2><div>
+５【研究開発活動】
+
+該当事項はありません。
+
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+
+該当事項はありません。
+
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+
+該当事項はありません。
+
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+
+該当事項はありません。
+
+ 
+</div><h2>2022</h2><div>
+５【研究開発活動】
+
+該当事項はありません。
+
+ 
+</div><h2>2022</h2><div>
+５【研究開発活動】
+
+該当事項はありません。
+
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+該当事項はありません。
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+該当事項はありません。
+ 
+</div>
+</body>
+</html>

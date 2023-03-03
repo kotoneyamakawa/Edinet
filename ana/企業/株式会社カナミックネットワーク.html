@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,1504408000,2742939000.0,7174986000.0,19368338500.0],[2019,1881444000,2850965500.0,6729846000.0,20747120250.0],[2020,2080776000,2617526000.0,6525920000.0,20868118000.0],[2021,2502775000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,256731000,246323000.0,508480000.0,1285449000.0],[2019,474297000,222781750.0,543709500.0,1308375750.0],[2020,584682000,227411000.0,583122000.0,1569382000.0],[2021,685516000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,1487876000,3028000000.0,6976213000.0,20664790000.0],[2019,2313637000,3104853250.0,7586630500.0,22460925250.0],[2020,4408720000,3119784000.0,7470900000.0,23359865000.0],[2021,6506323000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.17065250915974922,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.2520920101794154,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.28099228364802364,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.2739023683711081,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,1.0111111409821787,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,0.8131975759377984,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.47196828104302385,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.3846681143865744,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+ 
+５ 【研究開発活動】
+当社は、在宅医療・看護・介護分野の連携を実現する情報ネットワーク基盤の強化を目的として研究開発を行っております。研究開発活動の内容といたしましては、主に東京大学高齢社会総合研究機構との共同研究体制により、在宅医療・看護・介護のシームレスな連携を実現するネットワークシステムにおける多職種間連携の機能強化に関する研究を進めております。また、当事業年度より国立大学法人 旭川医科大学との共同研究を開始し、同大学との共同研究体制を通じてIoTクラウド利用の地域包括ケア・グローバルモデル構築を目的とした遠隔医療・介護に関する研究を進めております。
+このような研究開発活動の結果、当事業年度における研究開発費は14,150千円となりました。
+　</div><h2>2019</h2><div>
+５【研究開発活動】
+
+当社グループは、在宅医療・看護・介護分野の連携を実現する情報ネットワーク基盤の強化を目的として研究開発を行っております。研究開発活動の内容といたしましては、主に東京大学高齢社会総合研究機構との共同研究体制により、在宅医療・看護・介護のシームレスな連携を実現するネットワークシステムにおける多職種間連携の機能強化に関する研究を進めております。また、前期に引き続き国立大学法人 旭川医科大学との共同研究体制を通じてIoTクラウド利用の地域包括ケア・グローバルモデル構築を目的とした遠隔医療・介護に関する研究を進めております。また、当連結会計年度よりＡＩを活用した医療・介護分野における地域連携の研究開発を開始しております。
+
+
+このような研究開発活動の結果、当連結会計年度における研究開発費は35,280千円となりました。
+
+</div><h2>2020</h2><div>
+５【研究開発活動】
+当社グループは、在宅医療・看護・介護分野の連携を実現する情報ネットワーク基盤の強化を目的として研究開発を行っております。研究開発活動の内容といたしましては、主に東京大学高齢社会総合研究機構との共同研究体制により、在宅医療・看護・介護のシームレスな連携を実現するネットワークシステムにおける多職種間連携の機能強化に関する研究を進めております。また、前連結会計年度に引き続き国立大学法人 旭川医科大学との共同研究体制を通じてIoTクラウド利用の地域包括ケア・グローバルモデル構築を目的とした遠隔医療・介護に関する研究を実施いたしました。
+このような研究開発活動の結果、当連結会計年度における研究開発費は4,323千円となりました。
+</div><h2>2021</h2><div>
+５【研究開発活動】
+当社グループは、在宅医療・看護・介護・ヘルスケア分野の連携を実現する情報ネットワーク基盤の強化を目的として研究開発を行っております。
+なお、上記研究開発活動は前連結会計年度以前の支出時に全額費用計上しているため、当連結会計年度における研究開発費は計上しておりません。
+</div>
+</body>
+</html>

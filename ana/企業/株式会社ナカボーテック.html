@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,10918688000,19019000000.0,52629034000.0,149649000000.0],[2018,10976345000,28828000000.0,74634000000.0,186874000000.0],[2019,11019657000,18644394750.0,56724571500.0,174331250000.0],[2020,13013554000,14885341250.0,54665500000.0,172926500000.0],[2021,12909735000,16839280000.0,60103000000.0,179846000000.0],[2022,12909735000,37708000000.0,83873000000.0,158310000000.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,320304000,861545000.0,2307000000.0,6546000000.0],[2018,437416000,951389000.0,3086451000.0,7918000000.0],[2019,466432000,789313750.0,2314500000.0,7458000000.0],[2020,901473000,652209000.0,2003000000.0,6961500000.0],[2021,763789000,783216000.0,2106505000.0,7354000000.0],[2022,763789000,1334394500.0,2686000000.0,5711500000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,10556718000,17175987000.0,48142000000.0,138696000000.0],[2018,10762670000,24506000000.0,64483000000.0,170267000000.0],[2019,10576069000,14489163750.0,52824500000.0,150633750000.0],[2020,11251866000,14476408500.0,53154921000.0,152369500000.0],[2021,10860140000,15975838000.0,60952000000.0,169621000000.0],[2022,10860140000,37572000000.0,91160000000.0,179649000000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.02933539267721543,0.030924349441835856,0.039577014168778825,0.058677855219082094],[2018,0.03985078821775372,0.031072925954035355,0.04161303855176716,0.06319902676296472],[2019,0.042327270258956336,0.028178067669523625,0.04059571508285559,0.05737225684500878],[2020,0.06927185302339392,0.03030438467669186,0.0441683828260139,0.05607611512859936],[2021,0.05916380158074507,0.029102847139656655,0.04053289942031933,0.05916380158074507],[2022,0.05916380158074507,0.023007689642939005,0.039577014168778825,0.052436240720858285],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,1.034288118712653,0.893641596175952,1.12094166304527,1.2909456612246364],[2018,1.0198533449413576,0.9255580807185754,1.0999100978745782,1.286668754635347],[2019,1.0419426159190148,0.9259435944572808,1.1020887324943982,1.3033115108639235],[2020,1.1565685193904727,0.8202071972877718,1.0157665895829968,1.2387227108529704],[2021,1.1887263884259318,0.8194591659988107,1.0289774168992645,1.2068439911605475],[2022,1.1887263884259318,0.8337306423744932,0.9804584863190148,1.2217360018581536],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５ 【研究開発活動】
+当社の事業は、国内における戦略的なインフラ整備の実施に伴い、構造物の長寿命化対策として、益々重要な役割を担っております。このインフラ整備の実施が継続される中で、当社の研究開発活動は、安心・安全の確保を前提とした既存技術の更なる品質向上と適用した防食対策工法の適切な維持管理手法や構造物への新たな補修対策工法を提案し、お客様からの厚い信頼を得るために尽力して参りました。
+当事業年度における研究開発費は、総額で139百万円であります。その主たる費用は、人件費、物品費、減価償却費であります。
+なお、当事業年度に実施した研究開発活動は、事業の種類別セグメントに明確な関連付けができないため、セグメント別の記載を省略しております。
+ </div><h2>2018</h2><div>
+５ 【研究開発活動】当社の事業は、国内における戦略的なインフラ整備の実施に伴い、構造物の長寿命化対策として、益々重要な役割を担っております。このインフラ整備の実施が継続される中で、当社の研究開発活動は、安心・安全の確保を前提とした既存技術の更なる品質向上と適用した防食対策工法の適切な維持管理手法や構造物への新たな補修対策工法を提案し、お客様からの厚い信頼を得るために尽力して参りました。当事業年度における研究開発費は、総額で155百万円であります。その主たる費用は、人件費、物品費、減価償却費であります。なお、当事業年度に実施した研究開発活動は、事業の種類別セグメントに明確な関連付けができないため、セグメント別の記載を省略しております。 </div><h2>2019</h2><div>
+５ 【研究開発活動】当社の事業は、国内における戦略的なインフラ整備の実施に伴い、構造物の長寿命化対策として、益々重要な役割を担っております。このインフラ整備の実施が継続される中で、当社の研究開発活動は、安心・安全の確保を前提とした既存技術の更なる品質向上と適用した防食対策工法の適切な維持管理手法や構造物への新たな補修対策工法を提案し、お客様からの厚い信頼を得るために尽力して参りました。当事業年度における研究開発費は、総額で151百万円であります。その主たる費用は、人件費、減価償却費、修繕維持費であります。なお、当事業年度に実施した研究開発活動は、事業の種類別セグメントに明確な関連付けができないため、セグメント別の記載を省略しております。 </div><h2>2020</h2><div>
+５ 【研究開発活動】当社の事業は、国内における戦略的なインフラ整備の実施に伴い、構造物の長寿命化対策として、益々重要な役割を担っております。このインフラ整備の実施が継続される中で、当社の研究開発活動は、安心・安全の確保を前提とした既存技術の更なる品質向上と適用した防食対策工法の適切な維持管理手法や構造物への新たな補修対策工法を提案し、お客様からの厚い信頼を得るために尽力して参りました。当事業年度における研究開発費は、総額で153百万円であります。その主たる費用は、人件費、減価償却費、修繕維持費であります。なお、当事業年度に実施した研究開発活動は、事業の種類別セグメントに明確な関連付けができないため、セグメント別の記載を省略しております。 </div><h2>2021</h2><div>
+５ 【研究開発活動】当社の事業は、国内における戦略的なインフラ整備の実施に伴い、構造物の長寿命化対策として、益々重要な役割を担っております。このインフラ整備の実施が継続される中で、当社の研究開発活動は、安心・安全の確保を前提とした既存技術の更なる品質向上と適用した防食対策工法の適切な維持管理手法や構造物への新たな補修対策工法を提案し、お客様からの厚い信頼を得るために尽力して参りました。当事業年度における研究開発費は、総額で162百万円であります。その主たる費用は、人件費、減価償却費、修繕維持費であります。なお、当事業年度に実施した研究開発活動は、事業の種類別セグメントに明確な関連付けができないため、セグメント別の記載を省略しております。 </div><h2>2022</h2><div>
+５ 【研究開発活動】当社の事業は、国内における戦略的なインフラ整備の実施に伴い、構造物の長寿命化対策として、益々重要な役割を担っております。このインフラ整備の実施が継続される中で、当社の研究開発活動は、安心・安全の確保を前提とした既存技術の更なる品質向上と適用した防食対策工法の適切な維持管理手法や構造物への新たな補修対策工法を提案し、お客様からの厚い信頼を得るために尽力して参りました。当事業年度における研究開発費は、総額で162百万円であります。その主たる費用は、人件費、減価償却費、修繕維持費であります。なお、当事業年度に実施した研究開発活動は、事業の種類別セグメントに明確な関連付けができないため、セグメント別の記載を省略しております。 </div>
+</body>
+</html>

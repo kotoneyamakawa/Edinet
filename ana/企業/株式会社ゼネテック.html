@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2019,4720378000,2850965500.0,6729846000.0,20747120250.0],[2020,4079318000,2617526000.0,6525920000.0,20868118000.0],[2021,4079318000,2652336500.0,6505502500.0,19927118500.0],[2021,4683093000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2019,289430000,222781750.0,543709500.0,1308375750.0],[2020,173409000,227411000.0,583122000.0,1569382000.0],[2021,173409000,217422750.0,573529000.0,1656336000.0],[2021,72115000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2019,2691504000,3104853250.0,7586630500.0,22460925250.0],[2020,2844733000,3119784000.0,7470900000.0,23359865000.0],[2021,2844733000,3000754500.0,7803625500.0,24362483000.0],[2021,3253302000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2019,0.06131500485766182,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.04250931160551837,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.04250931160551837,0.04391320201867674,0.07714890633224092,0.13271258411378287],[2021,0.01539901086739042,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2019,1.7538067935251072,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,1.4339897628353873,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,1.4339897628353873,0.5833868969965725,0.9166717213573184,1.2857667064817404],[2021,1.4394891713096416,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2019</h2><div>
+５【研究開発活動】
+
+当社グループは、災害時位置情報自動通知システム「ココダヨ」の開発を行っております。「ココダヨ」は報告セグメントに属さず、「その他」のセグメントに区分されております。
+
+現在の開発は、当社のココダヨ事業部において、アップデート版・カスタマイズ版開発、緊急地震速報受信サーバ開発等を行っております。
+
+
+2016年12月の有料版スマートフォンアプリのリリース、2017年４月の大手損害保険会社の保険加入者向けOEMサービスの提供を開始しており、当連結会計年度の売上高は96百万円（前期比210.0％増）、研究開発費は56百万円となっております。
+
+大地震や火山噴火等の自然災害時の通信が困難な状況であっても、家族など大切な人の居場所がわかることが最大の特徴であり、引き続き収益化に向けた事業展開を推進してまいります。
+
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+
+当社グループは、災害時位置情報自動通知システム「ココダヨ」の開発を行っております。「ココダヨ」は当連結会計年度より、重要性が増したことからセグメントに「ココダヨ事業」として含んでおります。
+
+現在の開発は、当社のココダヨ事業部において、アップデート版・カスタマイズ版開発、緊急地震速報受信サーバ開発等を行っております。
+
+
+2016年12月の有料版スマートフォンアプリのリリース、2017年４月の大手損害保険会社の保険加入者向けOEMサービスの提供を開始しており、当連結会計年度の売上高は301百万円（前期比214.1％増）、研究開発費は63百万円となっております。
+
+大地震や火山噴火等の自然災害時の通信が困難な状況であっても、家族など大切な人の居場所がわかることが最大の特徴であり、引き続き収益化に向けた事業展開を推進してまいります。
+
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+
+当社グループは、災害時位置情報自動通知システム「ココダヨ」の開発を行っております。「ココダヨ」は当連結会計年度より、重要性が増したことからセグメントに「ココダヨ事業」として含んでおります。
+
+現在の開発は、当社のココダヨ事業部において、アップデート版・カスタマイズ版開発、緊急地震速報受信サーバ開発等を行っております。
+
+
+2016年12月の有料版スマートフォンアプリのリリース、2017年４月の大手損害保険会社の保険加入者向けOEMサービスの提供を開始しており、当連結会計年度の売上高は301百万円（前期比214.1％増）、研究開発費は63百万円となっております。
+
+大地震や火山噴火等の自然災害時の通信が困難な状況であっても、家族など大切な人の居場所がわかることが最大の特徴であり、引き続き収益化に向けた事業展開を推進してまいります。
+
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+当社グループは、IT・IoT技術の著しい進歩に追随し、新規サービスの開発や既存サービスの改良を図るべく、研究開発活動を推進しております。現在の研究開発活動は、災害時位置情報自動通知システム「ココダヨ」に関する、今後の新機能追加を視野に入れた技術調査であり、当連結会計年度の研究開発費は12百万円となっております。
+ 
+</div>
+</body>
+</html>

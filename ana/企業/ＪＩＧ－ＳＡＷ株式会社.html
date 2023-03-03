@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,1296474000,2742939000.0,7174986000.0,19368338500.0],[2019,1797801000,2850965500.0,6729846000.0,20747120250.0],[2020,2192768000,2617526000.0,6525920000.0,20868118000.0],[2021,2751120000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,262456000,246323000.0,508480000.0,1285449000.0],[2019,446110000,222781750.0,543709500.0,1308375750.0],[2020,326732000,227411000.0,583122000.0,1569382000.0],[2021,336335000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,1578781000,3028000000.0,6976213000.0,20664790000.0],[2019,2231024000,3104853250.0,7586630500.0,22460925250.0],[2020,2175930000,3119784000.0,7470900000.0,23359865000.0],[2021,2640558000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.20243830574311555,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.2481420357425544,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.14900436343470902,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.1222538457064759,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.8211867257079988,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,0.805818763043338,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,1.0077383004048843,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,1.0418706955120849,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+６ 【研究開発活動】
+当社グループは、当連結会計年度における研究開発活動として、すべてがインターネットにつながる世界をテクノロジーで支えるというミッションのもと、「オートセンサリング＆オートディレクション（A＆A）」コンセプトによって全ての産業の自動化・分散化・シェアリング化に向けたIoT分野の研究・開発活動を行ってまいりました。具体的には、今後のIoT分野でのデータコントロールサービスにおける通信制御・半導体領域に係る研究開発活動や「生物・細胞」をソフトウェアによってダイレクトに制御する再生医療分野におけるプロジェクト始動に係る研究開発活動であります。
+当連結会計年度における研究開発費の総額は、31,293千円であります。
+なお、当社グループはマネジメントサービス事業の単一セグメントであるため、セグメント情報に関連付けた記載を行っておりません。</div><h2>2019</h2><div> 
+５ 【研究開発活動】当社グループは、当連結会計年度における研究開発活動として、あらゆる機器・装置や物質・生物・人（IoA：Internet of Abilities）を自動で監視、検知、制御する「Auto Sensing × Auto Control（A＆A）」コンセプトによって、全産業の自動化・効率化に向けたIoT分野の研究・開発活動を行ってまいりました。具体的には、IoT分野でのロボット型オートディレクションプラットフォーム、データコントロールサービスにおける通信制御・半導体領域、IoTコントロールモジュール「neqto」に係る研究開発活動や「生物・細胞」をソフトウェアによってダイレクトに制御する再生医療分野におけるプロジェクトに係る研究開発活動、建機分野における自律走行・操縦ソフトウェア搭載の業界標準機開発プロジェクトに係る研究開発活動であります。当連結会計年度における研究開発費の総額は、139,011千円であります。なお、当社グループはマネジメントサービス事業の単一セグメントであるため、セグメント情報に関連付けた記載を行っておりません。 </div><h2>2020</h2><div>
+５ 【研究開発活動】当社グループは、当連結会計年度において、インターネットにおける独自のコア技術・基盤技術を活用したIoT分野の研究・開発活動を行ってまいりました。具体的には、ソフトウエア基盤技術、ハードウエア基盤技術、データ制御基盤技術、全自動制御（A&A：Auto Sensing × Auto Control）技術などをベースとし、マネジメントサービスにおける研究開発活動や全世界における双方向データ制御のIoTサービス実現に向けた研究開発活動であります。また、コア技術を応用した「生物・細胞」をソフトウエアによってダイレクトに制御する再生医療分野におけるプロジェクト及び建機分野における自律走行・操縦ソフトウエア搭載の業界標準機開発プロジェクトについても、事業化を視野に継続的な研究・開発活動を行っております。当連結会計年度における研究開発費の総額は158,610千円であります。なお、当社グループはデータコントロール事業の単一セグメントであるため、セグメント情報に関連付けた記載を行っておりません。 </div><h2>2021</h2><div>
+５ 【研究開発活動】当社グループは、当連結会計年度において、インターネットにおける独自のコア技術・基盤技術を活用したIoT分野の研究・開発活動を行ってまいりました。具体的には、ソフトウエア技術、ハードウエア技術、自動運転・操縦技術、データ制御技術などをベースとし、マネジメントサービスにおける研究開発活動や全世界における双方向データ制御のIoTサービス実現に向けた研究開発活動であります。また、コア技術を応用したソフトウエア技術で人間の視覚能力（知覚）拡張の実現を目指す再生医療プロジェクト及び建機分野における自律走行・操縦ソフトウエア搭載の業界標準機開発プロジェクトについても、製品化・商用化を視野に継続的な研究・開発活動を行っております。当連結会計年度における研究開発費の総額は168,904千円であります。なお、当社グループはデータコントロール事業の単一セグメントであるため、セグメント情報に関連付けた記載を行っておりません。 </div>
+</body>
+</html>

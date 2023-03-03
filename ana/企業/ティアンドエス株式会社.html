@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2020,2732771000,2617526000.0,6525920000.0,20868118000.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2020,294567000,227411000.0,583122000.0,1569382000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2020,1987447000,3119784000.0,7470900000.0,23359865000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2020,0.10779059057637834,0.045301909529547935,0.07861214036975551,0.14225266733569528],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2020,1.3750157865844976,0.5965235769806071,0.9009308170378753,1.310139405285049],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2020</h2><div>
+５【研究開発活動】
+当社の研究開発は先進技術ソリューションカテゴリーの基礎研究となっており、当事業年度の研究開発費の総額は26,174千円であります。当社は国立大学法人東北大学国際集積エレクトロニクス研究開発センター（以降、CIES）及び東北大学工学研究科と共同研究を進めており、以下の３つのテーマの研究開発を行っております。
+ 
+当社の研究開発はスピントロニクス技術を搭載した次世代メモリとAIの融合をテーマとしております。現在CIESで研究開発されているスピントロニクス技術を搭載した次世代メモリは、世界トップレベルの技術であり(*1)、これを搭載したマイコンやAIプロセッサの消費電力は、従来のプロセッサに比べ性能を落とすことなく１/100～１/1,000に低減できるという実績が報告されております(*2)。近年の自動運転・画像処理・IoT機器・ロボット産業といった分野の急成長には、低消費電力化が不可欠です。CIESの次世代メモリ及びそれを搭載したチップの研究成果は、上述した分野の急成長の実現に大きく貢献することが期待されています。CIESの取り決めにより、共同研究への参加企業は「１業種１社」とされており、当社はこの研究活動の中で、特にこれらに関連したソフトウエアの研究開発全般を担当します。まず初期のフェーズでは、下記のテーマを中心に研究開発活動を行っております。
+ 
+(1) スピントロニクス技術を搭載した次世代メモリのエラー訂正技術の研究開発
+スピントロニクス技術を搭載した次世代メモリはデータ書き込み時にエラービットが発生することがあるため（デジタル記録において、データを構成するビットが伝送・再生などの過程で損傷を受け、ビットが反転する）、メモリの信頼性を高めるエラー訂正は、スピントロニクス技術を搭載した次世代メモリの製品化に必要不可欠な技術であります。当社ではスピントロニクス技術を搭載した次世代メモリに適したエラー訂正技術の開発を行っており、高可用かつハードウエア化が容易な技術の提案・実装を進め、信頼性の確保を目指しております。これまでにエラー訂正技術の調査・作成・評価を行っており、スピントロニクス技術を搭載した次世代メモリが持つ低消費電力・高速応答といったハードウエア特性に適したエラー訂正技術を実装する準備を進めております。
+ 
+(2) スピントロニクス技術搭載AIプロセッサ用アプリケーションソフトウエアの研究開発
+自動運転や産業用機器、IoT機器に搭載されるAIプロセッサは消費電力が少なく応答が速いことが期待されておりますが、現状ではまだ開発途上のステージにあります。消費電力と応答に優れたスピントロニクス技術を搭載した次世代メモリをAIプロセッサに搭載することで、これまでの機器よりもさらに省エネ・小型化・高機能化を実現することが可能であります。当社では、スピントロニクス技術を搭載した次世代メモリを搭載した次世代AIプロセッサを用いた研究開発・実用化を促進させるために、スピントロニクス技術を搭載した次世代メモリの特性や性能を活かしたファームウエアならびに、AIアプリケーションソフトウエアを効率的に開発するためのソフトウエア開発キット(SDK)の設計・開発を進め、企業がAIアプリケーションボードを使って手軽に評価・開発ができる環境の提供を目指しております。これまでに、基礎研究としてAIプロセッサの性能と消費電力の調査、AIアルゴリズムの調査を行っており、ファームウエア・アプリケーションソフトウエア開発の準備を進めております。
+ 
+(3) 物体認識向けAIプロセッサにおける高効率高性能アルゴリズムの研究
+AIの主な活用先として、音声認識、画像認識や物体認識等が挙げられます。その中で、物体認識の応用範囲は広く様々なアプリケーションで用いられることが知られています。本研究では、用途に合わせた物体認識のAIアルゴリズムの有望な候補を選定し、スピントロニクス搭載アプリケーションプロセッサ上で動作する最適なAIアルゴリズムの研究を進めてまいります。
+ 
+*1　CIESは、世界初となる各実証に成功しており、世界トップレベルの技術を有していると認識しております。
+・「スピントロニクス技術とCMOS技術の融合により、スピン軌道トルク型磁気トンネル接合（SOT-MTJ）素子を用いた不揮発メモリ（SOT-MRAM）チップの試作・実証に初めて成功」（2020年6月16日）
+
+
+
+
+
+
+
+
+http://www.tohoku.ac.jp/japanese/2020/06/press20200616-01-sot-mram.html
+
+
+
+
+
+・「４重界面磁気トンネル接合素子(Quad-MTJ)の材料・デバイス技術の開発により、工業製品化されている従来の２重界面磁気トンネル接合素子（Double-MTJ）では困難であった車載スペックでの10年以上のデータ保持特性を維持しながら、1)10ナノ秒（ns）の高速書き込み動作と、2)21％の低消費電力動作と、3）1011回以上の高書込み耐性の同時達成を世界で初めて実証（2020年6月15日）
+
+
+
+
+
+
+
+
+http://www.tohoku.ac.jp/japanese/2020/06/press20200615-01STT-MRAM.html
+
+
+
+
+
+また、第14回産学官連携功労者表彰で、CIESの研究成果が「内閣総理大臣賞」を受賞しております。
+ 
+*2　「日経エレクトロニクス」2020年6月号 P28～38　日経BP社
+ 
+</div>
+</body>
+</html>

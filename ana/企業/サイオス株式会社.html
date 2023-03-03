@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,12470303000,2742939000.0,7174986000.0,19368338500.0],[2019,13686915000,2850965500.0,6729846000.0,20747120250.0],[2020,14841739000,2617526000.0,6525920000.0,20868118000.0],[2021,15725371000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,614361000,246323000.0,508480000.0,1285449000.0],[2019,318158000,222781750.0,543709500.0,1308375750.0],[2020,310145000,227411000.0,583122000.0,1569382000.0],[2021,367750000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,4849194000,3028000000.0,6976213000.0,20664790000.0],[2019,5332468000,3104853250.0,7586630500.0,22460925250.0],[2020,6851698000,3119784000.0,7470900000.0,23359865000.0],[2021,6649910000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.049265924011629866,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.0232454135939326,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.02089681000319437,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.023385775763255442,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,2.5716238616149405,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,2.5667130116861463,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,2.166140276468694,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,2.3647494477368864,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+ 
+６ 【研究開発活動】
+当社グループの研究開発活動は、当社グループの事業の中心であるオープンシステム基盤事業とアプリケーション事業において、各種の製品開発に取り組んでおり、当連結会計年度における研究開発費の総額は588,293千円となっております。
+　
+(1) オープンシステム基盤事業
+Linuxを基本とした企業情報システムの利用拡大に向けて、OSS等の機能、性能、拡張性等の向上を目指した研究開発を行っております。具体的には、以下のとおりであります。
+①   機械学習技術を用いた仮想環境分析・運用ツール「SIOS iQ」の機能強化
+・高次の原因分析(Meta Analysis)機能の追加
+・ストレージレベルのパフォーマンス問題の予測機能の追加
+・パフォーマンス改善等
+②  「LifeKeeper」等の新規機能の開発。開発した機能概要は以下のとおりです。
+・SIOS Protection Suite Linux v9 EEの開発
+- インメモリーデータベース「SAP HANA 1.0」用コンポーネントの開発
+・LifeKeeper v9.2 アップデートバージョンの開発
+- AWS Direct Connect対応機能の開発
+- Hyper Converged Infrastructure対応ソリューションの開発
+- インメモリーデータベース「SAP HANA 2.0」用コンポーネントの開発
+・その他新規機能開発
+③   AWS用のSaaS「SIOS Coati」の新規開発。
+・AWS EC2上のシステム障害の検知と自動復旧機能の開発
+・管理者への通知と障害レポート機能の開発
+なお、当連結会計年度のオープンシステム基盤事業の研究開発費は、404,131千円であります。
+ 
+(2) アプリケーション事業
+当社開発製品を様々な業種・業態への適応や、市場ニーズに柔軟に対応させるための機能開発に取り組んでおります。具体的には以下のとおりであります。
+①   複合機のファクス受信機能を簡単、便利に活用するソフトウエア「Easyファクス」の新規開発。開発した機能概要は以下のとおりです。
+・「Easyファクス」の新規開発
+　- 容易な振り分け機能の開発
+　- Offcie365連携機能の開発
+　- どこでもキャビネット連携の開発
+②   複合機の操作情報を画像と共にログとして記録するソフトウェア「Log キャプチャNX」を機能強化する「枚数集計オプション」の開発
+③   クラウドサービス「Gluegentシリーズ」の機能強化。強化した機能概要は以下のとおりです。
+・「Gluegent Gate」の基盤更新、ポータル機能、Adobe Creative Cloud連携機能、Evernote対応等
+・「Gluegent Flow」の複数添付ファイルの一括ダウンロード機能、テナント間連携の開発、独立版の開発等
+・その他、「Gluegentシリーズ」のAPI改廃対応、各種機能強化
+④   「金融勘定の金利リスク（IRRBB）」対応機能のALMパッケージ・Vivaldiの開発等
+なお、当連結会計年度のアプリケーション事業の研究開発費は、184,162千円であります。
+ </div><h2>2019</h2><div> 
+５ 【研究開発活動】当社グループの研究開発活動は、当社グループの事業の中心であるオープンシステム基盤事業とアプリケーション事業において、各種の製品開発に取り組んでおり、当連結会計年度における研究開発費の総額は652,741千円となっております。　(1) オープンシステム基盤事業Linuxを基本とした企業情報システムの利用拡大に向けて、OSS等の機能、性能、拡張性等の向上を目指した研究開発を行っております。具体的には、以下のとおりであります。①「LifeKeeper」等の新規機能の開発　・LifeKeeper v9.4アップデートバージョンの開発－「SAPのENSAv2およびERSv2」用コンポーネントの開発（SAP S/4 HANA認定取得）－スタンバイノード監視機能の開発・その他新規機能開発なお、当連結会計年度のオープンシステム基盤事業の研究開発費は、359,940千円であります。 (2) アプリケーション事業当社開発製品を様々な業種・業態への適応や、市場ニーズに柔軟に対応させるための機能開発に取り組んでおります。具体的には以下のとおりであります。① サブスクリプション事業者向けサービスプラットフォーム「SIOS bilink」の開発・ベータ版開発－ルールエンジン機能、及び、データ連携のためのAPI開発－ユーザー向インターフェースの開発－データベースの開発・追加機能開発－ルールエンジン機能の追加開発－外部連携機能の強化－商用リリースに向けたインフラ強化、運用自動化② 複合機ソリューション関連の機能開発・強化　・複合機の新モデルへの対応  ・Quickスキャン、Speedocメージャーバージョンアップ  －マテリアルデザインに準拠した新しいユーザーI/Fに刷新　・Speedocのサブスクリプション対応③ クラウドサービス「Gluegentシリーズ」の機能強化　　・「Gluegent Gate」の認証制御アプリの開発、GSyncの機能拡張、証明書配信対応　・「Gluegent Flow」の独立版対応　・「Gluegent Apps 共有アドレス帳」の電話着信対応　・「Gluegentシリーズ」全般のAPI改廃対応、各種機能強化④ 金融機関向けシステム関連の機能開発・強化　・金融機関向けALMパッケージ・Vivaldi2の機能強化対応（収益管理帳票の改善およびクラウド（AWS）対応）  ・金融機関向けマーケティング・ソリューション開発なお、当連結会計年度のアプリケーション事業の研究開発費は、292,801千円であります。 </div><h2>2020</h2><div> 
+５ 【研究開発活動】当社グループの研究開発活動は、当社グループの事業の中心であるオープンシステム基盤事業とアプリケーション事業において、各種の製品開発に取り組んでおり、当連結会計年度における研究開発費の総額は616,609千円となっております。　(1) オープンシステム基盤事業Linuxを基本とした企業情報システムの利用拡大に向けて、OSS等の機能、性能、拡張性等の向上を目指した研究開発を行っております。具体的には、以下のとおりであります。①「LifeKeeper」等の新規機能の開発　・LifeKeeper v9.5アップデートバージョンの開発－Oracle PDB（Multi-Tenant）対応機能の開発－自動インストール機能の開発－環境設定のクローニング機能の開発－環境構築用のCLI（各種コマンド）の開発・その他新規機能開発なお、当連結会計年度のオープンシステム基盤事業の研究開発費は、393,797千円であります。 (2) アプリケーション事業当社開発製品を様々な業種・業態への適応や、市場ニーズに柔軟に対応させるための機能開発に取り組んでおります。具体的には以下のとおりであります。① サブスクリプション事業者向けサービスプラットフォーム「SIOS bilink」の開発・商用版開発－ルールエンジン機能及びデータ連携のためのAPIの追加開発－ユーザー向けインターフェースの追加開発－商用提供にあたってのインフラ開発－セキュリティの強化－監視、CI/CDのシステム構築、運用体制の確立・追加機能開発－ルールエンジン機能の追加開発－外部連携機能の強化② 複合機ソリューション関連の機能開発・強化　・複合機の新モデルへの対応  ・Quickスキャン、Speedocの新機能開発  －大手ユーザー向けに認証機能強化　・PC設定ツール開発  －複合機上でしかできなかったQuickスキャン、Speedocの設定をPC上で設定できるツール③ クラウドサービス「Gluegentシリーズ」の機能強化　　・「Gluegent Gate」の認証強化（RADIUS対応、Azure AD連携）、ID申請ワークフロー機能追加　・「Gluegent Flow」のモバイルアプリ開発、ID申請ワークフロー機能追加　・「Gluegent Apps」の独立化のためのID統合開発　・「Gluegentシリーズ」全般の各種機能強化④ 金融機関向けシステム関連の機能開発・強化　・金融機関向けALMパッケージ・Vivaldi2の機能強化対応 (LIBOR:Lodon Interbank Offered Rate 公表停止対応)  ・金融機関向けマーケティング・ソリューション開発なお、当連結会計年度のアプリケーション事業の研究開発費は、222,812千円であります。 </div><h2>2021</h2><div> 
+５ 【研究開発活動】当社グループの研究開発活動は、当社グループの事業の中心であるオープンシステム基盤事業とアプリケーション事業において、各種の製品開発に取り組んでおり、当連結会計年度における研究開発費の総額は638,572千円となっております。　(1) オープンシステム基盤事業Linuxを基本とした企業情報システムの利用拡大に向けて、OSS等の機能、性能、拡張性等の向上を目指した研究開発を行っております。具体的には、以下のとおりであります。①「LifeKeeper」等の新規機能の開発　・LifeKeeper v9.5及びv9.6アップデートバージョンの開発－CLIの更なる機能強化－スタンバイノード監視機能の強化－Azure上でのSTONITHデバイスに対応－AWSのファンデーショナルテクニカルレビュー（FTR）の取得・その他新規機能開発なお、当連結会計年度のオープンシステム基盤事業の研究開発費は、336,276千円であります。 (2) アプリケーション事業当社開発製品を様々な業種・業態への適応や、市場ニーズに柔軟に対応させるための機能開発に取り組んでおります。具体的には以下のとおりであります。① 複合機ソリューション関連の機能開発・強化　・複合機の新モデルへの対応  ・Quickスキャン、Speedocの新機能開発  －複合機上でしかできなかったQuickスキャン、SpeedocのOCR処理をPC上で実行できるツールの開発  －既存複合機の設定を活かしたスキャン機能の開発② クラウドサービス「Gluegentシリーズ」の機能強化　　・「Gluegent Flow 情シスクラウド」機能強化　・「Gluegent Apps」の独立化のためのID統合開発　・「Gluegent Gate」のSSO連携機能強化（顔認証）、ID申請ワークフロー機能追加　・「Gluegentシリーズ」全般の各種機能強化③ 金融機関向けシステム関連の機能開発・強化　・金融機関向けALMパッケージ・VivaldiⅡの機能強化対応（LIBOR：London Interbank Offered Rate 公表停止対応）  ・金融機関向けマーケティングソリューション実証実験　・金融機関向け統合与信ソリューション・QUANTUM/e-AcrisのKSC（全国銀行個人信用情報センター）更改対応④ HR Tech関連サービスの機能開発・強化　・フリーアドレス座席管理システム「YourDesk」の開発  ・モチベーション・マネジメントシステム「Willysm」の機能開発・強化なお、当連結会計年度のアプリケーション事業の研究開発費は、302,296千円であります。 </div>
+</body>
+</html>

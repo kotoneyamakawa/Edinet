@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2020,1153196000,2617526000.0,6525920000.0,20868118000.0],[2021,1171289000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2020,153115000,227411000.0,583122000.0,1569382000.0],[2021,27038000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2020,936912000,3119784000.0,7470900000.0,23359865000.0],[2021,973210000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2020,0.13277448066070294,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.023083969882753103,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2020,1.2308477210239595,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,1.2035316118823276,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2020</h2><div>
+５ 【研究開発活動】当社は、日々進化するAI技術を業務で利用しやすい形に変換して提供することを目的に、「AIの民主化」を目標に研究開発を進めております。AI、IoTなどの新しい技術領域の研究開発結果を「SyncLect」サービスに集約してサービス提供することで、汎用的な利用を可能とするとともに多様化する先端技術のサービス窓口になることを目指しております。当事業年度において、当社が支出した研究開発費の総額は8,297千円であり、次の技術分野に対する研究開発活動を行っております。 
+(1) AI技術近年、クラウドサービスの充実により急速に普及しているビジネスチャットに機械学習を利用することで、自動的に対話を行い質問に回答したり、言語分析を行うニーズが発生しております。WEBサイト上で利用するチャットボットを始め、社内利用されるチャットツール上のやり取りは機械学習によって業務効率化や業務スピードの改善が期待されています。それに加え、画像認識の中でもOCR技術の業務改善に対するニースが高まっており、クラウドサービスを活用しつつ業務要件に合わせたカスタマイズが可能なサービスの研究を進めております。また、一方でビッグデータの活用の重要性を認識しつつも、うまく活用しきれていない企業に対して、業務や蓄積したデータに合わせた機械学習モデルの開発を行うことで、顧客に新たな企業価値を与えビジネスチャンスの拡大に繋がる提案を次々と行っております。進化するAI技術と顧客のビジネスをどのように融合させるか、顧客への提案に向けた実施検証、最適なAI技術の選定をできるよう研究開発によってそれぞれのAIエンジンの強み・弱みを整理しております。 
+(2) スマートスピーカー労働人口の不足や働き方改革により、各業種で人手不足が深刻な問題に直面しております。コミュニケーションロボットやスマートスピーカーによる音声認識は、これらの課題に対していくつかのソリューションを提供できると仮説を立て、Google Home、Amazon Echo、Fairy Devicesなどの各スマートスピーカーの技術検証を行っています。Pepperアプリ開発の実績を持つ当社は、UI/UX(※１)分野において十分なノウハウを蓄積していることで、スマートスピーカーにおいてもそれらを利用して発話による業務効率化、労働人口不足の代替ソリューションを研究開発によって提供し続けております。 ※１　UI(ユーザーインターフェース)とは、ユーザーがPCとやり取りをする際の入力や表示方法などの仕組みをいい、UX(ユーザーエクスペリエンス)とは、サービスなどによって得られるユーザー体験をいいます。 </div><h2>2021</h2><div>
+５ 【研究開発活動】当社は、日々進化するAI技術を業務で利用しやすい形に変換して提供することを目的に、研究開発を進めております。AI、IoTなどの新しい技術領域の研究開発結果を「SyncLect」サービスに集約してサービス提供することで、汎用的な利用を可能とするとともに多様化する先端技術のサービス窓口になることを目指しております。当事業年度において、当社が支出した研究開発費の総額は2,128千円であり、次の技術分野に対する研究開発活動を行っております。 
+(1) 業界特化型AI
+　近年、実証実験を目的としたAIからビジネス貢献を目的としたAIへシフトが進む中、業界に特化した業務課題を解決するためのAIニーズが発生しております。　当社では大手企業との連携により、建設業界に特化した構造設計工程や見積業務を効率化するAI、物流業界に特化した棚卸業務を効率化する無人フォークリフトやスマートグラスによる映像解析AI、輸送効率の高いルートを提案するAIオンデマンド配送、製油業界に特化した油と揚げ物の映像解析などの独自ディープラーニングモデルの研究開発を進めております。　また、一方で業界特化型AIを限られたデータサイエンティスト以外でも利用可能とするために、「SyncLect」サービスにMLOps(※１)やAutoML(※２)機能の拡張を進めております。
+ 
+※１　MLOpsとは、機械学習又はディープラーニングのライフサイクルを管理するための、データサイエンティスト、エンジニア、保守運用担当者のコラボレーション及びコミュニケーションに関する実践手法です。これによりAIライフサイクルの高速化並びにデータサイエンティストの負荷軽減を実現します。
+※２　AutoML(Automated Machine Learning)とは、機械学習を実際の問題に適用するタスクを自動化するプロセスです。 
+(2) スマートストア
+労働人口の不足や働き方改革によって、各業種で人手不足が深刻な問題に直面しております。
+AIやIoTと言った最新テクノロジーを採用することで、店内のショッピング体験向上、顧客行動のデジタル化、非接触型決済を始めとする購入プロセスの簡略化、新型コロナウイルス対策などデジタル活用を行うスマートストア向けに、IoTマイクによる音声認識、エッジカメラによる画像解析、ToF(※３)による人感センサー、MEMS(※４)による匂いセンサー、自動走行ロボティクスソリューションを研究開発によって提供しております。
+また、スマートストアで培ったテクノロジーをスマートシティ領域に利用する拡張を進めております。
+ 
+※３　ToF(Time of Flight)とは、レーザーやLEDといった発光源からの光を対象物に照射し、その反射光をセンサーで　検出するまでの時間差を利用して対象物までの距離を測定します。小型化、低電力化、低コスト化が進み、近年iPhoneにも搭載されています。
+※４　MEMSとは、Micro Electro Mechanical Systems（微小電気機械システム）の頭文字からメムスと呼ばれています。 MEMSは、機械要素部品、センサー、アクチュエータ、電子回路を一つのシリコン基板、ガラス基板、有機材料などの上に集積化したデバイスを指します。</div>
+</body>
+</html>

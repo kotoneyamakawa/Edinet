@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2019,49810774000,2850965500.0,6729846000.0,20747120250.0],[2019,51868569000,2850965500.0,6729846000.0,20747120250.0],[2020,48003297000,2617526000.0,6525920000.0,20868118000.0],[2021,45220567000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2019,2896642000,222781750.0,543709500.0,1308375750.0],[2019,3638871000,222781750.0,543709500.0,1308375750.0],[2020,4036271000,227411000.0,583122000.0,1569382000.0],[2021,3039255000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2019,39155146000,3104853250.0,7586630500.0,22460925250.0],[2019,41374258000,3104853250.0,7586630500.0,22460925250.0],[2020,43789715000,3119784000.0,7470900000.0,23359865000.0],[2021,45147751000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2019,0.05815292089217485,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2019,0.07015560811018326,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.08408320370161242,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.06720957302459299,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2019,1.2721386353660895,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2019,1.2536434852801468,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,1.096223097135937,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,1.0016128378133387,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2019</h2><div>
+５【研究開発活動】
+
+当連結会計年度における研究開発活動は、変化する顧客のニーズに対応できる特徴ある製品・サービスを創出することを目的としており、提出会社中心に進めております。
+
+
+具体的な研究開発としましては、主に自社商品の競争力強化、ならびに顧客に価値あるICTサービスを提供するための技術力強化をテーマに、次のような活動を行ってまいりました。
+
+
+当連結会計年度の研究開発費は、134,471千円であり、主な研究開発活動は次のとおりであります。
+
+ 
+
+（デジタルインダストリー事業）
+
+
+製造現場のデジタル化を支援するスマートファクトリー分野において、次の開発研究を行いました。
+
+
+・工場IoTデータの可視化アプリケーションの開発
+
+・製造現場に特化したスマートグラス向けアプリケーションおよびプラットフォームの開発
+
+・機械学習技術を用いた画像処理に関する研究開発
+
+
+・トラック積降効率化ICTソリューション「LogiPull™」の開発
+
+・ドキュメント診断ツール「cleardox™」の開発
+
+この結果、当連結会計年度の研究開発費は、100,240千円となりました。
+
+ 
+（サービスインテグレーション事業）
+お客様のビジネス環境を多種多様な脅威から守るセキュリティサービス分野を中心に、次の開発研究を行いました。
+
+・オフィスセキュリティソリューション「SmartSESAME®」の新機能開発
+
+
+・工場セキュリティソリューション「SecureCross™ Factory」の新機能開発
+
+
+・CRMクラウドサービスの新機能開発
+
+
+この結果、当連結会計年度の研究開発費は、34,231千円となりました。
+
+ 
+ 
+</div><h2>2019</h2><div>
+５【研究開発活動】
+
+当連結会計年度における研究開発活動は、変化する顧客のニーズに対応できる特徴ある製品・サービスを創出することを目的としており、提出会社中心に進めております。
+
+
+具体的な研究開発としましては、主に自社商品の競争力強化、ならびに顧客に価値あるICTサービスを提供するための技術力強化をテーマに、次のような活動を行ってまいりました。
+
+
+当連結会計年度の研究開発費は、179,381千円であり、主要な研究開発活動は次のとおりであります。
+
+ 
+
+（デジタルインダストリー事業）
+
+
+製造現場のデジタル化を支援するスマートファクトリー分野において、次の開発研究を行いました。
+
+
+・工場IoTデータの可視化アプリケーション「Visual Factory®」の開発
+
+・機械学習技術を用いた画像処理に関する研究開発
+
+・データ分析におけるAI活用に関する研究開発
+
+
+・トラック積降効率化ICTソリューション「LogiPull®」の開発
+
+・工場セキュリティの検知可視化に関する開発
+
+・製造業作業者支援を目的としたデータ利活用に関する開発
+
+
+・自然言語処理に関する研究開発
+
+・ドキュメント診断ツール「ClearDox®」の開発
+
+この結果、当連結会計年度の研究開発費は、104,211千円となりました。
+
+ 
+（サービスインテグレーション事業）
+お客様のビジネス環境を多種多様な脅威から守るセキュリティサービス分野において、次の開発研究を行いました。
+
+・産業用制御システムのセキュリティ対策「ICS Defender®」の開発
+
+
+・サービス事業者向けデジタルサービスプラットフォーム「CanDay™」の開発
+
+
+この結果、当連結会計年度の研究開発費は、75,170千円となりました。
+
+ 
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+
+当連結会計年度における研究開発活動は、変化する顧客のニーズに対応できる特徴ある製品・サービスを創出することを目的としており、提出会社中心に進めてまいりました。
+
+
+具体的には、新製品開発をはじめとする自社商品の競争力強化、および顧客に価値あるICTサービスを提供するための技術力強化をテーマに、次のような活動を行ってまいりました。
+
+
+当連結会計年度の研究開発費は、149,086千円であり、主要な研究開発活動は次のとおりであります。
+
+ 
+
+（デジタルインダストリー事業）
+
+
+製造現場および物流におけるデジタル化を支援するスマートファクトリー分野において、次の開発研究を行いました。
+
+
+・機械学習技術を用いた画像処理に関する研究開発
+
+
+・データ分析におけるAI活用に関する開発
+
+
+・WiseImagingⓇバージョンアップ機能追加開発
+
+
+・次世代物流サービスソリューションの開発
+
+
+・LogiPullⓇ機能拡張開発
+
+
+・位置情報に関連するサービスプラットフォームに関する開発
+
+
+・車載ソフトウェアシミュレーションに関する開発
+
+
+・I/Oセンシングに関する開発
+
+
+・cleardoxⓇバージョンアップ機能開発
+
+
+・Visual FactoryⓇ機能拡張開発
+
+
+この結果、当連結会計年度の研究開発費は、113,610千円となりました。
+
+ 
+（サービスインテグレーション事業）
+
+お客様のビジネス環境を多種多様な脅威から守るセキュリティサービス分野において、次の開発研究を行いました。
+
+
+・環境別セキュリティソリューションの開発
+
+
+・CRMクラウドサービスの業種別テンプレート開発
+
+
+この結果、当連結会計年度の研究開発費は、35,476千円となりました。
+
+ 
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+当連結会計年度における研究開発活動は、変化する顧客のニーズに対応できる特徴ある製品・サービスを創出することを目的としており、提出会社中心に進めてまいりました。
+具体的には、新製品開発をはじめとする自社商品の競争力強化、および顧客に価値あるICTサービスを提供するための技術力強化をテーマに、次のような活動を行ってまいりました。
+当連結会計年度の研究開発費は、174,511千円であり、主要な研究開発活動は次のとおりであります。
+ 
+（デジタルインダストリー事業）
+製造現場および物流におけるデジタル化を支援するスマートファクトリー分野において、次の開発研究を行いました。
+・WiseImagingⓇバージョンアップ機能追加開発
+・ANIoTⓇ製品開発
+・次世代物流サービスソリューションの開発
+・LogiPullⓇ機能拡張開発
+・PlusLocationⓇ新機能開発
+・FacteyeⓇ機能拡張開発
+・Visual FactoryⓇ機能拡張開発
+この結果、当連結会計年度の研究開発費は、122,635千円となりました。
+ 
+（サービスインテグレーション事業）
+ビジネス環境における多種多様な脅威から守るセキュリティサービス分野と、ビジネス成長の加速に不可欠となるクラウドサービス分野において、次の開発研究を行いました。
+・環境別セキュリティソリューションの開発
+・新クラウドサービスの開発
+・Dynamics 365 業種特化型テンプレートの開発
+この結果、当連結会計年度の研究開発費は、51,875千円となりました。
+ 
+ 
+</div>
+</body>
+</html>

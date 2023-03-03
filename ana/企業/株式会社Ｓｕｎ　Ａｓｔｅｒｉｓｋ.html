@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2020,5367633000,2617526000.0,6525920000.0,20868118000.0],[2021,8030849000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2020,804388000,227411000.0,583122000.0,1569382000.0],[2021,1301554000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2020,6216907000,3119784000.0,7470900000.0,23359865000.0],[2021,8395499000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2020,0.14985897880872256,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.16206929055695107,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2020,0.8633928414885409,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.9565660123358957,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2020</h2><div>
+５【研究開発活動】
+
+当社グループは、最新のITを研究し、様々な顧客ニーズに迅速に応えるとともに、既存製品・サービスの改善改良及び新規サービスを開発するため、テーマ毎にR&Dのプロジェクトチームを組成し、各分野にわたって研究開発に取り組んでいます。各会計年度における活動状況は以下のとおりです。
+
+
+当連結会計年度において、当社グループ全体の研究開発活動の金額は、107,394千円（前連結会計年度比75.7％増）となっており、主要研究開発テーマは、次のとおりです。
+
+
+① DevOpsの自動化・高速化に関する研究開発
+
+
+② 画像処理、音声言語処理、レコメンド関連についてのAIモジュールの研究開発
+
+
+③ ブロックチェーンの社会実装に関する研究開発
+
+
+④ プログラミング教育コンテンツ及びシステムに関する研究開発
+
+
+⑤ サイバーセキュリティーに関する研究開発
+
+
+⑥ ライブ配信システムに関する研究開発
+
+
+当社グループにおける研究開発活動は、グループ内の人員による通常の開発業務の中で行われているため、研究開発費という勘定科目は設定していませんが、上記研究開発テーマのプロジェクトチームで発生した費用(労務費、外注費及びその他経費)を集計して当社グループ全体の研究開発活動の金額としています。
+
+
+各テーマの研究開発の経過は四半期毎にグループ内で報告され、主に社内プロジェクト等において試験的に活用・応用し、その結果を研究開発にフィードバックするというサイクルを回しており、上記の６テーマについては引き続き、研究開発を進めている状況です。
+
+
+なお、当社グループは、デジタル・クリエイティブスタジオ事業の単一セグメントであるため、セグメント別の記載を省略しています。
+
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+当社グループは、最新のITを研究し、様々な顧客ニーズに迅速に応えるとともに、既存製品・サービスの改善改良及び新規サービスを開発するため、テーマ毎にR&Dのプロジェクトチームを組成し、各分野にわたって研究開発に取り組んでいます。
+当連結会計年度において、当社グループ全体の研究開発活動の金額は、245,622千円（前連結会計年度比128.7％増）となっており、主要研究開発テーマは、次のとおりです。
+① DevOpsの自動化・高速化に関する研究開発
+② 画像処理、音声言語処理、レコメンド関連についてのAIモジュールの研究開発
+③ ブロックチェーンの社会実装に関する研究開発
+④ プログラミング教育コンテンツ及びシステムに関する研究開発
+⑤ サイバーセキュリティーに関する研究開発
+⑥ ライブ配信システムに関する研究開発
+当社グループにおける研究開発活動は、グループ内の人員による通常の開発業務の中で行われているため、研究開発費という勘定科目は設定していませんが、上記研究開発テーマのプロジェクトチームで発生した費用(労務費、外注費及びその他経費)を集計して当社グループ全体の研究開発活動の金額としています。
+各テーマの研究開発の経過は四半期毎にグループ内で報告され、主に社内プロジェクト等において試験的に活用・応用し、その結果を研究開発にフィードバックするというサイクルを回しており、上記の６テーマについては引き続き、研究開発を進めている状況です。
+なお、当社グループは、デジタル・クリエイティブスタジオ事業の単一セグメントであるため、セグメント別の記載を省略しています。
+ 
+</div>
+</body>
+</html>

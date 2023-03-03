@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,2413862000,2742939000.0,7174986000.0,19368338500.0],[2020,2611138000,2617526000.0,6525920000.0,20868118000.0],[2021,2877109000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,230306000,246323000.0,508480000.0,1285449000.0],[2020,328879000,227411000.0,583122000.0,1569382000.0],[2021,339562000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,4188216000,3028000000.0,6976213000.0,20664790000.0],[2020,5153485000,3119784000.0,7470900000.0,23359865000.0],[2021,5245464000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.09540976244706616,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2020,0.12595236253311776,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.1180219449454296,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.5763461101337658,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2020,0.5066742214249192,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.5484946612921183,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５【研究開発活動】
+セグメント別の研究開発の状況は、以下のとおりであります。
+ 
+(1）ソフトウェア開発関連事業
+
+該当事項はありません。
+
+ 
+(2）サービスインテグレーション事業
+
+該当事項はありません。
+
+ 
+(3）その他
+
+該当事項はありません。
+
+ 
+
+(4）全社費用
+
+当社は、農業のＩＣＴ化への取組みに関する研究開発活動として、平成28年４月１日に公立大学法人大阪府立大学（以下、「大阪府立大学」）と、「植物工場の栽培環境実測と統合環境制御による作物の品質・生産性向上に関する研究」を研究題目とした共同研究契約を締結しました。
+また、当社は、農林水産省の「平成28年度農業界と経済界の連携による先端モデル農業確立実証事業」に「メロン養液栽培による循環型農業確立コンソーシアム」の経済界側代表として応募し、平成28年４月21日に先端農業連携創造機構より承認されました。
+平成29年４月には、大阪府立大学の「新世代植物工場研究開発実証評価プロジェクト」へ参画し、平成28年４月の大阪府立大学との「人工光型植物工場に関する共同研究による参画」に加え、参画企業との連携をもって生産品の栽培・販売に向けての研究・検証を進めております。
+平成29年12月より帝燃産業株式会社との共同研究契約を締結し、ＬＰガスでのメロン栽培の暖房の最適化を行っております。
+上記の研究開発活動に係る支出については、特定のセグメントに帰属しない全社費用として管理する方針としております。なお、当連結会計年度における研究開発費は、3,227千円であります。
+ 
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+セグメント別の研究開発の状況は、以下のとおりであります。
+ 
+(1）ソフトウェア開発関連事業
+該当事項はありません。
+ 
+(2）サービスインテグレーション事業
+該当事項はありません。
+ 
+(3）その他
+該当事項はありません。
+ 
+(4）全社費用
+当社は、農業のＩＣＴ化への取組みに関する研究開発活動として、2016年４月１日に公立大学法人大阪府立大学（以下、「大阪府立大学」）と、「植物工場の栽培環境実測と統合環境制御による作物の品質・生産性向上に関する研究」を研究題目とした共同研究契約を締結しました。
+また、当社は、農林水産省の「2016年度農業界と経済界の連携による先端モデル農業確立実証事業」に「メロン養液栽培による循環型農業確立コンソーシアム」の経済界側代表として応募し、2016年４月21日に先端農業連携創造機構より承認されました。
+2017年４月には、大阪府立大学の「新世代植物工場研究開発実証評価プロジェクト」へ参画し、2016年４月の大阪府立大学との「人工光型植物工場に関する共同研究による参画」に加え、参画企業との連携をもって生産品の栽培・販売に向けての研究・検証を進めております。
+2017年12月には、帝燃産業株式会社との共同研究契約を締結し、ＬＰガスでのメロン栽培の暖房の最適化を行っております。
+2020年９月には、国立大学法人静岡大学と共同研究契約を締結し、静岡大学内の農知創造研究所と近未来に予想される食糧危機問題に対し、定量的かつ省力化されたエコロジカルな次世代栽培システムを構築し、問題解決に寄与することを目的に共同研究を実施しております。
+上記の研究開発活動に係る支出については、特定のセグメントに帰属しない全社費用として管理する方針としております。なお、当連結会計年度における研究開発費は、14,328千円であります。
+ 
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+セグメント別の研究開発の状況は、以下のとおりであります。
+ 
+(1）ソフトウェア開発関連事業
+該当事項はありません。
+ 
+(2）サービスインテグレーション事業
+該当事項はありません。
+ 
+(3）その他
+該当事項はありません。
+ 
+(4）全社費用
+当社は、農業のＩＣＴ化への取組みに関する研究開発活動として、2016年４月１日に公立大学法人大阪府立大学（以下、「大阪府立大学」）と、「植物工場の栽培環境実測と統合環境制御による作物の品質・生産性向上に関する研究」を研究題目とした共同研究契約を締結しました。
+また、当社は、農林水産省の「2016年度農業界と経済界の連携による先端モデル農業確立実証事業」に「メロン養液栽培による循環型農業確立コンソーシアム」の経済界側代表として応募し、2016年４月21日に先端農業連携創造機構より承認されました。
+2017年４月には、大阪府立大学の「新世代植物工場研究開発実証評価プロジェクト」へ参画し、2016年４月の大阪府立大学との「人工光型植物工場に関する共同研究による参画」に加え、参画企業との連携をもって生産品の栽培・販売に向けての研究・検証を進めております。
+2017年12月には、帝燃産業株式会社との共同研究契約を締結し、ＬＰガスでのメロン栽培の暖房の最適化を行っております。
+2020年９月より、国立大学法人静岡大学と共同研究契約を締結し、静岡大学内の農知創造研究所と近未来に予想される食糧危機問題に対し、定量的かつ省力化されたエコロジカルな次世代栽培システムを構築し、問題解決に寄与することを目的に共同研究を実施しております。
+上記の研究開発活動に係る支出については、特定のセグメントに帰属しない全社費用として管理する方針としております。なお、当連結会計年度における研究開発費は、13,492千円であります。
+ 
+ 
+</div>
+</body>
+</html>

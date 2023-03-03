@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,7056886000,2742939000.0,7174986000.0,19368338500.0],[2018,9422699000,3037116500.0,8593534000.0,26552707000.0],[2020,10061205000,2617526000.0,6525920000.0,20868118000.0],[2021,10441411000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,965537000,246323000.0,508480000.0,1285449000.0],[2018,624399000,228386500.0,578979000.0,1692422500.0],[2020,840867000,227411000.0,583122000.0,1569382000.0],[2021,522254000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,15517559000,3028000000.0,6976213000.0,20664790000.0],[2018,15419717000,3175141500.0,8093000000.0,24401691500.0],[2020,14865697000,3119784000.0,7470900000.0,23359865000.0],[2021,14364017000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.13682196368199798,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2018,0.06626540866900238,0.03877421033147174,0.06133828996282528,0.1193959476792288],[2020,0.08357517812230245,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.050017569464510116,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.4547677891864307,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2018,0.6110811891035355,0.6667319029191288,0.9877678356794964,1.4165269135225755],[2020,0.6768068123546443,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.7269144139832193,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５【研究開発活動】
+
+当連結会計年度（以下、当期）における研究開発費は３億23百万円（前期比26.3％増）となり、対売上高比率は4.6％（前期は3.7％）となりました。各セグメント別の研究開発活動の状況及び研究開発費の金額は以下のとおりであります。
+
+
+(1）クラウド事業
+
+当事業においては、データ連携ミドルウェアの機能向上、業界初となるコミュニケーション特化型プラットフォームでのサービス拡張、システム運用の品質向上や効率化を実現するクラウド型ITサービスマネジメントツールの機能拡充等の研究開発に注力しました。
+当期の主な成果としては、企業内・企業間のコミュニケーション変革に特化したコミュニケーションプラットフォーム「Smart Communication Platform」上でのAI機能追加や、クラウド型サービスデスク「LMIS on cloud」の最新版をリリースしました。
+
+当期におけるクラウド事業に係る研究開発費は１億57百万円であります。
+
+
+(2）プロダクト事業
+
+
+当事業においては既存の主力製品に新たな付加価値を追加するための研究開発を主に実施しました。
+
+
+当期の主な成果としては、ジョブ管理ツール「A-AUTO」とサーバ監視を一元的にモニタリングする「A-AUTO/Dashboard」の新バージョンや、情報活用基盤「Report & Form Warehouse」の新たな機能をリリースしました。
+
+
+当期におけるプロダクト事業に係る研究開発費は１億60百万円であります。
+
+
+(3）ソリューション事業
+
+
+当事業については、クラウド事業やプロダクト事業にて開発し、提供している製品・サービスに関連するコンサルティングや技術支援サービスを提供する事業であることから、研究開発活動は行っておらず、当該費用は発生しておりません。
+
+
+(4）メインフレーム事業
+
+
+当事業については、マーケットおよび製品が成熟しているなか、顧客ニーズを調査し、対象となるテーマを絞り込んだ研究開発を行っております。
+
+
+当期の主な成果としては、当社のシステム運用ノウハウを活かし、主力製品であるシステム運用自動化ツール「A-AUTO」の新たな機能となる「JobVisualizer(ジョブビジュアライザー)」をリリースしました。
+
+
+当期におけるメインフレーム事業に係る研究開発費は５百万円であります。
+
+
+(5）システムインテグレーション事業
+
+
+当事業については、顧客企業からシステム構築に関する業務の受託を行う事業であることから、研究開発活動は行っておらず、当該費用は発生しておりません。
+
+ 
+ 
+</div><h2>2018</h2><div>
+５【研究開発活動】
+
+当連結会計年度（以下、当期）における研究開発費は522百万円（前期比61.4％増）となり、対売上高比率は5.5％（前期は4.6％）となりました。各セグメント別の研究開発活動の状況及び研究開発費の金額は以下のとおりであります。
+
+
+(1）クラウド事業
+
+当事業においては、クラウド技術の進展とお客様ニーズを見据え、クラウド化に対応するための既存製品力とサービス力強化のための研究開発に注力しました。
+当期の主な成果としては、資本業務提携先の㈱アイネットのクラウド基盤を活用した当社のサービス基盤「ユニリタクラウドサービス」の提供を開始し、クラウド型サービスデスク「LMIS」では、スマートフォン等のモバイル機器での操作性向上等を実現した最新版をリリースしました。
+
+当期におけるクラウド事業に係る研究開発費は284百万円であります。
+
+
+(2）プロダクト事業
+
+
+当事業においては既存の主力製品に新たな付加価値を追加するための研究開発を主に実施しました。
+
+
+当期の主な成果としては、システム運用自動化ツール「A-AUTO」と帳票管理ツール「DURL」の新バージョンのリリースや、データ活用ツール「Waha! Transformer」の機能拡充を図りました。
+
+
+当期におけるプロダクト事業に係る研究開発費は230百万円であります。
+
+
+(3）ソリューション事業
+
+
+当事業については、クラウド事業やプロダクト事業にて開発し、提供している製品・サービスに関連するコンサルティングや技術支援サービスを提供する事業であることから、研究開発活動は行っておらず、当該費用は発生しておりません。
+
+
+(4）メインフレーム事業
+
+
+当事業については、マーケットおよび製品が成熟しているなか、顧客ニーズを調査し、対象となるテーマを絞り込んだ研究開発を行っております。
+
+
+当期の主な成果としては、ホストコンピュータ端末エミュレータ「EXTES」の機能拡充を図りました。
+
+
+(5）システムインテグレーション事業
+
+
+当事業については、顧客企業からシステム構築に関する業務の受託を行う事業であることから、研究開発活動は行っておらず、当該費用は発生しておりません。
+
+ 
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+当連結会計年度（以下、当期）における研究開発費は535百万円（前期比51.7％増）となり、対売上高比率は5.3％（前期は3.5％）となりました。各セグメント別の研究開発活動の状況及び研究開発費の金額は以下のとおりであります。
+(1）クラウド事業
+当事業においては、お客様ニーズを見据え、サービス力強化のための研究開発に注力しました。
+当期の主な成果としては、「Growwwing」を開発し、サブスクリプションビジネスにおける「LTVの最大化」を実現するためのカスタマーサクセス活動を管理・支援するプラットフォームとして提供しました。
+当期におけるクラウド事業に係る研究開発費は124百万円であります。
+ 
+(2）プロダクト事業
+当事業においては既存の主力製品に新たな付加価値を追加するための研究開発を主に実施しました。
+当期の主な成果としては、「Waha! Transformer」の機能拡充、帳票ソリューション「XRF」のバージョンアップ、帳票管理ツール「DURL」の新バージョンのリリースとなります。
+当期におけるプロダクト事業に係る研究開発費は309百万円であります。
+(3）ソリューション事業
+当事業については、クラウド事業やプロダクト事業にて開発し、提供している製品・サービスに関連するコンサルティングや技術支援サービスを提供する事業であることから、研究開発活動は行っておらず、当該費用は発生しておりません。
+(4）メインフレーム事業
+当事業については、マーケットおよび製品が成熟しているなか、顧客ニーズを調査し、対象となるテーマを絞り込んだ研究開発を行っております。
+(5）システムインテグレーション事業
+当事業については、顧客企業からシステム構築に関する業務の受託を行う事業であることから、研究開発活動は行っておらず、当該費用は発生しておりません。
+(6）その他
+上記セグメントに属さない研究開発活費は94百万円であります。
+ 
+</div><h2>2021</h2><div>
+５ 【研究開発活動】当連結会計年度(以下、当期)における研究開発費は328百万円(前期比38.7％減)となり、対売上高比率は3.1％(前期は5.3％)となりました。各セグメント別の研究開発活動の状況及び研究開発費の金額は以下のとおりであります。
+(1) クラウドサービス事業当事業においては、お客様ニーズを見据え、サービス力強化のための研究開発に注力しました。当期の主な成果としては、「Waha! Transformer」の機能拡充、前期に引き続き「Growwwing」を開発し、サブスクリプションビジネスにおける「LTVの最大化」を実現するためのカスタマーサクセス活動を管理・支援するプラットフォームとして提供しました。当期におけるクラウド事業に係る研究開発費は172百万円であります。 
+(2) プロダクトサービス事業当事業においては既存の主力製品に新たな付加価値を追加するための研究開発を主に実施しました。当期の主な成果としては、「bindit」を開発し、SaaS型で提供されるアプリケーション同士の連携に特化した、ノーコードでアプリケーションの連携が自動化できるクラウドベースのiPaaSツールを開発しました。当期におけるプロダクト事業に係る研究開発費は25百万円であります。 (3) プロフェッショナルサービス事業当事業については、クラウドサービス事業やプロダクトサービス事業にて開発し、提供している製品・サービスに関連するコンサルティングや技術支援サービスを提供する事業であることから、研究開発活動は行っておらず、当該費用は発生しておりません。 
+(4) その他上記セグメントに属さない研究開発費は130百万円であります。 </div>
+</body>
+</html>

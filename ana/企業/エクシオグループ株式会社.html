@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2018,423727000000,28828000000.0,74634000000.0,186874000000.0],[2019,524574000000,18644394750.0,56724571500.0,174331250000.0],[2020,573339000000,14885341250.0,54665500000.0,172926500000.0],[2021,594840000000,16839280000.0,60103000000.0,179846000000.0],[2022,594840000000,37708000000.0,83873000000.0,158310000000.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2018,40333000000,951389000.0,3086451000.0,7918000000.0],[2019,15656000000,789313750.0,2314500000.0,7458000000.0],[2020,24585000000,652209000.0,2003000000.0,6961500000.0],[2021,28418000000,783216000.0,2106505000.0,7354000000.0],[2022,28418000000,1334394500.0,2686000000.0,5711500000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2018,416483000000,24506000000.0,64483000000.0,170267000000.0],[2019,444905000000,14489163750.0,52824500000.0,150633750000.0],[2020,491574000000,14476408500.0,53154921000.0,152369500000.0],[2021,535617000000,15975838000.0,60952000000.0,169621000000.0],[2022,535617000000,37572000000.0,91160000000.0,179649000000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2018,0.09518628739731005,0.031072925954035355,0.04161303855176716,0.06319902676296472],[2019,0.029845169604288433,0.028178067669523625,0.04059571508285559,0.05737225684500878],[2020,0.04288039013567889,0.03030438467669186,0.0441683828260139,0.05607611512859936],[2021,0.047774191379194406,0.029102847139656655,0.04053289942031933,0.05916380158074507],[2022,0.047774191379194406,0.023007689642939005,0.039577014168778825,0.052436240720858285],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2018,1.0173932669520724,0.9255580807185754,1.0999100978745782,1.286668754635347],[2019,1.1790696890347379,0.9259435944572808,1.1020887324943982,1.3033115108639235],[2020,1.1663330444653297,0.8202071972877718,1.0157665895829968,1.2387227108529704],[2021,1.1105696794537887,0.8194591659988107,1.0289774168992645,1.2068439911605475],[2022,1.1105696794537887,0.8337306423744932,0.9804584863190148,1.2217360018581536],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５【研究開発活動】
+当社グループは、品質・安全性・生産性の向上や成長事業の拡大などに関する技術開発・支援に取り組んでおり、当連結会計年度におけるセグメント別研究開発費は、エンジニアリングソリューション ８百万円、システムソリューション ６千６百万円、各セグメントに配分できない基礎研究費用 ５千７百万円となり、総額は１億３千２百万円であります。
+ 
+</div><h2>2018</h2><div>
+５【研究開発活動】
+当社グループは、品質・安全性・生産性の向上や成長事業の拡大などに関する技術開発・支援に取り組んでおり、当連結会計年度におけるセグメント別研究開発費は、協和エクシオグループ 97百万円、シーキューブグループ 18百万円、西部電気工業グループ11百万円、日本電通グループ33百万円となり、総額は160百万円であります。
+</div><h2>2019</h2><div>
+５【研究開発活動】
+当社グループは、品質・安全性・生産性の向上や成長事業の拡大などに関する技術開発・支援に取り組んでおり、当連結会計年度におけるセグメント別研究開発費は、協和エクシオグループ 83百万円、シーキューブグループ 122百万円、西部電気工業グループ25百万円、日本電通グループ35百万円となり、総額は266百万円であります。
+</div><h2>2020</h2><div>
+５【研究開発活動】
+当社グループは、品質・安全性・生産性の向上や成長事業の拡大などに関する技術開発・支援に取り組んでおり、当連結会計年度におけるセグメント別研究開発費は、協和エクシオグループ 110百万円、シーキューブグループ101百万円、西部電気工業グループ48百万円、日本電通グループ36百万円となり、総額は297百万円であります。
+</div><h2>2021</h2><div>
+５【研究開発活動】
+当社グループは、品質・安全性・生産性の向上や成長事業の拡大などに関する技術開発・支援に取り組んでおり、当連結会計年度におけるセグメント別研究開発費は、エクシオグループ 429百万円、シーキューブグループ141百万円、西部電気工業グループ32百万円、日本電通グループ33百万円となり、総額は637百万円であります。
+</div><h2>2022</h2><div>
+５【研究開発活動】
+当社グループは、品質・安全性・生産性の向上や成長事業の拡大などに関する技術開発・支援に取り組んでおり、当連結会計年度におけるセグメント別研究開発費は、エクシオグループ 429百万円、シーキューブグループ141百万円、西部電気工業グループ32百万円、日本電通グループ33百万円となり、総額は637百万円であります。
+</div>
+</body>
+</html>

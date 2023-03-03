@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2016,16841610000,2269122000.0,4507630000.0,8797186500.0],[2018,17133935000,3037116500.0,8593534000.0,26552707000.0],[2020,18174427000,2617526000.0,6525920000.0,20868118000.0],[2022,18174427000,2546049000.0,5562488500.0,17786584750.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2016,1614346000,765140250.0,999508500.0,1270738750.0],[2018,1464134000,228386500.0,578979000.0,1692422500.0],[2020,1515955000,227411000.0,583122000.0,1569382000.0],[2022,1515955000,173898000.0,381498000.0,1122213250.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2016,18824496000,2098270750.0,5056286500.0,10262037000.0],[2018,20861229000,3175141500.0,8093000000.0,24401691500.0],[2020,21606156000,3119784000.0,7470900000.0,23359865000.0],[2022,21606156000,2663318500.0,6166607500.0,17227721000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2016,0.09585461247469808,0.16575454353339647,0.2398626711750075,0.5700789730505555],[2018,0.08545229102363235,0.03877421033147174,0.06133828996282528,0.1193959476792288],[2020,0.08341143299868546,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2022,0.08341143299868546,0.03967641512587309,0.06586391788145754,0.12112679120949958],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2016,0.894664590223292,0.7688518917765533,1.1244332498956011,1.5809393451300653],[2018,0.8213291268697545,0.6667319029191288,0.9877678356794964,1.4165269135225755],[2020,0.8411689242639921,0.5965235769806071,0.9009308170378753,1.310139405285049],[2022,0.8411689242639921,0.588049747991468,0.9378736161788688,1.4148965093543149],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2016</h2><div>
+ 
+６ 【研究開発活動】
+当連結会計年度における研究開発費の総額は、7,965千円であります。事業別の主な取り組みおよび成果は以下のとおりであります。
+ 
+（ソフトウエア開発事業）
+当事業を中心に展開する当社においては、様々な新技術が提唱される中で、その時点時点での技術的限界を見極め、最適なシステム構築技術を顧客にサービスすべく、製造現場に根ざした技術ニーズおよび技術動向を把握した技術の改善と革新に重点を置き、研究を実施しております。
+なお、当事業に係る研究開発費は、7,965千円であります。
+ 
+(1) 技術研究
+生産性の向上に有効な生産管理手法や開発環境の改善、革新を目的として、次の研究を実施しております。
+① 定量管理運用における予実分析評価方式の改良
+② 検収条件の確立のためのテストの考え方とテスト量計測方式の改良
+③ 開発工程定義の改良
+④ 改造型開発における見積方式の改良
+⑤ 基本設計およびシステムテストでの問題発見方法の改善
+ 
+(2) 技術情報収集
+オープンシステム化、ネットワーク化、分散システム化に対応すべき技術を整理し、広域の技術動向について、その傾向を情報収集し、製造現場へ情報を提供します。
+ 
+（システム販売事業）
+該当事項はありません。
+ </div><h2>2018</h2><div> 
+５ 【研究開発活動】当事業年度における研究開発費の総額は、4,392千円であります。当社の主な取り組みおよび成果は以下のとおりであります。 当社においては、様々な新技術が提唱される中で、その時点時点での技術的限界を見極め、最適なシステム構築技術を顧客にサービスすべく、製造現場に根ざした技術ニーズおよび技術動向を把握した技術の改善と革新に重点を置き、研究を実施しております。 (1) 技術研究生産性の向上に有効な生産管理手法や開発環境の改善、革新を目的として、次の研究を実施しております。① 定量管理方式の適用（改造型見積方式、リスク管理、テスト論、および工事進行基準の適用も含む）② 業務分掌規程の刷新③ 顧客打ち合わせ（審議内容）の標準化④ 工程定義の再定義⑤ 検収条件の確立⑥ 売上および請求管理の方式化⑦ 原価管理の方式化⑧ チーム力のモデル化⑨ リソースアロケーション⑩ 当社として戦略的に取り組みたい顧客の選定および開拓方法⑪ AI、IoTのモデル化および提案書作成⑫ 海外仕入れ販売　テーマの選定および業者の選定⑬ 目標管理の導入 (2) 技術情報収集オープンシステム化、ネットワーク化、分散システム化に対応すべき技術を整理し、広域の技術動向について、その傾向を情報収集し、製造現場へ情報を提供します。 </div><h2>2020</h2><div> 
+５ 【研究開発活動】当事業年度における研究開発費の総額は、9,008千円であります。当社の主な取り組みおよび成果は以下のとおりであります。 当社においては、様々な新技術が提唱される中で、その時点時点での技術的限界を見極め、最適なシステム構築技術を顧客にサービスすべく、製造現場に根ざした技術ニーズおよび技術動向を把握した技術の改善と革新に重点を置き、研究を実施しております。 (1) 技術研究生産性の向上に有効な生産管理手法や開発環境の改善、革新を目的として、次の研究を実施しております。① 定量管理方式の適用(改造型見積方式、リスク管理、テスト論、および工事進行基準の適用も含む)② 業務分掌規程の刷新③ 顧客打ち合わせ(審議内容)の標準化④ 工程定義の再定義⑤ 検収条件の確立⑥ 売上および請求管理の方式化⑦ 原価管理の方式化⑧ チーム力のモデル化⑨ リソースアロケーション⑩ AI、IoTのモデル化および提案書作成⑪ 海外仕入れ販売　テーマの選定および業者の選定 (2) 技術情報収集オープンシステム化、ネットワーク化、分散システム化に対応すべき技術を整理し、広域の技術動向について、その傾向を情報収集し、製造現場へ情報を提供するとともに技術教育の機会を創出します。 </div><h2>2022</h2><div> 
+５ 【研究開発活動】当事業年度における研究開発費の総額は、9,008千円であります。当社の主な取り組みおよび成果は以下のとおりであります。 当社においては、様々な新技術が提唱される中で、その時点時点での技術的限界を見極め、最適なシステム構築技術を顧客にサービスすべく、製造現場に根ざした技術ニーズおよび技術動向を把握した技術の改善と革新に重点を置き、研究を実施しております。 (1) 技術研究生産性の向上に有効な生産管理手法や開発環境の改善、革新を目的として、次の研究を実施しております。① 定量管理方式の適用(改造型見積方式、リスク管理、テスト論、および工事進行基準の適用も含む)② 業務分掌規程の刷新③ 顧客打ち合わせ(審議内容)の標準化④ 工程定義の再定義⑤ 検収条件の確立⑥ 売上および請求管理の方式化⑦ 原価管理の方式化⑧ チーム力のモデル化⑨ リソースアロケーション⑩ AI、IoTのモデル化および提案書作成⑪ 海外仕入れ販売　テーマの選定および業者の選定 (2) 技術情報収集オープンシステム化、ネットワーク化、分散システム化に対応すべき技術を整理し、広域の技術動向について、その傾向を情報収集し、製造現場へ情報を提供するとともに技術教育の機会を創出します。 </div>
+</body>
+</html>

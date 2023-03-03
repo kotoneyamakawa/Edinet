@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,10894640000,19019000000.0,52629034000.0,149649000000.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,430087000,861545000.0,2307000000.0,6546000000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,10565014000,17175987000.0,48142000000.0,138696000000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.039476935447155664,0.030924349441835856,0.039577014168778825,0.058677855219082094],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,1.0311997693519384,0.893641596175952,1.12094166304527,1.2909456612246364],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+ 
+５ 【研究開発活動】
+平成29年度の建設業界におきましては、建設投資額はピーク時の平成４年度から比べると約35％減の55兆円となる見通しです。ただ微増ながら前年を上回っておりここ数年政府、民間投資共堅調に推移しております。ただし建設許可業者、就業者数共減少傾向にあります。また働き方改革により近々現場における実作業時間も減らさざるを得ないのが現状であります。
+このような状況下において、効率的な施工や品質の確保など顧客のニーズと合致する技術の開発がより重要になっております。現在地盤に関する様々な保有技術をもとに、施工の効率化や品質の見える化、機械化による作業の省力化など、差別化が図れる技術の研究開発および事業化に取り組んでおります。　なお、研究開発の手法としましては社外機関との共同研究開発に重点を置いております。　当連結会計年度における当社グループが支出した研究開発費の総額は１億33百万円となっております。 
+(1）国の機関との共同研究
+当社の基幹技術であるコンパクショングラウチング工法に関しては、平成13年度より国立大学および独立行政法人港湾空港技術研究所との共同研究に着手し、これまで静的締固めメカニズムの解明、改良効果の確認・理論解析を行ってまいりました。平成23年度からは、改良効果の向上ならびに新たなコンパクショングラウチング工法に関する研究を実施しております。 
+(2) 民間企業との共同研究
+民間企業との共同研究開発により実用化したV-JET工法に関しては、平成23年度の実用化後も施工技術の改良や品質管理手法の開発などを継続して実施しており、工法の完成度アップと新たな形状の改良体の開発・実用化により適用範囲の拡大を図っております。
+ 
+(3) 海外技術との連携
+米国、欧州および東南アジアの契約エージェントを通じてタイムリーに情報収集・発信を行い、海外技術の導入および自社技術の海外展開に取り組んでおります。
+ 
+(4) 特許関係
+新規特許の出願および保有特許の維持管理を行い、当社グループにおける現在有効で実用可能な特許・実用新案は100件となっております。 </div>
+</body>
+</html>

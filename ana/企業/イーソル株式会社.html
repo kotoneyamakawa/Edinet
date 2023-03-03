@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2019,9644996000,2850965500.0,6729846000.0,20747120250.0],[2020,9042716000,2617526000.0,6525920000.0,20868118000.0],[2021,8937872000,2652336500.0,6505502500.0,19927118500.0],[2022,8937872000,2546049000.0,5562488500.0,17786584750.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2019,659326000,222781750.0,543709500.0,1308375750.0],[2020,676285000,227411000.0,583122000.0,1569382000.0],[2021,200702000,217422750.0,573529000.0,1656336000.0],[2022,200702000,173898000.0,381498000.0,1122213250.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2019,6686718000,3104853250.0,7586630500.0,22460925250.0],[2020,7470900000,3119784000.0,7470900000.0,23359865000.0],[2021,7284029000,3000754500.0,7803625500.0,24362483000.0],[2022,7284029000,2663318500.0,6166607500.0,17227721000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2019,0.06835938553007176,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.07478781817321256,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.022455233191972318,0.04391320201867674,0.07714890633224092,0.13271258411378287],[2022,0.022455233191972318,0.03967641512587309,0.06586391788145754,0.12112679120949958],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2019,1.4424110602540738,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,1.2103917867994485,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,1.2270505787387722,0.5833868969965725,0.9166717213573184,1.2857667064817404],[2022,1.2270505787387722,0.588049747991468,0.9378736161788688,1.4148965093543149],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2019</h2><div>
+５【研究開発活動】
+
+当社グループは、IoTなどコンピュータ技術の著しい進化に追随するため、積極的に研究開発を進めております。
+
+
+現在の研究開発は、当社の技術本部を中心に担当し、当連結会計年度の研究開発費の総額は551百万円となっております。
+
+ 
+
+（１）組込みソフトウエア事業
+
+当セグメントの研究開発は、主に以下のような技術開発に向けて実施し、551百万円の研究開発費を計上しております。
+① AUTOSAR　OSの開発
+
+先進運転支援や自動運転、コネクテッドカーなど電子化の著しい次世代のスマートモビリティの実現に向け、車載ソフトウエアのプラットフォームとしてのAUTOSAR規格に準拠した車載向けソフトウエアプラットフォームの開発を継続しております。
+ 
+② eMCOS／eMBPの開発
+コンピュータの頭脳としてのCPUを複数搭載したコンピュータシステム向けのOSの開発を行ってまいりました。コンピュータの性能向上技術としては、CPUを駆動するための周波数を早くするという手法が今まで一般的でしたが、現在ではその手法は限界に達しており、２－４個程度のCPUを搭載する手法が主流となっており、今後はこのCPUの数をより多く搭載することが考えられております。搭載されたCPUの数が多くなると、従来とは異なった設計を行ったRTOSが必要となりますが、eMCOSはマルチコアからメニーコアまでをスケーラブルに対応可能なRTOSであります。当連結会計年度では、eMCOSをより利用しやすくするため、世界的に利用されているLinux上で動作するソフトウエア資産の流用を可能にする改修や車載システムへの適応が可能なAUTOSAR向けの対応を継続しております。また、マルチコア／メニーコア用の設計ツールeMBPの開発も継続しております。
+ 
+
+③ 自動車向けAI応用技術eBRADの研究
+
+
+自動車事故の低減や安全で快適な自動車の実現に、AI技術は不可欠であると考えております。当社では運転者個々の運転行動特性を学習してパーソナルな自動運転の判断モデルを生成するAIフレームワークeBRADの開発を行っております。この技術により、運転者や同乗者に違和感のない挙動と安心感を与えることが可能になると考えております。
+
+ 
+
+④ 国立研究開発法人新エネルギー・産業技術総合開発機構（NEDO）向け開発
+
+
+NEDOより採択された「高効率・高速処理を可能とするAIチップ・次世代コンピューティングの技術開発」に係るプラットフォームの開発を継続しております。
+
+ 
+
+（２）センシングソリューション事業
+
+
+該当事項はありません。
+
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+
+当社グループは、IoTなどコンピュータ技術の著しい進化に追随するため、積極的に研究開発を進めております。
+
+
+現在の研究開発は、当社の技術本部を中心に担当し、当連結会計年度の研究開発費の総額は860百万円となっております。
+
+ 
+
+（１）組込みソフトウエア事業
+
+当セグメントの研究開発は、主に以下のような技術開発に向けて実施し、860百万円の研究開発費を計上しております。
+① AUTOSAR　OSの開発
+
+先進運転支援や自動運転、コネクテッドカーなど電子化の著しい次世代のスマートモビリティの実現に向け、車載ソフトウエアのプラットフォームとしてのAUTOSAR規格に準拠した車載向けソフトウエアプラットフォームの開発を行っております。
+ 
+② eMCOS／eMBPの開発
+
+コンピュータの頭脳としてのCPUを複数搭載したコンピュータシステム向けのOSの開発を継続しております。コンピュータの性能向上技術としては、CPUを駆動するための周波数を早くするという手法が今まで一般的でしたが、現在では、複数のCPUを搭載する手法が主流となっており、今後はより多くのCPUが搭載されていくと考えられます。CPUの数が多くなると、新たな設計によるRTOSが必要となりますが、eMCOSはマルチコアからメニーコアまでスケーラブルな対応が可能となるよう設計されたRTOSであります。さらに、RTOS上のアプリケーションと、汎用のOS上のアプリケーションを同時に実行し、両者の統合をはかる技術の開発も進めております。また、マルチコア／メニーコア用の設計ツールeMBPの開発や標準化活動も継続しております。
+
+ 
+
+③ 自動車向けAI応用技術eBRADの研究
+
+
+自動車事故の低減や安全で快適な自動車の実現に、AI技術は不可欠であると考えております。当社では運転者個々の運転行動特性を学習してパーソナルな自動運転の判断モデルを生成するAIフレームワークeBRADの開発を行っております。この技術により、運転者や同乗者に違和感のない挙動と安心感を与えることが可能になると考えております。
+
+ 
+
+④ 国立研究開発法人新エネルギー・産業技術総合開発機構（NEDO）向け開発
+
+
+NEDOより採択された「高効率・高速処理を可能とするAIチップ・次世代コンピューティングの技術開発」に係るプラットフォームの開発を継続しております。
+
+ 
+
+（２）センシングソリューション事業
+
+
+該当事項はありません。
+
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+当社グループは、IoT等、コンピュータ技術の著しい進化に追随するため、積極的に研究開発を進めております。
+現在の研究開発は、当社の技術本部を中心に担当し、当連結会計年度の研究開発費の総額は1,125百万円となっております。
+ 
+（１）組込みソフトウェア事業
+当セグメントの研究開発は、主に以下のような技術開発に向けて実施し、1,125百万円の研究開発費を計上しております。
+① AUTOSAR　OSの開発
+先進運転支援や自動運転、コネクテッドカー等、電子化の著しい次世代のスマートモビリティの実現に向け、車載ソフトウェアのプラットフォームとしてのAUTOSAR規格に準拠した車載向けソフトウェアプラットフォームの開発を行っております。
+ 
+② eMCOS／eMBPの開発
+コンピュータの頭脳としてのCPUを複数搭載したコンピュータシステム向けのOSの開発を継続しております。コンピュータの性能向上技術としては、CPUを駆動するための周波数を早くするという手法が今まで一般的でしたが、現在では、複数のCPUを搭載する手法が主流となっており、今後はより多くのCPUが搭載されていくと考えられます。CPUの数が多くなると、新たな設計によるRTOSが必要となりますが、eMCOSはマルチコアからメニーコアまでスケーラブルな対応が可能となるよう設計されたRTOSであります。さらに、RTOS上のアプリケーションと、汎用のOS上のアプリケーションを同時に実行し、両者の統合をはかる技術の開発も進めております。また、マルチコア／メニーコア用の設計ツールeMBPの開発や標準化活動も継続しております。
+ 
+③ 自動車向けAI応用技術eBRADの研究
+自動車事故の低減や安全で快適な自動車の実現に、AI技術は不可欠であると考えております。当社では運転者個々の運転行動特性を学習してパーソナルな自動運転の判断モデルを生成するAIフレームワークeBRADの開発を行っております。この技術により、運転者や同乗者に違和感のない挙動と安心感を与えることが可能になると考えております。
+ 
+④ 国立研究開発法人新エネルギー・産業技術総合開発機構（NEDO）向け開発
+NEDOより採択された「高効率・高速処理を可能とするAIチップ・次世代コンピューティングの技術開発」に係るプラットフォームの開発を継続しております。
+ 
+（２）センシングソリューション事業
+該当事項はありません。
+ 
+</div><h2>2022</h2><div>
+５【研究開発活動】
+当社グループは、IoT等、コンピュータ技術の著しい進化に追随するため、積極的に研究開発を進めております。
+現在の研究開発は、当社の技術本部を中心に担当し、当連結会計年度の研究開発費の総額は1,125百万円となっております。
+ 
+（１）組込みソフトウェア事業
+当セグメントの研究開発は、主に以下のような技術開発に向けて実施し、1,125百万円の研究開発費を計上しております。
+① AUTOSAR　OSの開発
+先進運転支援や自動運転、コネクテッドカー等、電子化の著しい次世代のスマートモビリティの実現に向け、車載ソフトウェアのプラットフォームとしてのAUTOSAR規格に準拠した車載向けソフトウェアプラットフォームの開発を行っております。
+ 
+② eMCOS／eMBPの開発
+コンピュータの頭脳としてのCPUを複数搭載したコンピュータシステム向けのOSの開発を継続しております。コンピュータの性能向上技術としては、CPUを駆動するための周波数を早くするという手法が今まで一般的でしたが、現在では、複数のCPUを搭載する手法が主流となっており、今後はより多くのCPUが搭載されていくと考えられます。CPUの数が多くなると、新たな設計によるRTOSが必要となりますが、eMCOSはマルチコアからメニーコアまでスケーラブルな対応が可能となるよう設計されたRTOSであります。さらに、RTOS上のアプリケーションと、汎用のOS上のアプリケーションを同時に実行し、両者の統合をはかる技術の開発も進めております。また、マルチコア／メニーコア用の設計ツールeMBPの開発や標準化活動も継続しております。
+ 
+③ 自動車向けAI応用技術eBRADの研究
+自動車事故の低減や安全で快適な自動車の実現に、AI技術は不可欠であると考えております。当社では運転者個々の運転行動特性を学習してパーソナルな自動運転の判断モデルを生成するAIフレームワークeBRADの開発を行っております。この技術により、運転者や同乗者に違和感のない挙動と安心感を与えることが可能になると考えております。
+ 
+④ 国立研究開発法人新エネルギー・産業技術総合開発機構（NEDO）向け開発
+NEDOより採択された「高効率・高速処理を可能とするAIチップ・次世代コンピューティングの技術開発」に係るプラットフォームの開発を継続しております。
+ 
+（２）センシングソリューション事業
+該当事項はありません。
+ 
+</div>
+</body>
+</html>

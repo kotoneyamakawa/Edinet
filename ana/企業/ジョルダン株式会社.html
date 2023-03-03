@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,4005648000,2742939000.0,7174986000.0,19368338500.0],[2019,3474514000,2850965500.0,6729846000.0,20747120250.0],[2020,2913855000,2617526000.0,6525920000.0,20868118000.0],[2021,2651761000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,132581000,246323000.0,508480000.0,1285449000.0],[2019,80662000,222781750.0,543709500.0,1308375750.0],[2020,149988000,227411000.0,583122000.0,1569382000.0],[2021,133864000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,5559880000,3028000000.0,6976213000.0,20664790000.0],[2019,5501397000,3104853250.0,7586630500.0,22460925250.0],[2020,5655879000,3119784000.0,7470900000.0,23359865000.0],[2021,5822041000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.033098514896965484,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.023215333137238763,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.05147407815419779,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.050481170814413515,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.720455837176342,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,0.6315693995543313,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.5151904770239958,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.4554693105046838,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div> 
+５ 【研究開発活動】当社グループは、技術革新、業界標準及び顧客ニーズの変化、新技術及び新サービスの登場等が激しいICT業界において、主に事業を展開しております。その中で、新しい技術への対応を行い、競争力を確保するため、的確かつ効率的な研究開発活動を経常的に行うよう努めております。当連結会計年度の研究開発活動は主に、企画営業本部、研究開発部及び当社からの委託により連結子会社のゼストプロ株式会社にて行ってまいりました。さらに、シナジー効果の活用を図るため、必要に応じプロジェクトチームを編成し、研究開発活動を行ってまいりました。その結果、研究開発費の総額は、48,110千円となりました。 セグメントごとの研究開発活動を示すと、次のとおりであります。 乗換案内事業モバイル端末向けの移動に関するナビゲーションサービスやスポット情報等の機能について、前連結会計年度に引き続き研究開発を進めてまいりました。また、ハードウエアを含めたバスロケーションシステムについての研究開発を行い、販売開始に至っております。上記の研究開発活動等の結果、乗換案内事業セグメントにおける研究開発費は39,047千円となりました。 マルチメディア事業マルチメディア事業セグメントにおける研究開発活動はありませんでした。 その他「ライフスタイルを大きく変えるサービス」の提供の一環として、新しいサービスの研究開発を進めております。上記の研究開発活動等の結果、その他セグメントにおける研究開発費は9,063千円となりました。 </div><h2>2019</h2><div> 
+５ 【研究開発活動】当社グループは、技術革新、業界標準及び顧客ニーズの変化、新技術及び新サービスの登場等が激しいICT業界において、主に事業を展開しております。その中で、新しい技術への対応を行い、競争力を確保するため、的確かつ効率的な研究開発活動を経常的に行うよう努めております。当連結会計年度の研究開発活動は主に、法人本部、研究開発部、連結子会社のゼストプロ株式会社並びに当社からの委託により連結子会社のイーツアー株式会社にて行ってまいりました。さらに、シナジー効果の活用を図るため、必要に応じプロジェクトチームを編成し、研究開発活動を行ってまいりました。その結果、研究開発費の総額は、65,948千円となりました。 セグメントごとの研究開発活動を示すと、次のとおりであります。 乗換案内事業MaaSの実現に向けた交通機関との連携機能や、「withコロナ社会」の混雑を避けた移動をサポートする機能等について研究開発を進め、スマートフォン向けの「乗換案内」アプリケーションへの搭載を行いました。また、MaaSにおけるモバイルチケットの新機能、マルチモーダル経路検索プラットフォーム「JRD-COMPASS」、公共交通機関のデータを集約し配信する「公共交通HUBシステム」等についても研究開発を行い、いずれも提供開始に至っております。その他、位置や移動に関する新しいサービス等の研究開発を行っております。上記の研究開発活動等の結果、乗換案内事業セグメントにおける研究開発費は51,924千円となりました。 マルチメディア事業新しいエンターテイメントコンテンツについて研究開発を進めております。上記の研究開発活動等の結果、マルチメディア事業セグメントにおける研究開発費は92千円となりました。 その他「ライフスタイルを大きく変えるサービス」の提供の一環として、新しいサービスやハードウエアの研究開発を進めてまいりました。商品棚とデジタルサイネージを併設した次世代型店舗「QRECS」について、提供開始に至っております。上記の研究開発活動等の結果、その他セグメントにおける研究開発費は13,932千円となりました。 </div><h2>2020</h2><div> 
+５ 【研究開発活動】当社グループは、技術革新、業界標準及び顧客ニーズの変化、新技術及び新サービスの登場等が激しいICT業界において、主に事業を展開しております。その中で、新しい技術への対応を行い、競争力を確保するため、的確かつ効率的な研究開発活動を経常的に行うよう努めております。当連結会計年度の研究開発活動は主に、法人本部、研究開発部、開発推進部、システム部、マーケティング部、連結子会社のゼストプロ株式会社並びに当社からの委託により連結子会社の若尓丹(上海)軟件開發有限公司にて行ってまいりました。さらに、シナジー効果の活用を図るため、必要に応じプロジェクトチームを編成し、研究開発活動を行ってまいりました。その結果、研究開発費の総額は、71,114千円となりました。 セグメントごとの研究開発活動を示すと、次のとおりであります。 乗換案内事業MaaSにおけるモバイルチケットの新機能、オフィスと従業員の配置・コスト管理を行うサテライトオフィスシミュレータ「JRD-RELOCATE」、新たな企業の移動スタイルに対応する新旅費精算システム「JRD-SmartAssist」、「Alipay」上で利用可能な中国語対応「乗換案内」ミニアプリ、メニュー閲覧・注文・決済・配膳までできる電子メニュークラウドサービス「スマートオーダー」等について研究開発を行い、いずれも提供開始に至っております。また、相乗りタクシーサービス等についても研究開発を進め、実証実験を行いました。その他、位置や移動に関する新しいサービス等の研究開発を行っております。上記の研究開発活動等の結果、乗換案内事業セグメントにおける研究開発費は61,762千円となりました。 マルチメディア事業マルチメディア事業セグメントにおける研究開発活動はありませんでした。 その他「ライフスタイルを大きく変えるサービス」の提供の一環として、新しいサービスの研究開発を進めてまいりました。上記の研究開発活動等の結果、その他セグメントにおける研究開発費は9,352千円となりました。 </div><h2>2021</h2><div> 
+５ 【研究開発活動】当社グループは、技術革新、業界標準及び顧客ニーズの変化、新技術及び新サービスの登場等が激しいICT業界において、主に事業を展開しております。その中で、新しい技術への対応を行い、競争力を確保するため、的確かつ効率的な研究開発活動を経常的に行うよう努めております。当連結会計年度の研究開発活動は主に、営業本部、開発本部並びに当社からの委託により連結子会社のゼストプロ株式会社及び株式会社ジェイフロンティアにて行ってまいりました。さらに、シナジー効果の活用を図るため、必要に応じプロジェクトチームを編成し、研究開発活動を行ってまいりました。その結果、研究開発費の総額は、116,674千円となりました。 セグメントごとの研究開発活動を示すと、次のとおりであります。 乗換案内事業MaaSにおけるモバイルチケットの新機能、MaaS事業者のためのプラットフォーム、交通機関向けのMaaS関連システム等について研究開発を行いました。また、相乗りタクシーサービス等についても研究開発を進め、実証実験を行いました。その他、位置や移動に関する新しいサービス等の研究開発を行っております。上記の研究開発活動等の結果、乗換案内事業セグメントにおける研究開発費は111,288千円となりました。 マルチメディア事業マルチメディア事業セグメントにおける研究開発活動はありませんでした。 ソフトウエア事業「ライフスタイルを大きく変えるサービス」の提供の一環として、新しいサービスの研究開発を進めてまいりました。上記の研究開発活動等の結果、ソフトウエア事業セグメントにおける研究開発費は5,386千円となりました。 ハードウエア事業ハードウエア事業セグメントにおける研究開発活動はありませんでした。 その他その他セグメントにおける研究開発活動はありませんでした。 </div>
+</body>
+</html>

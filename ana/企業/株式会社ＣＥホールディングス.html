@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,9046572000,2742939000.0,7174986000.0,19368338500.0],[2019,10603887000,2850965500.0,6729846000.0,20747120250.0],[2020,12284597000,2617526000.0,6525920000.0,20868118000.0],[2021,13702572000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,344017000,246323000.0,508480000.0,1285449000.0],[2019,173479000,222781750.0,543709500.0,1308375750.0],[2020,722187000,227411000.0,583122000.0,1569382000.0],[2021,682652000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,7018506000,3028000000.0,6976213000.0,20664790000.0],[2019,8858089000,3104853250.0,7586630500.0,22460925250.0],[2020,9459079000,3119784000.0,7470900000.0,23359865000.0],[2021,10905398000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.03802733234201861,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.016359944235543062,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.0587880090816166,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.04981926020895931,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,1.2889597871683802,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,1.1970851726597012,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,1.298709631244226,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,1.2564944443109733,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５【研究開発活動】
+
+　当社グループは医療に関わる様々なニーズに応えるべく、医療システム事業において、主力である電子カルテシステムの製品価値向上に向けた最新技術の導入や新規システムの開発に取り組んでおります。
+
+
+　現在の研究開発体制は、主として、システム開発部門が中心となり、グループ内で横断的なプロジェクトチームを編成しております。
+
+
+　医療システム事業における当連結会計年度の主な研究開発活動は、主力製品である電子カルテシステムの標準化や今後の事業領域拡大を見据えた活動を行ってまいりました。
+
+
+　当連結会計年度の研究開発費の総額は14百万円であります。
+
+ 
+</div><h2>2019</h2><div>
+５【研究開発活動】
+
+　当社グループは医療に関わる様々なニーズに応えるべく、医療ソリューション事業において、主力である電子カルテシステムの製品価値向上に向けた最新技術の導入や新規システムの開発に取り組んでおります。
+
+
+　現在の研究開発体制は、主として、システム開発部門が中心となり、グループ内で横断的なプロジェクトチームを編成しております。
+
+
+　医療ソリューション事業における当連結会計年度の主な研究開発活動は、主力製品である電子カルテシステムの標準化や今後の事業領域拡大を見据えた活動を行ってまいりました。
+
+
+　当連結会計年度の研究開発費の総額は45百万円であります。
+
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+　当社グループは医療に関わる様々なニーズに応えるべく、医療ソリューション事業において、主力である電子カルテシステムの製品価値向上に向けた最新技術の導入や新規システムの開発に取り組んでおります。
+　現在の研究開発体制は、複数の連結子会社が中心となり、新製品の開発及び既存製品の改良に取り組んでおります。
+　医療ソリューション事業における当連結会計年度の主な研究開発活動は、主力製品である電子カルテシステムとの連携可能な問診サービス「かかりんＤＸ問診」関連の開発を中心に行ってまいりました。
+　当連結会計年度の研究開発費の総額は147百万円であります。
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+　当社グループは医療に関わる様々なニーズに応えるべく、医療ソリューション事業において、主力である電子カルテシステムの製品価値向上に向けた最新技術の導入や新規システムの開発に取り組んでおります。
+　現在の研究開発体制は、複数の連結子会社が中心となり、新製品の開発及び既存製品の改良に取り組んでおります。
+　医療ソリューション事業における当連結会計年度の主な研究開発活動は、主力製品である電子カルテシステムとの連携可能な問診サービスの開発を中心に行ってまいりました。
+　当連結会計年度の研究開発費の総額は178百万円であります。
+ 
+</div>
+</body>
+</html>

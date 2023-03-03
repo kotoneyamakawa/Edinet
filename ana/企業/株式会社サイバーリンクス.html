@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,9615314000,2742939000.0,7174986000.0,19368338500.0],[2019,10449702000,2850965500.0,6729846000.0,20747120250.0],[2020,12777704000,2617526000.0,6525920000.0,20868118000.0],[2021,13241045000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,251549000,246323000.0,508480000.0,1285449000.0],[2019,282579000,222781750.0,543709500.0,1308375750.0],[2020,1569382000,227411000.0,583122000.0,1569382000.0],[2021,645266000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,5786943000,3028000000.0,6976213000.0,20664790000.0],[2019,9638508000,3104853250.0,7586630500.0,22460925250.0],[2020,10293228000,3119784000.0,7470900000.0,23359865000.0],[2021,10140834000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.026161288128500014,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.02704182377641008,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.12282190916302334,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.04873225640423395,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,1.6615532587758337,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,1.0841617810557402,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,1.2413699570241716,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,1.3057155851284026,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+６ 【研究開発活動】
+当社は、急激に変化するビジネス環境において、顧客ニーズへの対応、顧客の企業活動の価値向上及び競合他社に対する優位性確保を目的に、急速に拡大しつつあるクラウドサービスへの対応を中心に、ＩＴクラウド事業において既存サービスの改善、新規サービスの開発、最新技術の調査・研究等の研究開発活動を行っております。なお、研究開発費としては、調査目的等で購入するハードウェア及びソフトウェア等が計上されております。
+当事業年度における研究開発費は、新サービスの開発等により、総額は15,491千円であります。</div><h2>2019</h2><div>
+５ 【研究開発活動】当社グループは、急激に変化するビジネス環境において、顧客ニーズへの対応、顧客の企業活動の価値向上及び競合他社に対する優位性確保を目的に、ＩＴクラウド事業において既存サービスの改善、新規サービスの開発、最新技術の調査・研究等の研究開発活動を行っております。なお、研究開発費としては、調査目的等で購入するハードウェア及びソフトウェア等が計上されております。当連結会計年度における研究開発費は、新サービスの開発等により、総額は38,422千円であります。</div><h2>2020</h2><div>
+５ 【研究開発活動】当社グループは、急激に変化するビジネス環境において、顧客ニーズへの対応、顧客の企業活動の価値向上及び競合他社に対する優位性確保を目的に、ＩＴクラウド事業において既存サービスの改善、新規サービスの開発、最新技術の調査・研究等の研究開発活動を行っております。なお、研究開発費としては、調査目的等で購入するハードウェア及びソフトウェア等が計上されております。当連結会計年度における研究開発費は、新サービスの開発等により、総額は120,791千円であります。</div><h2>2021</h2><div>
+５ 【研究開発活動】当社グループは、急激に変化するビジネス環境において、顧客ニーズへの対応、顧客の企業活動の価値向上及び競合他社に対する優位性確保を目的に、流通クラウド、官公庁クラウド、トラスト事業において既存サービスの改善、新規サービスの開発、最新技術の調査・研究等の研究開発活動を行っております。なお、研究開発費としては、新サービスの取得費用、開発費用、調査目的等で購入するハードウェア及びソフトウェア等が計上されております。当連結会計年度における研究開発費は、新サービスの開発等により、総額は316,285千円であります。</div>
+</body>
+</html>

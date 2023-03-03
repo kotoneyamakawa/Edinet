@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,80991000000,2742939000.0,7174986000.0,19368338500.0],[2018,81986000000,3037116500.0,8593534000.0,26552707000.0],[2019,82937000000,2850965500.0,6729846000.0,20747120250.0],[2020,78344000000,2617526000.0,6525920000.0,20868118000.0],[2021,85100000000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,3037000000,246323000.0,508480000.0,1285449000.0],[2018,3773000000,228386500.0,578979000.0,1692422500.0],[2019,2099000000,222781750.0,543709500.0,1308375750.0],[2020,2253000000,227411000.0,583122000.0,1569382000.0],[2021,6299000000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,102680000000,3028000000.0,6976213000.0,20664790000.0],[2018,107788000000,3175141500.0,8093000000.0,24401691500.0],[2019,114786000000,3104853250.0,7586630500.0,22460925250.0],[2020,119079000000,3119784000.0,7470900000.0,23359865000.0],[2021,123788000000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.037497993604227634,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2018,0.046020052204034836,0.03877421033147174,0.06133828996282528,0.1193959476792288],[2019,0.02530836659150922,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.028757786173797612,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.07401880141010576,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.7887709388391118,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2018,0.7606227038260289,0.6667319029191288,0.9877678356794964,1.4165269135225755],[2019,0.7225358493196035,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.657916173296719,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.6874656671082819,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2018</h2><div>
+５ 【研究開発活動】当社は、認定放送持株会社として、グループ各社の研究開発活動をサポートします。各社の活動としては、以下のようなものがありました。 ①　朝日放送テレビにおいては、高校野球中継などで４Ｋ中継の実験的放送、収録に取り組み、将来的な４Ｋ放送にむけての技術的な知見を深めました。また、Ｍ－１グランプリのような視聴率の高い番組をキーに、テレビの視聴ログを取得し活用する検証実験を行い、視聴者に求められるコンテンツの可能性を探るなどの取り組みも進めました。②　ＡＢＣフロンティアホールディングスにおいては、株式会社Viibarと共同で出資・運営する動画サービスONNELA（オンネラ） のテストサービスを開始し、ＳＮＳ配信から将来的には放送番組やＥコマースなどに領域を拡大すべく調査・探究を進めました。</div><h2>2019</h2><div>
+５ 【研究開発活動】①　朝日放送テレビ株式会社においては、株式会社デジアサと協力し、番組で実施される放送と連携したサービスの開発に取り組み、番組連動型の“スマホで格付けチェック”や12月のＭ－１敗者復活等の番組では、番組視聴者からの集中したリクエストを受け付けるアプリケーションにおいて、クラウド技術を活用し安定したサービスを提供できる環境の調査・実証を進めました。②　令和元年の総務省「放送と通信を連携したローカルコンテンツの配信及び災害情報の提供の在り方」に係る実証事業で、株式会社デジアサ・朝日放送テレビ株式会社（・他グループ外２社）で、テレビと連携したスマホアプリを活用した情報配信の可用性確保による平時及び災害時のＳＮＳやハイブリッドキャストを用いたコンテンツ配信サービスの確立を目指したサーバ機能の技術検証ならびに視聴データを活用した災害地域周辺での限定配信等に係る検証を行いました。　　また、朝日放送テレビ株式会社では、総務省「平成31年度周波数逼迫対策技術試験事務」に関わる次世代の放送通信連携技術の調査・検討にも加わりました。 </div><h2>2020</h2><div>
+５ 【研究開発活動】①  朝日放送テレビ株式会社では、2020年10月、データ放送のエリア別強制表示機能を用いて、地上波テレビＣＭで市区町村別に内容の異なるコンテンツを放送する 「プレアドレッサブルＴＶ」実証実験を行いました。データ放送の、視聴エリア別に異なるテロップを放送画面上に表示する技術と、エリア情報が含まれたＵＲＬの二次元バーコードを受像器内で生成する技術を組み合わせた新たな手法を用いています。②　朝日放送テレビ株式会社では、総務省令和元年度「周波数逼迫対策技術試験事務」に関わる次世代の放送通信連携技術の調査・検討に加わり、テレビ受信機を含めたクライアント端末への番組関連情報等の伝送・活用技術について検証を進めました。 </div><h2>2021</h2><div>
+５ 【研究開発活動】①　当社では、継続して放送と通信を連携するサービスについて研究・検証を行っています。今期は、動画配信において情報（メタデータ）をコンテンツに重畳し、意図するタイミングで処理させるMTE(Media Timed Event)と呼ばれる技術検証を進め、映像情報メディア学会の研究会で報告を行いました。②　㈱朝日新聞社と共同で展開している「バーチャル高校野球」では、配信に必要なシステムを毎年アップグレードさせながら、配信試合数を拡充しています。2021年度は、試合数増とともに年々煩雑化する運用の効率化を目指し、新たな情報共有システムを開発、地方大会において、約180球場、最大１日で200試合以上を配信、計約2,500試合の配信に活用しました。③　当社ではプライバシーに配慮した形で、各種データを格納したＣＤＰ（カスタマー・データ・プラットフォーム）を構築しました。このＣＤＰのデータを活かし、朝日放送テレビ㈱のふるさと納税サイト「ふるラボ」において、LINEを活用した広告配信の実証実験を行いました。 なお、当連結会計年度の研究開発費の総額は112百万円であります。 </div>
+</body>
+</html>

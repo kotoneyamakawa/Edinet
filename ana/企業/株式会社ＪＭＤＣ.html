@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2019,4755000000,2850965500.0,6729846000.0,20747120250.0],[2020,6318000000,2617526000.0,6525920000.0,20868118000.0],[2021,6318000000,2652336500.0,6505502500.0,19927118500.0],[2021,8026000000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2019,534000000,222781750.0,543709500.0,1308375750.0],[2020,734000000,227411000.0,583122000.0,1569382000.0],[2021,734000000,217422750.0,573529000.0,1656336000.0],[2021,1211000000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2019,18435000000,3104853250.0,7586630500.0,22460925250.0],[2020,42475000000,3119784000.0,7470900000.0,23359865000.0],[2021,42475000000,3000754500.0,7803625500.0,24362483000.0],[2021,41388000000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2019,0.11230283911671925,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.11617600506489395,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.11617600506489395,0.04391320201867674,0.07714890633224092,0.13271258411378287],[2021,0.15088462496885124,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2019,0.25793327908869,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.1487463213655091,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.1487463213655091,0.5833868969965725,0.9166717213573184,1.2857667064817404],[2021,0.19392094326858025,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2019</h2><div>
+５【研究開発活動】
+
+　当社グループは企業理念として、「健康で豊かな人生をすべての人に」を掲げており、この企業理念の実現のため、人材やテクノロジーに積極的に投資し、医療ビッグデータを活用した新しい取組みやサービス開発にチャレンジし続けます。
+
+
+　当連結会計年度におけるグループ全体の研究開発活動の金額は206百万円であります。セグメントごとの研究開発活動を示すと次のとおりであります。
+ 
+(1）ヘルスビッグデータ
+　当セグメントでは、現在は下記をテーマにした開発を進めております。
+・超重症化予防　　　　　　：生活習慣病等の重症化予防のための個別介入サービス
+・ポリファーマシー対策　　：安全性、効率性に問題のある多剤併用の抑制
+・Big Data for Children　 ：難病を含めた小児医療の発展に対するデータを活用した支援
+・健康経営　　　　　　　　：企業における従業員の健康管理や健康への投資の支援
+
+当連結会計年度における研究開発費の金額は102百万円であります。
+ 
+(2）遠隔医療
+　当セグメントでは、ディープラーニングを中心とするＡＩテクノロジーを用いた診断アシストエンジンを日々の読影の中で活用できるようにする診断アシストプラットフォーム「ＡＩ－ＲＡＤ」の開発に取り組んでおります。当連結会計年度における研究開発費の金額は102百万円であります。
+ 
+(3）調剤薬局支援
+　調剤薬局支援事業では、新製品の開発及び保険調剤薬局向けパッケージシステム関連の研究開発活動をしております。当連結会計年度における研究開発費の金額は1百万円であります。
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+
+　当社グループは人材やテクノロジーに積極的に投資し、医療ビッグデータを活用した新しい取組みやサービス開発にチャレンジし続けます。
+
+
+　当連結会計年度におけるグループ全体の研究開発活動の金額は206百万円であります。セグメントごとの研究開発活動を示すと次のとおりであります。
+ 
+(1）ヘルスビッグデータ
+　当セグメントでは、現在は下記をテーマにした開発を進めております。
+・超重症化予防　　　　　　：生活習慣病等の重症化予防のための個別介入サービス
+・ポリファーマシー対策　　：安全性、効率性に問題のある多剤併用の抑制
+・Big Data for Children　 ：難病を含めた小児医療の発展に対するデータを活用した支援
+・健康経営　　　　　　　　：企業における従業員の健康管理や健康への投資の支援
+
+当連結会計年度における研究開発費の金額は123百万円であります。
+ 
+(2）遠隔医療
+　当セグメントでは、ディープラーニングを中心とするＡＩテクノロジーを用いた診断アシストエンジンを日々の読影の中で活用できるようにする診断アシストプラットフォーム「ＡＩ－ＲＡＤ」の開発に取り組んでおります。当連結会計年度における研究開発費の金額は79百万円であります。
+ 
+(3）調剤薬局支援
+　調剤薬局支援事業では、新製品の開発及び保険調剤薬局向けパッケージシステム関連の研究開発活動をしております。当連結会計年度における研究開発費の金額は2百万円であります。
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+
+　当社グループは人材やテクノロジーに積極的に投資し、医療ビッグデータを活用した新しい取組みやサービス開発にチャレンジし続けます。
+
+
+　当連結会計年度におけるグループ全体の研究開発活動の金額は206百万円であります。セグメントごとの研究開発活動を示すと次のとおりであります。
+ 
+(1）ヘルスビッグデータ
+　当セグメントでは、現在は下記をテーマにした開発を進めております。
+・超重症化予防　　　　　　：生活習慣病等の重症化予防のための個別介入サービス
+・ポリファーマシー対策　　：安全性、効率性に問題のある多剤併用の抑制
+・Big Data for Children　 ：難病を含めた小児医療の発展に対するデータを活用した支援
+・健康経営　　　　　　　　：企業における従業員の健康管理や健康への投資の支援
+
+当連結会計年度における研究開発費の金額は123百万円であります。
+ 
+(2）遠隔医療
+　当セグメントでは、ディープラーニングを中心とするＡＩテクノロジーを用いた診断アシストエンジンを日々の読影の中で活用できるようにする診断アシストプラットフォーム「ＡＩ－ＲＡＤ」の開発に取り組んでおります。当連結会計年度における研究開発費の金額は79百万円であります。
+ 
+(3）調剤薬局支援
+　調剤薬局支援事業では、新製品の開発及び保険調剤薬局向けパッケージシステム関連の研究開発活動をしております。当連結会計年度における研究開発費の金額は2百万円であります。
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+　当社グループは人材やテクノロジーに積極的に投資し、医療ビッグデータを活用した新しい取組みやサービス開発にチャレンジし続けます。
+　当連結会計年度における当社グループ全体の研究開発活動の金額は201百万円であります。セグメントごとの研究開発活動を示すと次のとおりであります。
+ 
+(1）ヘルスビッグデータ
+　当セグメントでは、ヘルスケアデータの収集のためのサービス開発とヘルスケアデータの利活用方法の開発を目的に研究開発活動を実施しました。かかる観点での開発を進め、当連結会計年度にも、以下のようなサービスを順次リリースしました。
+ 
+・ウェアラブルデータを活用したメンタル疾患予兆検知アルゴリズムの研究
+・生活習慣改善のための支援アプリ「ＴＯＭＯＣＯ」を活用した実証実験の実施
+・約1,000万人分のデータを用いて医療費予測統計モデルの構築
+・累積約1,300万人分のレセプトデータと気象データを掛け合わせ、疾患と気象条件の相関関係を統計的に解析することで、片頭痛の発症・重症化リスクを予測するＡＩモデルを活用したサービスの提供開始
+・医師の学術活動を迅速に分析するクラウドサービス 「Ｄｏｃｔｏｒｎａ」（ドクターナ）を提供開始
+・薬剤比較アプリ「イシヤク」のリリース
+・3,500店舗を超える薬局データ提供開始
+・150万人の子ども統計ダッシュボード無償提供開始
+・医療データに対して機械学習を用いてコロナ重症化リスクを解析
+・ビッグデータを活用した臨床試験効率化サービスを開始
+・血圧が虚血性心疾患・脳卒中の発症に及ぼす影響について検討
+・疾患発症予測ＡＩを用いた「透析・虚血性心疾患予防における医療連携プログラム」の開始
+ 
+当連結会計年度における研究開発費の金額は82百万円であります。
+ 
+(2）遠隔医療
+　当セグメントでは、ディープラーニングを中心とするＡＩテクノロジーを用いた診断アシストエンジンを日々の読影の中で活用できるようにする診断アシストプラットフォーム「ＡＩ－ＲＡＤ」の開発に取り組んでおります。
+当連結会計年度においては、新型コロナウイルス肺炎を含む感染性肺炎の画像診断を支援する 胸部X線ＡＩエンジンの薬事承認を日本で初めて取得し、ＡＩ－ＲＡＤでのサービス提供・販売を開始しております。
+当連結会計年度における研究開発費の金額は114百万円であります。
+ 
+(3）調剤薬局支援
+　当セグメントでは、新製品の開発及び保険調剤薬局向けパッケージシステム関連の研究開発活動をしております。当連結会計年度は主に下記をテーマにした開発を進め、順次サービスリリースを行いました。
+・ＡＩを活用した保険薬局のための医薬品需要予測サービスのリリース
+・12の検査項目でカラダの健康状態が分かる指標 「健康年齢」を保険薬局向けに販売開始
+当連結会計年度における研究開発費の金額は4百万円であります。
+ 
+</div>
+</body>
+</html>

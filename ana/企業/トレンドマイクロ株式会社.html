@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,148811000000,2742939000.0,7174986000.0,19368338500.0],[2019,165195000000,2850965500.0,6729846000.0,20747120250.0],[2020,174061000000,2617526000.0,6525920000.0,20868118000.0],[2021,190359000000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,25692000000,246323000.0,508480000.0,1285449000.0],[2019,27816000000,222781750.0,543709500.0,1308375750.0],[2020,26376000000,227411000.0,583122000.0,1569382000.0],[2021,37616000000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,331157000000,3028000000.0,6976213000.0,20664790000.0],[2019,359710000000,3104853250.0,7586630500.0,22460925250.0],[2020,376701000000,3119784000.0,7470900000.0,23359865000.0],[2021,420457000000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.17264852732660893,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.16838282030327795,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.15153308322944256,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.19760557683114535,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.44936691659847144,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,0.4592449473186734,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.46206673197044873,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.4527430866890074,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+６ 【研究開発活動】
+当社グループの研究開発活動は、世界中の情報機器を結ぶネットワーク環境において、重要な課題となる情報セキュリティの確保(情報セキュリティ管理)に資する目的で、コンピュータセキュリティ対策ソフトウエアの開発を主として取り組んでおります。
+開発製品は、主にコンピュータセキュリティ対策ソフトでありますが、これに関連した基礎的な技術開発、または応用技術等も含め、当社並びに北米地域子会社 Trend Micro Incorporated(米国)、Trend Micro Canada Technologies, Inc.,(カナダ)、欧州地域子会社 Trend Micro Deutschland GmbH(ドイツ)、Trend Micro EMEA(GB) Limited(英国)、Trend Micro France SA（フランス）、Trend Micro(EMEA)Limited（アイルランド）、アジア・パシフィック地域子会社 Trend Micro Incorporated(台湾)、Trend Micro (China)Incorporated（中国）、Trend Micro Australia Pty. Ltd.(オーストラリア)、Trend Micro India Private Limited (インド)、及び中南米地域子会社 Trend Micro do Brasil Ltda.（ブラジル）の12社に所属する研究開発部門スタッフが密接な連係のもとに研究開発活動を行っております。
+なお、当連結会計年度の研究開発費の総額は7,788百万円であり、すべてコンピュータセキュリティ対策ソフトウエアの開発に係わるものであります。なお、研究開発活動については、特定のセグメントに関連付けられないため、セグメント別の記載は行っておりません。
+ </div><h2>2019</h2><div>
+５ 【研究開発活動】当社グループの研究開発活動は、世界中の情報機器を結ぶネットワーク環境において、重要な課題となる情報セキュリティの確保(情報セキュリティ管理)に資する目的で、コンピュータセキュリティ対策ソフトウエアの開発を主として取り組んでおります。開発製品は、主にコンピュータセキュリティ対策ソフトでありますが、基礎及び応用技術等を含めた製品の研究開発活動は、当社並びにTrend Micro Incorporated（米国）、Trend MicroAustralia Pty. Ltd.（オーストラリア）及びTrend Micro IrelandLimited（アイルランド）において行っております。また一部の研究開発活動につきましては、TrendMicro Incorporated（台湾）、Trend Micro (China) Incorporated（中国）、Trend Micro Canada Technologies, Inc.（カナダ）等に業務委託をしております。なお、当連結会計年度の研究開発費の総額は8,233百万円であり、すべてコンピュータセキュリティ対策ソフトウエアの開発に係わるものであります。なお、研究開発活動については、特定のセグメントに関連付けられないため、セグメント別の記載は行っておりません。 </div><h2>2020</h2><div>
+５ 【研究開発活動】当社グループの研究開発活動は、世界中の情報機器を結ぶネットワーク環境において、重要な課題となる情報セキュリティの確保(情報セキュリティ管理)に資する目的で、コンピュータセキュリティ対策ソフトウエアの開発を主として取り組んでおります。開発製品は、主にコンピュータセキュリティ対策ソフトでありますが、基礎及び応用技術等を含めた製品の研究開発活動は、当社並びにTrend Micro Incorporated（米国）、Trend MicroAustralia Pty. Ltd.（オーストラリア）及びTrend Micro IrelandLimited（アイルランド）において行っております。また一部の研究開発活動につきましては、TrendMicro Incorporated（台湾）、Trend Micro (China) Incorporated（中国）、Trend Micro Canada Technologies, Inc.（カナダ）等に業務委託をしております。なお、当連結会計年度の研究開発費の総額は7,340百万円であり、すべてコンピュータセキュリティ対策ソフトウエアの開発に係わるものであります。なお、研究開発活動については、特定のセグメントに関連付けられないため、セグメント別の記載は行っておりません。 </div><h2>2021</h2><div>
+５ 【研究開発活動】当社グループの研究開発活動は、世界中の情報機器を結ぶネットワーク環境において、重要な課題となる情報セキュリティの確保(情報セキュリティ管理)に資する目的で、コンピュータセキュリティ対策ソフトウエアの開発を主として取り組んでおります。開発製品は、主にコンピュータセキュリティ対策ソフトでありますが、基礎及び応用技術等を含めた製品の研究開発活動は、当社並びにTrend Micro Incorporated（米国）、Trend Micro Australia Pty. Ltd.（オーストラリア）及びTrend Micro Ireland Limited（アイルランド）において行っております。また一部の研究開発活動につきましては、Trend Micro Incorporated（台湾）、Trend Micro (China) Incorporated（中国）、Trend Micro Canada Technologies, Inc.（カナダ）等に業務委託をしております。なお、当連結会計年度の研究開発費の総額は4,680百万円であり、すべてコンピュータセキュリティ対策ソフトウエアの開発に係わるものであります。なお、研究開発活動については、特定のセグメントに関連付けられないため、セグメント別の記載は行っておりません。 </div>
+</body>
+</html>

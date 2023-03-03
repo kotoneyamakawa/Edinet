@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,156605000,6664692500.0,16905000000.0,42269500000.0],[2018,155624000,7128251000.0,20084129000.0,43111803000.0],[2020,128515000,7442147500.0,19057626000.0,43023500000.0],[2021,156360000,8933031750.0,20676427000.0,55867250000.0],[2022,155677000,1090630000.0,8519101000.0,43593545000.0],[2022,128515000,1090630000.0,8519101000.0,43593545000.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,124305000,344694000.0,1076674000.0,3591894500.0],[2018,46482000,412495000.0,1131923000.0,4298698000.0],[2020,24718000,418122000.0,1080885000.0,3456724000.0],[2021,43972000,459764750.0,1400043500.0,3532919750.0],[2022,43431000,187830000.0,892407000.0,2485461000.0],[2022,24718000,187830000.0,892407000.0,2485461000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,6245813000,8312284500.0,23994053000.0,71881369000.0],[2018,6112644000,9456707000.0,27923780000.0,99597389000.0],[2020,6088076000,11423026500.0,28702000000.0,85405000000.0],[2021,6119897000,12896184000.0,32099494000.0,97653659750.0],[2022,6016579000,6016579000.0,12975464000.0,60683562000.0],[2022,6088076000,6016579000.0,12975464000.0,60683562000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.7937486031735896,0.04188619071294099,0.06370747685096131,0.10055768360596112],[2018,0.29868143731044056,0.04049436542187427,0.06523464373286987,0.1279968537179915],[2020,0.19233552503598803,0.04028622032346084,0.06341094357072347,0.11189336733559738],[2021,0.2812228191353287,0.03624433826312993,0.06025178246416974,0.0961040601385215],[2022,0.2789814808867077,0.0628407856650602,0.09087942628139364,0.2],[2022,0.19233552503598803,0.0628407856650602,0.09087942628139364,0.2],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.0250735973043061,0.3990029433006008,0.7286374379775538,1.0618900218799712],[2018,0.025459359321432756,0.33749399090891724,0.6776793235429529,0.9485339906457676],[2020,0.02110929627028309,0.3370756544816167,0.5897375578916415,0.918520452102126],[2021,0.025549449606749916,0.45191863134019633,0.7133072571432875,0.9655004321173984],[2022,0.025874670639245326,0.16936538722783434,0.49490227469088743,0.865042962962963],[2022,0.02110929627028309,0.16936538722783434,0.49490227469088743,0.865042962962963],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2018</h2><div>
+５【研究開発活動】
+　該当事項はありません。
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+　該当事項はありません。
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+　該当事項はありません。
+ 
+</div><h2>2022</h2><div>
+５【研究開発活動】
+　該当事項はありません。
+ 
+</div><h2>2022</h2><div>
+５【研究開発活動】
+　該当事項はありません。
+ 
+</div>
+</body>
+</html>

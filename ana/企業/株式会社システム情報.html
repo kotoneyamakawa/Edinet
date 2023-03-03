@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,10115042000,2742939000.0,7174986000.0,19368338500.0],[2019,12771273000,2850965500.0,6729846000.0,20747120250.0],[2020,13004600000,2617526000.0,6525920000.0,20868118000.0],[2021,14655072000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,703771000,246323000.0,508480000.0,1285449000.0],[2019,1015089000,222781750.0,543709500.0,1308375750.0],[2020,1095751000,227411000.0,583122000.0,1569382000.0],[2021,1242698000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,4713827000,3028000000.0,6976213000.0,20664790000.0],[2019,5968051000,3104853250.0,7586630500.0,22460925250.0],[2020,7047184000,3119784000.0,7470900000.0,23359865000.0],[2021,7795804000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.06957667600391575,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.0794822098000724,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.08425872383618105,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.08479644453469762,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,2.145823764851786,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,2.1399403255769767,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,1.8453612109461028,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,1.879866656473149,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５【研究開発活動】
+
+当社グループにおける研究開発活動は以下のとおりであります。なお、当連結会計年度の研究開発費の金額は2,853千円であります。
+
+ 
+
+（１）コグニティブ・サービス
+
+コグニティブ・サービスとは、数値や整形されたデータなどの「構造化データ」のみならず、IoT（Internet of Things）・AI（Artificial Intelligence）・Analytics（分析・可視化）といったコンピュータ技術を組み合わせることにより、自然言語、画像、音声など「非構造化データ」までを対象に広げ、見る・読む・聞く・考える・話すといった人の認知（Cognitive）する能力をサポートすることで、今まで人の判断で行っていた行動を代行したり、その行動にかかる時間を短縮したり、人の知覚だけでは処理しきれないビッグデータから新たな法則を発見するといった「人の知的活動を拡張する（Augmented Intelligence）」ことを目的としたサービスです。
+当社が提供するコグニティブ・サービスは、顧客体験（UX）を通じて、比較的短期間で効果の出る業務やデータに絞る評価分析（Assessment）を行い、短期間で動くシステムを提供し、お客様と共に概念検証（PoC：Proof of Concept）を通じて効果を検証し、より高い効果が見込めるシステムを開発導入支援（Development）し、運用（Operations）をワンストップで提供するというものです。
+当社は、お客様自身が市場にAIサービスを提供するプロバイダーへと変革していくために、AIコンサンルティングを起点に、AIトライアルを経て、さらにはAIプロダクトへの発展と成功というゴールを共に目指します。これら３つのAI（Augmented Intelligence）メニューを用意することで、当社はお客様のご要望に応じたサービスを提供します。
+上記目標実現のため、当社は日本アイ・ビー・エム株式会社が展開するIoT関連サービスの基盤となる 「IBM Watson IoT Platformパートナーエコシステム」へ参画し、また、IBM Watsonに関する高度なスキルを有している「IBM Watsonの開発基盤を自社に構築したビジネス・パートナー」国内10社の内の１社に選定されました。さらに当社は、これらIBM Watsonを活用した当社独自の音声認識ソリューション「AI Meeting（エーアイミーティング）」の販売を開始しております。
+また、東芝デジタルソリューションズ株式会社とパートナー契約を締結し、東芝コミュニケーションAI「RECAIUS™（リカイアス）」を活用したインテグレーションサービスを開始しました。今後、当社のサービスと合わせてビジネスの加速化に取り組んでまいります。
+ 
+
+（２）クラウド・サービス
+
+
+システム更改期を契機としてお客様の求めるサービスが従来のオンプレミスからパブリッククラウドへ急ピッチで移行しております。また、AIやIoT等の先進技術はクラウド・ネイティブと呼ばれ、クラウド環境で稼働させることを前提とする技術群となっております。当社ではこの変化に対応するため、以下の点に重点的に取り組んでおります。
+①　クラウド技術の習得
+②　運用・監視プロセスの構築
+③　APNアドバンスドコンサルティングパートナー（注）認定の取得
+④　クラウド技術者の体制強化
+（注）APNはAmazon Partner Networkの略。アドバンスドコンサルティングパートナーは、米Amazon社が提供するパブリッククラウドサービス「Amazon Web Services」におけるサービサーのグレードの一つ。スタンダードコンサルティングパートナーは2018年２月に認定を達成。
+
+（３）RPA・サービス
+
+労働人口減少により、一層深刻化する人手不足に加えて、働き方改革の推進に伴う長時間労働の抑制や人材流動化対策の影響を受けて、業務の生産性向上や労働力不足の代替手段確保が必要不可欠となっています。
+RPA（Robotic Process Automation）は、ソフトウェア型の「ロボット」により、パソコン操作を自動化するソリューションです。パソコンを利用した定型作業を自動化することで、より付加価値の高い業務へリソースをシフトすることや、人為的なエラーを抑止することが可能となります。
+RPAを活用したデジタル・オートメーション化が急務となっているため、各企業で急速にRPA導入が進んでおり、この状況に対応するため、当社ではRPA技術を取り扱うサービスグループを新設し、サービスの構築・拡大を強化するため、以下の点に重点的に取り組んでおります。
+①　RPA技術の習得（RPAベンダー資格認定、社内／社外トレーニング）
+②　RPAソリューションベンダーとのアライアンス強化（ソフトバンク株式会社「SynchRoid」、UiPath株式会社「UiPath」、株式会社エヌ・ティ・ティ・データ「WinActor」）
+③　RPAサービスメニューの拡充（「導入コンサルティング」、「シナリオ作成・保守」、「トライアル導入」、「コグニティブ（AI）連携」、「ライセンス販売」）
+④　RPAサービスの体制強化（キャリア採用）
+ 
+
+（４）情報セキュリティ・サービス
+
+企業をターゲットにしたサイバースパイ攻撃が深刻化し、加えてクラウド・サービスやモバイルデバイスの利用が拡大する状況の下、これまで以上のセキュリティ対策が求められており、今後も情報セキュリティ対策の市場は今後も拡大することが見込まれます。
+当社では、情報セキュリティソリューション企業と協業し、すでにセキュリティコンサルティング分野で事業を展開しておりますが、今後はコンサルティングで培ったノウハウを基に、ソリューション販売、ソリューション運用、物理セキュリティを重点課題として取り組んでまいります。
+ 
+</div><h2>2019</h2><div>
+５【研究開発活動】
+当社グループにおける研究開発活動は、人財の能力開発に重点を置いております。DXを見据えた大きなステップアップに向けて、当社独自の開発標準であるSICPを進化させた”SICP Advanced”を策定中でありますが、人財のファシリテーションスキルアップがその中心となります。
+また、DX加速化に後押しされてクラウド・ネイティブが推進される中、全社横断でクラウド技術を高めていく必要が高まっていることで、研修を含めた人財開発を強化しております。更に、開発手法としてのアジャイル開発が注目を集めており、ブランド価値向上を目指して、コンサルティングを展開すると同時に社内でもアジャイル開発をリードする人財の強化に注力しております。
+なお、当連結会計年度における研究開発費の金額は5,370千円であります。
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+当社グループにおける研究開発活動は、人財の能力開発に重点を置いております。DXを見据えた大きなステップアップに向けて、当社独自の開発標準であるSICPを進化させた”SICP Advanced”を策定中でありますが、人財のファシリテーションスキルアップがその中心となります。
+また、DX加速化に後押しされてクラウド・ネイティブが推進される中、全社横断でクラウド技術を高めていく必要が高まっていることで、研修を含めた人財開発を強化しております。更に、開発手法としてのアジャイル開発が注目を集めており、ブランド価値向上を目指して、コンサルティングを展開すると同時に社内でもアジャイル開発をリードする人財の強化に注力しております。
+なお、当連結会計年度における研究開発費の金額は2,737千円であります。
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+当社グループの研究開発活動は、内部強化のための積極的な投資により、DX提供価値を向上させることや新技術を獲得することを目的としております。
+そのために、まずは、DX人材を育成していくことが重要であり、中長期的なコア事業の拡大を推進すべく、若手・未経験者のポテンシャル人材の採用枠を拡大し、従来型SIの技術者育成だけではなく、CAMBRIC技術領域に対応するDX人材を内部育成しております。また、DX提案力の強化策として、アーキテクチャの標準化やベストプラクティスを整備し、パターン化することにより、DX関連のナレッジマネジメント強化を推進しております。迅速かつ効果的な提案を推進し、ビジネス創出型のスタイルを確立していく狙いであります。
+なお、OJTによる育成や、品質管理活動の一環として行っていることもあり、当連結会計年度に研究開発費として区分経理されている金額としては1,908千円であります。
+ 
+</div>
+</body>
+</html>

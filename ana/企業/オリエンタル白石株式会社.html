@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2020,55224000000,14885341250.0,54665500000.0,172926500000.0],[2021,60726000000,16839280000.0,60103000000.0,179846000000.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2020,3763000000,652209000.0,2003000000.0,6961500000.0],[2021,3778000000,783216000.0,2106505000.0,7354000000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2020,55611000000,14476408500.0,53154921000.0,152369500000.0],[2021,60952000000,15975838000.0,60952000000.0,169621000000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2020,0.06814066347964653,0.03030438467669186,0.0441683828260139,0.05607611512859936],[2021,0.06221387873398544,0.029102847139656655,0.04053289942031933,0.05916380158074507],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2020,0.9930409451367536,0.8202071972877718,1.0157665895829968,1.2387227108529704],[2021,0.9962921643260271,0.8194591659988107,1.0289774168992645,1.2068439911605475],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2020</h2><div>
+５ 【研究開発活動】当連結会計年度における当社グループが支出した研究開発費の総額は459百万円であります。・建設事業建設事業では、プレストレストコンクリートとニューマチックケーソン技術を中心とした豊富な知識と経験を活かし、技術的により優れた企業を目指して、基礎的研究から新製品及び新工法の開発まで幅広く取り組んでおります。近年ますます高度化、多様化するニーズに対応するために、当社グループの独自技術を研鑽するとともに、大学、各種研究機関及び異業種企業との共同研究に加え、港湾分野に関する研究開発も進めております。当連結会計年度における研究開発費の金額は459百万円であり、主な研究開発テーマとその内容は次のとおりであります。①　ニューマチックケーソン設備の開発建設業全体における労働人口の減少や、大規模・大深度化に対応するためのニューマチックケーソン無人化及び自動化技術の開発や、現場の各種計測データを分析することによるAI技術を活用した沈下予測など、合理的かつ安全な施工方法に関する研究ならびに実工事での展開を行っております。②　補修・補強技術の開発複雑化する高速道路の大規模更新工事に的確に対応するため、床版取替工法「ＳＬＪスラブ工法」・「ＣＦＣＣスラブ工法」や桁取替工法「ＳＣＢＲ工法」の施工時における４車線確保技術や電気化学的補修工法、ならびに、ＰＣグラウト再注入工法「ＰＣ－Ｒｅｖ工法」の充填及び防錆性能に優れる材料開発など、さらなる改良を進めています。また、橋脚・基礎補強工法「ＳＳＰ工法」「ピアリフレ工法（曲げ補強対応）」をはじめとする各種補修・補強技術の改良を実施しております。③　橋梁技術の開発「ＳＣＢＲ工法」や「プレキャスト壁高欄」などプレキャスト部材を多用した省力化技術の適用拡大や、ＰＣグラウトの自動品質管理手法や生産部門での自動化など、生産性向上の観点から検討を進め、幾つかは実工事への展開を図っております。④　港湾構造物の開発港湾分野など新たな市場開拓を目指した「港湾桟橋用ＳＬＪスラブ」の実用化、過酷な塩害環境下での要求性能を満足する構造開発に注力するとともに、岸壁構造へのケーソン構造の適用について研究を行っております。 </div><h2>2021</h2><div>
+５ 【研究開発活動】当連結会計年度における当社グループが支出した研究開発費の総額は605百万円であります。（1）建設事業建設事業では、プレストレストコンクリートとニューマチックケーソン技術を中心とした豊富な知識と経験を活かし、技術的により優れた企業を目指して、基礎的研究から新製品及び新工法の開発まで幅広く取り組んでおります。近年ますます高度化、多様化するニーズに対応するために、当社グループの独自技術を研鑽するとともに、大学、各種研究機関及び異業種企業との共同研究に加え、持続可能な社会のためのCO2削減技術や、少子高齢化による生産人口減少に対する生産性向上技術に関する研究開発も進めております。当連結会計年度における研究開発費の金額は581百万円であり、主な研究開発テーマとその内容は次のとおりであります。①　ニューマチックケーソン設備の開発建設業全体における労働人口の減少や、大規模・大深度化に対応するためのニューマチックケーソン無人化及び自動化技術の開発や、現場の各種計測データを分析することによるAI技術を活用した沈下予測など、合理的かつ安全な施工方法に関する研究ならびに実工事での展開の上での改良を図っております。②　補修・補強技術の開発複雑化する高速道路の大規模更新工事に的確に対応するため、床版取替工法「ＳＬＪスラブ工法」・非鉄材料で構成するプレキャストＰＣ床版である「ＣＦＣＣスラブ工法」・桁取替工法「ＳＣＢＲ工法」や、ＰＣ合成桁の床版取替にプレキャスト部材を活用した「ＳＰスランプ工法」や電気化学的補修工法ならびにＰＣグラウト再注入工法「ＰＣ－Ｒｅｖ工法」の充填及び防錆性能に優れる材料開発など、更なる開発・改良を進めております。また、橋脚・基礎補強工法「ＳＳＰ工法」「ピアリフレ工法（曲げ補強対応）」「ＳＴＥＰ工法」をはじめとする各種補修・補強技術の改良を実施しております。③　橋梁技術の開発「ＳＣＢＲ工法」や「プレキャスト壁高欄」などプレキャスト部材を多用した省力化技術の適用拡大や、ＰＣグラウトの自動品質管理手法や生産部門での自動化など、生産性向上の観点から検討を進め、幾つかは実工事への展開を図っております。④　港湾構造物の開発港湾分野など新たな市場開拓を目指した「港湾桟橋用ＳＬＪスラブ」・「ＣＦＣＣスラブ」の実用化、過酷な塩害環境下での要求性能を満足する構造開発に注力するとともに、岸壁構造へのケーソン構造の適用について研究を行っております。 （2）鋼構造物事業鋼構造物事業の、当連結会計年度における研究開発費の金額は24百万円であり、主な内容は、「IH式装置システムによる塗膜剝離施工」に関する研究であります。 </div>
+</body>
+</html>

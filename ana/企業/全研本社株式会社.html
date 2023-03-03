@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2020,6216577000,2617526000.0,6525920000.0,20868118000.0],[2021,7705619000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2020,1049693000,227411000.0,583122000.0,1569382000.0],[2021,1584198000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2020,13506420000,3119784000.0,7470900000.0,23359865000.0],[2021,15288077000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2020,0.16885385639074366,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.2055899727199074,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2020,0.46026830203710534,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.5040280082315127,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2020</h2><div>
+５ 【研究開発活動】当社グループの研究開発活動では、主にコールセンター／カスタマーサポート向けのチャットボット及びFAQ検索システムの開発に取り組んでおり、具体的な開発商品としては、sAI Chat（チャットボットシステム）、sAI Search（FAQ検索システム）、sAI Phone（通話音声認識システム）、Monkey App（LINEミニアプリプラットフォーム）となります。当連結会計年度においては、主に、チャットボット、検索システム(AI)関連、データ管理プラットフォーム関連、自動音声応答関連の開発を重点的に行い、また、開発体制の効率化による生産性向上と品質保証の徹底を図りました。AIエンジンの開発は、株式会社サイシードにおいて、最高技術責任者（CTO）以下７名の体制で実施しております。 当連結会計年度におけるセグメントごとの研究開発活動を示すと次のとおりであります。なお、当連結会計年度の研究開発費の総額は62,571千円であります。 
+(1) ITセグメント①　チャットボット、検索システム(AI)関連情報検索時の検索精度及び速度を改善しました。これにより、サーバー等の機器に対する負荷の削減、及び、ユーザー体験の更なる向上を実現しました。また、これまでFAQのみを検索対象としていましたが、企業内におけるあらゆる情報を検索対象とすべく、webサイトを対象とした検索システム（サイト内検索）や、企業内の共有ファイルを対象とした検索システムの開発も行いました。また、それらのシステムを全て統合した企業用のオールインワンパッケージの開発にも着手しております。 ②　データ管理プラットフォーム関連FAQサイト及びツールの利用履歴や、FAQコンテンツの管理を行うプラットフォームを大幅に改善しました。これにより、利用履歴のより細かい分析、データに基づくFAQの改善、その評価を行うことができるようになり、製品の目的である問い合わせ数削減に対して、大きく寄与することとなりました。 ③　自動音声応答関連自動音声応答により、電話受付を自動化する製品を開発しました。本製品は、従来の自動音声応答技術に加え、音声認識技術を用いることで、より自然な電話応答を可能にするものです。すでに幾つかの企業及び自治体に導入されております。 ④　開発体制の効率化と品質保証の徹底前年度に引き続き、開発体制の効率化を行いました。当連結会計年度は、とりわけ汎用化及びドキュメンテーションを中心に行い、納品にかかるまでの時間及びコストを削減しました。また、納品前テストを拡充させることにより、製品における不具合を減らし、納品後のクレーム数を抑えることに成功しました。 ⑤　その他上記のAI関連システムの他、個別システムの開発も行なっております。当連結会計年度は、主に自治体向けの物資販売システム、及び予約システムの開発を行いました。 上記の他、新規事業開発に係る研究開発を行っており、当連結会計年度における研究開発費の金額は57,942千円であります。 
+(２) 語学セグメント新商品開発に取り組んでおり、当連結会計年度における研究開発費の金額は4,629千円であります。 </div><h2>2021</h2><div>
+５ 【研究開発活動】当社グループの研究開発活動では、主にコールセンター／カスタマーサポート向けのチャットボット及びFAQ検索システムの開発に取り組んでおり、具体的な開発商品としては、sAI Chat（チャットボットシステム）、sAI Search（FAQ検索システム）、sAI Phone（音声自動応答システム）、Monkey App（LINEミニアプリプラットフォーム）となります。当連結会計年度においては、主に、チャットボット、検索システム(AI)関連、データ管理プラットフォーム関連の開発を重点的に行いました。　ソフトウェアの開発は、株式会社サイシードにおいて、最高技術責任者（CTO）以下７名の体制で実施しております。 当連結会計年度におけるセグメントごとの研究開発活動を示すと次のとおりであります。なお、当連結会計年度の研究開発費の総額は144,840千円であります。 
+(1) ITセグメント①　チャットボット、検索システム(AI)関連情報検索時の検索精度及び速度を改善しました。これにより、サーバー等の機器に対する負荷の削減、及び、ユーザー体験の更なる向上を実現しました。また、システムを全て統合した企業用のオールインワンパッケージの開発と機能拡張に注力いたしました。また、FAQ検索システムのデザイン性の向上にも注力し、より使いやすくすることを目指して改善を続けております。 ②　データ管理プラットフォーム関連FAQサイト及びツールの利用履歴や、FAQコンテンツの管理を行うプラットフォームを大幅に改善しました。これにより、利用履歴のより細かい分析、データに基づくFAQの改善、その評価を行うことができるようになり、製品の目的である問い合わせ数削減に対して、大きく寄与することとなりました。 ③　開発体制の効率化と品質保証の徹底前年度に引き続き、開発体制の効率化を行いました。当連結会計年度は、とりわけ海外開発拠点を利用した開発体制の拡大とコスト削減に注力いたしました。これにより、大規模案件への対応が可能になっただけでなく、開発運用費用を下げることにも成功いたしました。 上記の他、新規事業開発に係る研究開発を行っており、当連結会計年度における研究開発費の金額は144,067千円であります。 
+(2) 語学セグメント新商品開発に取り組んでおり、当連結会計年度における研究開発費の金額は772千円であります。 </div>
+</body>
+</html>

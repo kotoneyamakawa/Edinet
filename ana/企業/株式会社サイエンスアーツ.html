@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2020,365992000,2617526000.0,6525920000.0,20868118000.0],[2021,659988000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2020,95288000,227411000.0,583122000.0,1569382000.0],[2021,9006000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2020,351346000,3119784000.0,7470900000.0,23359865000.0],[2021,801128000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2020,0.2603554176047564,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.013645702649139075,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2020,1.0416854041315398,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.8238234089933194,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2020</h2><div> 
+５ 【研究開発活動】当社は「世界中の人々を美しくつなげます」というミッションを掲げ、デスクレスワーカーをつなげるライブコミュニケーションプラットフォーム「Buddycom」の開発・販売を行っております。Buddybomの開発は、全て内製化されており、それにより、安定的な稼働と、新たな機能の追加を実現できる体制となっております。当事業年度においても、技術本部にて、単なる音声によるコミュニケーションにとどまらず、インターネットを介したクラウドサービスであることを活かし、動画、AIといった新たな機能の研究開発を行っております。また、当社では、グローバルなセールスネットワークや、様々なソフトウェア又はハードウェアなどのソリューションを持つ企業（エコパートナーと呼んでおります）とのコラボレーションにより、エコパートナーが持つネットワークやソリューションとBuddycomとをパッケージ化し、あるいはコミュニケーションプラットフォームとしてのBuddycomの機能をエコパートナーのソリューションに組み込むことによって、より付加価値の高いサービスの提供を目指す戦略的なパートナーシップ（パートナーエコシステムと呼んでおります）による機能の拡充も目指しております。当事業年度においても、エコパートナーが持つ様々なソフトウェアやハードウェアとの接続連携を可能とすべく研究開発を行っております。当事業年度において、外部ストレージサービスのBoxやDropboxとの連携、富士通株式会社のAI映像解析ソリューションとの連携、株式会社デンソーの地域情報配信システム「ライフビジョン」との連携、ならびにマクニカネットワークス株式会社の介護用見守りシステム「Attentive Connect」との連携が可能となりました。Buddycomは、スマホやタブレットなどの端末にアプリをインストールするだけで利用可能ですが、実際には多くのお客様は、イヤホンマイクやヘッドセットなどのアクセサリーを用いて利用しております。そのため、当社では、イヤホンマイクやヘッドセット、ウェアラブルカメラといった様々なIoT機器との接続連携についての研究開発も行っております。さらに、ドローンやパーソナルロボットとの接続連携に関する研究開発も行っております。以上の結果、当事業年度における当社が支出した研究開発費の総額は7,386千円であります。 </div><h2>2021</h2><div> 
+５ 【研究開発活動】当社は「世界中の人々を美しくつなげます」というミッションを掲げ、デスクレスワーカーをつなげるライブコミュニケーションプラットフォーム「Buddycom」の開発・販売を行っております。Buddybomの開発は、全て内製化されており、それにより、安定的な稼働と、新たな機能の追加を実現できる体制となっております。当事業年度においても、技術本部にて、単なる音声によるコミュニケーションにとどまらず、インターネットを介したクラウドサービスであることを活かし、動画、AIといった新たな機能の研究開発を行っております。また、当社では、グローバルなセールスネットワークや、様々なソフトウェア又はハードウェアなどのソリューションを持つ企業（エコパートナーと呼んでおります）とのコラボレーションにより、エコパートナーが持つネットワークやソリューションとBuddycomとをパッケージ化し、あるいはコミュニケーションプラットフォームとしてのBuddycomの機能をエコパートナーのソリューションに組み込むことによって、より付加価値の高いサービスの提供を目指す戦略的なパートナーシップ（パートナーエコシステムと呼んでおります）による機能の拡充も目指しております。当事業年度においても、エコパートナーが持つ様々なソフトウェアやハードウェアとの接続連携を可能とすべく研究開発を行っております。当事業年度において、ノーリツプレシジョン株式会社の次世代予測型見守りシステム「Neod＋Care（ネオスケア）」や、ワスド株式会社の店舗スタッフ呼び出しシステム「デジちゃいむ」との連携が可能となりました。Buddycomは、スマホやタブレットなどの端末にアプリをインストールするだけで利用可能ですが、実際には多くのお客様は、イヤホンマイクやヘッドセットなどのアクセサリーを用いて利用しております。そのため、当社では、イヤホンマイクやヘッドセット、ウェアラブルカメラといった様々なIoT機器との接続連携についての研究開発も行っております。さらに、各種センサー、AIカメラ、ドローンやパーソナルロボットとの接続連携に関する研究開発も行っております。以上の結果、当事業年度における当社が支出した研究開発費の総額は9,134千円であります。 </div>
+</body>
+</html>

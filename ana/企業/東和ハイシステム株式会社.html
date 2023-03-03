@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2019,1910043000,2850965500.0,6729846000.0,20747120250.0],[2020,2369643000,2617526000.0,6525920000.0,20868118000.0],[2021,2215419000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2019,245498000,222781750.0,543709500.0,1308375750.0],[2020,375566000,227411000.0,583122000.0,1569382000.0],[2021,316275000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2019,3084602000,3104853250.0,7586630500.0,22460925250.0],[2020,4018165000,3119784000.0,7470900000.0,23359865000.0],[2021,4045753000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2019,0.1285300906838223,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.1584905405582191,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.14276080506667135,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2019,0.6192186220458912,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.589732626708958,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.5475912642220125,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2019</h2><div> 
+５ 【研究開発活動】当社は、歯科医院向けに特化したパッケージソフトを社内で独自開発し、これを商品として販売する「歯科医院向けシステム事業」の単一セグメントであるため、セグメント別の記載はしておりません。当社商品は、レセプト機能・電子カルテ機能・インフォームドコンセント機能・歯科医院の運営管理の効率化を推進する機能の４つを、一元的に統合して運用できる点にあります。この強みをより生かした商品開発を目的に、当社のシステム事業本部は、「最先端の技術と知識を駆使したお客様の為の電子カルテシステムの開発」という行動指針に基づき、電子カルテ開発グループ12名と、品質保証部３名の体制で研究開発に取り組んでおります。2020年９月期においては、全自動精算機と来患分析ソフトをリリースしております。今後も、AI（人工知能）やクラウドを活用した歯科医院運営の自動化を推進する機能の開発に注力してまいります。 企業会計基準が定める研究開発費については、当事業年度において4百万円が発生しております。具体的な取組みは下記となります。①クラウド基盤の研究開発クラウド型の各種サービスを提供できる基盤に係る研究開発活動②クラウド型予約システム日付・時間帯・チェア・診療内容等の歯科医院運営の特徴に応じたクラウド型の予約管理システム③歯科オンライン診療システム電子カルテ統合システムと歯科オンライン診療（診療、電子カルテ記録、クレジットカード決済、薬・処方箋転送等）との連携に係る研究開発活動④クラウド型経営分析システム電子カルテ統合システムが保有するデータから、クラウド上で種々の経営データの分析表示（例えば、患者数についての予約状況の分析、診療内容の分析、多様な領域の診療を行っている場合の専門医別の分析、複数歯科医院経営を行っている場合の医院別の分析等）との連携に係る研究開発活動⑤スマホ診察券やSNS（医院と患者のコミュニケーション・ツール）との連携クラウド基盤を経由した、電子カルテシステムとスマホ診察券やSNSとの連携に係る研究開発活動⑥「AI（人工知能）の活用」に則した研究歯科医院運営にAI（人工知能）を活用した顔認証システム等の研究開発活動⑦リモート配信機能電子カルテ統合システムへのリモート配信機能の組み込みの研究 また現在、厚生労働省が「オンライン資格確認システム」を推進しております。これは、健康保険証のオンラインによる本人確認・資格確認を行う制度であり、2021年３月開始のスケジュールに沿って推進されております。当社もこれに対応した商品「Hi Dental 資格確認パック」（資格確認端末、ネットワーク設定、連携ソフト等）を提供できるよう、開発を進めております。 </div><h2>2020</h2><div> 
+５ 【研究開発活動】当社は、歯科医院向けに特化したパッケージソフトを社内で独自開発し、これを商品として販売する「歯科医院向けシステム事業」の単一セグメントであるため、セグメント別の記載はしておりません。当社商品は、レセプト機能・電子カルテ機能・インフォームドコンセント機能・歯科医院の運営管理の効率化を推進する機能の４つを、一元的に統合して運用できる点にあります。この強みをより生かした商品開発を目的に、当社のシステム事業本部は、「最先端の技術と知識を駆使したお客様の為の電子カルテシステムの開発」という行動指針に基づき、基幹システム開発グループ９名、サポート支援グループ３名、品質保証・クラウド開発グループ７名の体制で研究開発に取り組んでおります。2021年９月期においては、クラウド型予約システム、歯科オンライン診療システム、スマホ診察券、SNS連携をリリースしております。今後も、クラウドを活用した歯科医院運営の効率化・自動化を推進する機能の開発に注力してまいります。 当事業年度における研究開発費の総額は、2,464千円であります。具体的な取組みは下記となります。①歯科オンライン診療システム電子カルテ統合システムと歯科オンライン診療（診療、クレジットカード決済等）との連携に係る研究開発活動②スマホ診察券やSNS（医院と患者のコミュニケーション・ツール）との連携クラウド基盤を経由した、電子カルテシステムとスマホ診察券やSNSとの連携に係る研究開発活動③「AI（人工知能）の活用」に即した研究AI（人工知能）を活用した顔認証システム等に係る研究開発活動④プログラム自動配信機能電子カルテ統合システムへのプログラム配信機能の組み込みに係る研究開発活動 </div><h2>2021</h2><div> 
+５ 【研究開発活動】当社は、歯科医院向けに特化したパッケージソフトを社内で独自開発し、これを商品として販売する「歯科医院向けシステム事業」の単一セグメントであるため、セグメント別の記載はしておりません。当社商品は、レセプト機能・電子カルテ機能・インフォームドコンセント機能・歯科医院の運営管理の効率化を推進する機能の４つを、一元的に統合して運用できる点にあります。この強みをより生かした商品開発を目的に、当社のシステム事業本部は、「最先端の技術と知識を駆使したお客様の為の電子カルテシステムの開発」という行動指針に基づき、基幹システム開発グループ９名、サポート支援グループ３名、品質保証・クラウド開発グループ７名の体制で研究開発に取り組んでおります。2022年９月期においては、クラウド型予約システム、歯科オンライン診療システム、スマホ診察券、SNS連携、LINE連携、スマホ問診、JP1によるプログラム自動配信「Hi Dental Net on JP1」をリリースしております。今後も、クラウドを活用した歯科医院運営の効率化・自動化を推進する機能の開発に注力してまいります。さらに、日立製作所のAI音声認識技術と連携し、歯科医が個々の患者の診療中に端末で電子カルテ入力をする際、手袋を外さずに音声でカルテ入力ができるAI音声電子カルテの開発に注力しております。  当事業年度における研究開発費の総額は、6,468千円であります。具体的な取組みは下記となります。①歯科オンライン診療システム歯科電子カルテ統合システムと歯科オンライン診療（診療、クレジットカード決済等）との連携に係る研究開発活動②スマホ診察券やSNS（医院と患者のコミュニケーション・ツール）との連携クラウド基盤を経由した、歯科電子カルテ統合システムとスマホ診察券やSNSとの連携に係る研究開発活動③「AI（人工知能）の活用」に即した研究AI（人工知能）を活用した顔認証システム等に係る研究開発活動④プログラム自動配信機能歯科電子カルテ統合システムへのプログラム配信機能の組み込みに係る研究開発活動⑤AI音声電子カルテ日立AI音声認識技術と連携した歯科電子カルテ統合システムの音声入力対応に係る研究開発活動 </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,5850420000,19019000000.0,52629034000.0,149649000000.0],[2018,6225589000,28828000000.0,74634000000.0,186874000000.0],[2019,5944830000,18644394750.0,56724571500.0,174331250000.0],[2020,6545023000,14885341250.0,54665500000.0,172926500000.0],[2021,5945361000,16839280000.0,60103000000.0,179846000000.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,151025000,861545000.0,2307000000.0,6546000000.0],[2018,290827000,951389000.0,3086451000.0,7918000000.0],[2019,195477000,789313750.0,2314500000.0,7458000000.0],[2020,331855000,652209000.0,2003000000.0,6961500000.0],[2021,563026000,783216000.0,2106505000.0,7354000000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,7142552000,17175987000.0,48142000000.0,138696000000.0],[2018,6811458000,24506000000.0,64483000000.0,170267000000.0],[2019,6688873000,14489163750.0,52824500000.0,150633750000.0],[2020,8132752000,14476408500.0,53154921000.0,152369500000.0],[2021,8352257000,15975838000.0,60952000000.0,169621000000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.02581438597570773,0.030924349441835856,0.039577014168778825,0.058677855219082094],[2018,0.04671477670626827,0.031072925954035355,0.04161303855176716,0.06319902676296472],[2019,0.0328818485978573,0.028178067669523625,0.04059571508285559,0.05737225684500878],[2020,0.05070341234858915,0.03030438467669186,0.0441683828260139,0.05607611512859936],[2021,0.09470005269654778,0.029102847139656655,0.04053289942031933,0.05916380158074507],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.8190937916867809,0.893641596175952,1.12094166304527,1.2909456612246364],[2018,0.9139877248013568,0.9255580807185754,1.0999100978745782,1.286668754635347],[2019,0.8887640713166478,0.9259435944572808,1.1020887324943982,1.3033115108639235],[2020,0.8047734641361252,0.8202071972877718,1.0157665895829968,1.2387227108529704],[2021,0.711826875059041,0.8194591659988107,1.0289774168992645,1.2068439911605475],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2018</h2><div>
+５ 【研究開発活動】該当事項はありません。 </div><h2>2019</h2><div>
+５ 【研究開発活動】該当事項はありません。</div><h2>2020</h2><div> 
+５ 【研究開発活動】当社グループは、社会ニーズ（公共性・継続性・安定性）の対応と加速する働き方改革や安心・安全な環境、健康で快適な社会、脱炭素化社会の実現を目指し製品開発を行いました。 当連結会計年度における当社グループが支出した研究開発費の総額は20百万円であります。 (１)　クラウドプラットフォームを活用したセンサー・設備制御ネットワークシステムの開発当社と株式会社日建設計、株式会社協和エクシオ、株式会社WHERE、オムロン株式会社、X1Studio株式会社（敬称略）はワークプレイスの有効利用と室内環境の最適化に向けて、「クラウドプラットフォームを活用したセンサー・設備制御ネットワークシステム」と建築設備(照明・空調)制御との連携、及びAIを活用する検証を開始しました。先行していた５社の取組みにおいて、実証実験の場であるセンサー・ネットワークシステムを構築した実オフィスで照明制御連携の運用を開始しました。さらに今回、X1Studio株式会社も加わり、クラウドBAS(Building Automation System)による空調制御とクラウド上のAI活用の検証も開始し、空調制御連携の実証とAIによるセンサーデータ・制御ロジックの高度化を目指します。６社は、協創による実証実験をもとに、本システムの開発、普及、改善を通して、加速する働き方改革やカーボンニュートラル社会実現に貢献します。 (２)　Azure IoT HubとAzure IoT Edgeを活用した複数の通信プロトコルに対応したゲートウェイの開発 Microsoft 社が提供するAzure IoT Hub への対応及び、Azure IoT Edge を活用した、複数の通信プロトコルを一つのソフトウェアに統合対応したゲートウェイの開発・検証を完了すると共に当社での販売を開始致しました。本システムは、設備（照明・空調・監視システム・セキュリティ等）間の通信を円滑に行い、今まで個別に管理されていた設備を連携させる事で、新たな付加価値が提供可能となります。また、IoT 機器との親和性を強化し、クラウドプラットフォームへの接続を標準化する為の取組みを進めて参ります。 </div><h2>2021</h2><div>
+５ 【研究開発活動】該当事項はありません。</div>
+</body>
+</html>

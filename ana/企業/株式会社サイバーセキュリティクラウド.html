@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2019,816497000,2850965500.0,6729846000.0,20747120250.0],[2020,1194005000,2617526000.0,6525920000.0,20868118000.0],[2021,1817470000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2019,153774000,222781750.0,543709500.0,1308375750.0],[2020,149158000,227411000.0,583122000.0,1569382000.0],[2021,169741000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2019,498822000,3104853250.0,7586630500.0,22460925250.0],[2020,1499184000,3119784000.0,7470900000.0,23359865000.0],[2021,1710024000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2019,0.18833382118979003,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.12492242494796924,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.09339411379555096,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2019,1.6368504195885507,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.7964365948409268,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,1.0628330362614793,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2019</h2><div>
+５【研究開発活動】
+　サイバーセキュリティ製品の開発は、今までの専門家の知識をもとにした製品開発だけでなく、新規技術を活用した製品開発を進めることが重要になっております。そのため当社では、日々収集される大量のデータを活用する AI の活用や、システム開発におけるセキュリティのニーズやシーズ把握のための基礎研究を進めております。
+ 
+
+　当事業年度における研究開発費の総額は、49,689千円となりました。なお、当社はWebセキュリティ事業の単一セグメントでありますので、セグメント別の記載を省略しております。
+
+①　ビッグデータ・機械学習・AIを活用した精度向上の研究
+　AI を用いたサイバー攻撃の検知精度向上に関する研究開発を行いました。
+ 
+
+②　システムに関連する様々な要素技術の研究
+
+　IoT（注）で利用されるプロトコルのセキュリティ対策に関する研究開発を行いました。
+ 
+
+③　新たな脆弱性のリサーチ及びサイバー攻撃の基礎研究
+
+　新たな脆弱性情報をいち早く収集し、新たな攻撃手法と防御手法に関する研究開発を行いました。
+ 
+
+（注）「Internet of Things」の略で、モノのインターネットと呼ばれるように、これまではインターネットに接　　　続されていなかったモノが接続されることを意味する。
+
+ 
+</div><h2>2020</h2><div>
+５【研究開発活動】
+　サイバーセキュリティ製品の開発は、今までの専門家の知識をもとにした製品開発だけでなく、新規技術を活用した製品開発を進めることが重要になっております。そのため当社グループでは、日々収集される大量のデータを活用するAIの活用や、システム開発におけるセキュリティのニーズやシーズ把握のための基礎研究を進めております。
+ 
+
+　当連結会計年度における研究開発費の総額は、77,319千円となりました。なお、当社グループはサイバーセキュリティ事業の単一セグメントでありますので、セグメント別の記載を省略しております。
+
+①　ビッグデータ・機械学習・AIを活用した精度向上の研究
+　AI を用いたサイバー攻撃の検知精度向上に関する研究開発を行いました。また、Webサイトに対して不正な動作をする Bot の検知技術に関する研究開発を行いました。
+ 
+
+②　システムに関連する様々な要素技術の研究
+
+　IoT（注）で利用されるプロトコルのセキュリティ対策に関する研究開発を行いました。
+ 
+
+③　新たな脆弱性のリサーチ及びサイバー攻撃の基礎研究
+
+　新たな脆弱性情報をいち早く収集し、新たな攻撃手法と防御手法に関する研究開発を行いました。
+ 
+
+④　新たなアプリケーション開発手法の把握とそれに関わるセキュリティ課題の研究
+
+　アプリケーション開発方法とアプリケーションの動作環境が日々進化する中で発生するセキュリティ課題の研究開発をおこないました。
+
+（注）「Internet of Things」の略で、モノのインターネットと呼ばれるように、これまではインターネットに接続されていなかったモノが接続されることを意味する。
+
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+　サイバーセキュリティ製品の開発は、今までの専門家の知識をもとにした製品開発だけでなく、新規技術を活用した製品開発を進めることが重要になっております。そのため当社グループでは、日々収集される大量のデータを活用するAIの活用や、システム開発におけるセキュリティのニーズやシーズ把握のための基礎研究を進めております。
+ 
+　当連結会計年度における研究開発費の総額は、116,432千円となりました。なお、当社グループはサイバーセキュリティ事業の単一セグメントでありますので、セグメント別の記載を省略しております。
+①　ビッグデータ・機械学習・AIを活用した精度向上の研究
+　AI を用いたサイバー攻撃の検知精度向上および攻撃分類、通信識別等に関する研究開発を行いました。
+ 
+②　システムに関連する様々な要素技術の研究
+　コンテナ技術・サービスメッシュ、分散技術やオーケストレーション環境下におけるセキュリティ対策に関する研究開発を行いました。また、自社サービスの運用自動化、高度化に向けた研究開発を行いました。
+ 
+③　新たな脆弱性のリサーチ及びサイバー攻撃の基礎研究
+　新たな脆弱性情報をいち早く収集し、新たな攻撃手法と防御手法に関する研究開発を行いました。
+ 
+④　データ活用・連携に関する調査研究
+　当社保有のWAFログと、改ざん検知やサーバログ等の他データとの連携による分析の高度化および他業種データとの活用に関する研究開発をおこないました。
+ 
+</div>
+</body>
+</html>

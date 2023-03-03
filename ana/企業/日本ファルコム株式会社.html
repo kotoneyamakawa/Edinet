@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,2357991000,2742939000.0,7174986000.0,19368338500.0],[2019,2496586000,2850965500.0,6729846000.0,20747120250.0],[2020,2477954000,2617526000.0,6525920000.0,20868118000.0],[2021,2533808000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,836877000,246323000.0,508480000.0,1285449000.0],[2019,875723000,222781750.0,543709500.0,1308375750.0],[2020,1000299000,227411000.0,583122000.0,1569382000.0],[2021,1027651000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,6009582000,3028000000.0,6976213000.0,20664790000.0],[2019,7682001000,3104853250.0,7586630500.0,22460925250.0],[2020,8291815000,3119784000.0,7470900000.0,23359865000.0],[2021,9690331000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.3549110238334243,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.35076820906630096,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.40367940647808637,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.4055757184443336,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.3923718821042795,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,0.3249916265306396,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.29884337747525724,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.26147796189830874,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５ 【研究開発活動】
+ (1) 研究開発の目的及び主な内容について
+当社はコンテンツメーカーとして、ゲームソフトを通じてユーザーに夢と感動を与えるとともに、市場の真のニーズを把握し、ユーザーに満足していただける良質かつ高感度の製品を供給することを目的として研究開発活動を行っております。
+現在の研究開発活動は、これまでのゲームソフトの開発に加え、ネットワークや通信を利用したゲームソフトのための技術革新や新規製品開発にも取り組んでおります。
+　
+ (2) 研究開発の体制
+技術革新に関する研究開発はクリエイティブユニットにおいて行われており、株式会社ソニー・インタラクティブエンタテインメントのPlayStation４などへの対応、及びビジュアル機能の高度化に伴うデジタルグラフィックや３Ｄの最先端の技術研究と自社製品への取り込みを行っております。また、ゲームソフトの制作を支援するツールの研究開発、さらには開発の合理化及びクオリティの向上を目的とする研究等を行い、それらの成果物を全社で共有することによって、制作の効率化、技術基盤の集約を可能としております。製品開発のプロジェクトは、当社クリエイティブユニットとデザインユニットの連携にて行われており、各々のプロジェクトについては、その進捗状況に応じた人員と経営資源の配置を行っております。
+　
+ (3) 研究開発の成果
+研究開発の成果といたしましては、据置型ゲーム機PlayStation４向けゲームソフト「英雄伝説 閃の軌跡Ⅰ：改 -Thors Military Academy 1204-」（平成30年３月８日発売）及び「英雄伝説 閃の軌跡Ⅱ：改 -The Erebonian Civil War-」（平成30年４月26日発売）、そして「英雄伝説 閃の軌跡Ⅳ -THE END OF SAGA-」（平成30年９月27日発売）を制作、発売しました。
+　
+ (4) 研究開発費の総額
+当事業年度における研究開発費の総額は、414,476千円であります。
+　</div><h2>2019</h2><div>
+５ 【研究開発活動】
+ (1) 研究開発の目的及び主な内容について当社はコンテンツメーカーとして、ゲームソフトを通じてユーザーに夢と感動を与えるとともに、市場の真のニーズを把握し、ユーザーに満足していただける良質かつ高感度の製品を供給することを目的として研究開発活動を行っております。現在の研究開発活動は、これまでのゲームソフトの開発に加え、ネットワークや通信を利用したゲームソフトのための技術革新や新規製品開発にも取り組んでおります。　
+ (2) 研究開発の体制技術革新に関する研究開発はクリエイティブユニットにおいて行われており、株式会社ソニー・インタラクティブエンタテインメントのPlayStation４や任天堂株式会社のNintendo Switch、ストリーミングゲーム等のプラットフォームの他、PlayStation５等の次世代機への対応、及びビジュアル機能の高度化に伴うデジタルグラフィックや３Ｄの最先端技術研究と自社製品への取り込みを行っております。また、ゲームソフトの制作を支援するツールの研究開発、さらには開発の合理化及びクオリティの向上を目的とする研究等を行い、それらの成果物を全社で共有することによって、制作の効率化、技術基盤の集約を可能としております。製品開発のプロジェクトは、当社クリエイティブユニットとデザインユニットの連携にて行われており、各々のプロジェクトについては、その進捗状況に応じた人員と経営資源の配置を行っております。　
+ (3) 研究開発の成果研究開発の成果といたしましては、据置型ゲーム機PlayStation４向けゲームソフト「英雄伝説 零（ぜろ）の軌跡：改」（2020年４月23日発売）、「英雄伝説 碧（あお）の軌跡：改」（2020年５月28日発売）及び「英雄伝説 創（はじまり）の軌跡」（2020年８月27日発売）を制作、発売しました。　
+ (4) 研究開発費の総額当事業年度における研究開発費の総額は、484,007千円であります。　</div><h2>2020</h2><div>
+５ 【研究開発活動】
+ (1) 研究開発の目的及び主な内容について当社はコンテンツメーカーとして、ゲームソフトを通じてユーザーに夢と感動を与えるとともに、市場の真のニーズを把握し、ユーザーに満足していただける良質かつ高感度の製品を供給することを目的として研究開発活動を行っております。現在の研究開発活動は、これまでのゲームソフトの開発に加え、ネットワークや通信を利用したゲームソフトのための技術革新や新規製品開発にも取り組んでおります。　
+ (2) 研究開発の体制技術革新に関する研究開発はクリエイティブユニットにおいて行われており、株式会社ソニー・インタラクティブエンタテインメントのPlayStation４やPlayStation５、任天堂株式会社のNintendo Switch、ストリーミングゲーム等のプラットフォームの他、ビジュアル機能の高度化に伴うデジタルグラフィックや３Ｄの最先端技術研究と自社製品への取り込みを行っております。また、ゲームソフトの制作を支援するツールの研究開発、さらには開発の合理化及びクオリティの向上を目的とする研究等を行い、それらの成果物を全社で共有することによって、制作の効率化、技術基盤の集約を可能としております。製品開発のプロジェクトは、当社クリエイティブユニットとデザインユニットの連携にて行われており、各々のプロジェクトについては、その進捗状況に応じた人員と経営資源の配置を行っております。　
+ (3) 研究開発の成果研究開発の成果といたしましては、据置型ゲーム機PlayStation４向けゲームソフト「那由多（なゆた）の軌跡：改」（2021年６月24日発売）、及び「英雄伝説 黎（くろ）の軌跡」（2021年９月30日発売）を制作、発売しました。　
+ (4) 研究開発費の総額当事業年度における研究開発費の総額は、547,967千円であります。　</div><h2>2021</h2><div>
+５ 【研究開発活動】
+ (1) 研究開発の目的及び主な内容について当社はコンテンツメーカーとして、ゲームソフトを通じてユーザーに夢と感動を与えるとともに、市場の真のニーズを把握し、ユーザーに満足していただける良質かつ高感度の製品を供給することを目的として研究開発活動を行っております。現在の研究開発活動は、これまでのゲームソフトの開発に加え、ネットワークや通信を利用したゲームソフトのための技術革新や新規製品開発にも取り組んでおります。 
+ (2) 研究開発の体制技術革新に関する研究開発はクリエイティブユニットにおいて行われており、株式会社ソニー・インタラクティブエンタテインメントのPlayStation４やPlayStation５、任天堂株式会社のNintendo Switch、ストリーミングゲーム等のプラットフォームの他、ビジュアル機能の高度化に伴うデジタルグラフィックや３Ｄの最先端技術研究と自社製品への取り込みを行っております。また、ゲームソフトの制作を支援するツールの研究開発、さらには開発の合理化及びクオリティの向上を目的とする研究等を行い、それらの成果物を全社で共有することによって、制作の効率化、技術基盤の集約を可能としております。製品開発のプロジェクトは、当社クリエイティブユニットとデザインユニットの連携にて行われており、各々のプロジェクトについては、その進捗状況に応じた人員と経営資源の配置を行っております。　
+ (3) 研究開発の成果研究開発の成果といたしましては、Nintendo Switch向けゲームソフト「那由多の軌跡 アド・アストラ」（2022年5月26日発売）、PlayStation５向けゲームソフト「英雄伝説 黎の軌跡」（2022年７月28日発売）、PlayStation５／PlayStation４向けゲームソフト「英雄伝説 黎の軌跡Ⅱ-CRIMSON SiN-」（2022年９月29日発売）を制作、発売しました。　
+ (4) 研究開発費の総額当事業年度における研究開発費の総額は、503,089千円であります。　</div>
+</body>
+</html>

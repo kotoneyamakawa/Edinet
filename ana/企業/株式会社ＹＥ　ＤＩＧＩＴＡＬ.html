@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,12484235000,2742939000.0,7174986000.0,19368338500.0],[2020,14481536000,2617526000.0,6525920000.0,20868118000.0],[2021,13725533000,2652336500.0,6505502500.0,19927118500.0],[2022,13725533000,2546049000.0,5562488500.0,17786584750.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,975771000,246323000.0,508480000.0,1285449000.0],[2020,769915000,227411000.0,583122000.0,1569382000.0],[2021,541377000,217422750.0,573529000.0,1656336000.0],[2022,541377000,173898000.0,381498000.0,1122213250.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,8467769000,3028000000.0,6976213000.0,20664790000.0],[2020,11558113000,3119784000.0,7470900000.0,23359865000.0],[2021,10084476000,3000754500.0,7803625500.0,24362483000.0],[2022,10084476000,2663318500.0,6166607500.0,17227721000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.07816025571450713,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2020,0.05316528578183972,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.03944305842257638,0.04391320201867674,0.07714890633224092,0.13271258411378287],[2022,0.03944305842257638,0.03967641512587309,0.06586391788145754,0.12112679120949958],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,1.474323992541601,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2020,1.2529325504950506,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,1.3610556463221293,0.5833868969965725,0.9166717213573184,1.2857667064817404],[2022,1.3610556463221293,0.588049747991468,0.9378736161788688,1.4148965093543149],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+６ 【研究開発活動】
+当社グループ（当社および連結子会社）の研究開発活動は当社および連結子会社にて行っており、先端技術の研究、開発のベースとなる現技術のレベルアップ、先端技術の実用化による新製品・新サービスの開発を旨としております。
+
+研究開発テーマに関する方向づけは「経営会議」で、具体的なテーマ選定および評価は「開発投資審議会」・「開発投資審査会」で行われ、いずれも各部門の代表者で構成されております。
+研究開発作業は各テーマの申請部門が行っております。
+なお、当連結会計年度の研究開発費の総額は196百万円(対売上高比率1.6％)であり、事業部門別の研究開発活動および主なテーマは以下のとおりであります。
+ 
+〔全社共通部門〕
+当社独自のＡＩ技術を進化させ、ＡＩソリューション「Paradigm」を故障予知／製造品質／熟練者ノウハウ継承／画像判定の４本柱に発展させました。特に故障予知の分野では、大規模プラントにおいて他社を凌駕する実証結果を得ることで当社ＡＩのブランド価値を高めました。また、画像判定では、従来、人手に頼っていた車両監視・食品検査等をAIに置き換える技術の実証を開始しています。
+
+本部門に係わる研究開発費は65百万円であります。
+ 
+〔ＩｏＴソリューション事業〕
+スマートファクトリーソリューションでは、「見える工場」「止まらない工場」「つながる工場」を実現する「MMsmartFactory」の提供を開始しました。あわせて、工場向けセキュリティソリューションとして、不正通信検知サービス「MMsmartSecurity FS-Eye」の提供を開始しました。学校向けセキュリティ製品では、「NetSHAKER W-NAC」の機能を強化し、災害時の防災拠点機能に対応しました。AI関連ソリューションでは、故障予知サービス「MMPredict」の品揃えを拡充し、「プロダクトモデル」「プラントモデル」「モータモデル」の提供を開始しました。
+
+本部門に係わる研究開発費は132百万円であります。
+ </div><h2>2020</h2><div>
+５ 【研究開発活動】当社グループ（当社及び当社の関係会社）の研究開発活動は当社及び連結子会社にて行っており、先端技術の研究、開発のベースとなる現技術のレベルアップ、先端技術の実用化による新製品・新サービスの開発を旨としております。研究開発テーマに関する方向づけは「経営会議」で、具体的なテーマ選定及び評価は「開発投資審議会」・「開発投資審査会」で行われ、いずれも各部門の代表者で構成されております。研究開発作業は各テーマの申請部門が行っております。なお、当連結会計年度の研究開発費の総額は148,488千円（対売上高比1.0%）であり、事業部門別の研究開発活動及び主なテーマは以下のとおりであります。 〔全社共通部門〕当社独自のＡＩソリューション「Paradigm」では、ＧＡＮ（敵対的生成ネットワーク）を応用したアノマリー検知など最新技術を開発しました。このアノマリー検知技術では、不良品画像収集が困難な場合、正常品画像のみを学習して、異常を高精度に検知することができます。従来の異常検知に比べ、20％以上精度がアップ（当社従来比）しました。開発した最新技術はＡＩ画像判定サービス「MMEye」に搭載済です。本部門に係わる研究開発費は116,894千円であります。 〔ＩｏＴソリューション事業〕ＡＩ画像判定サービス「MMEye」では、最新ＡＩアルゴリズムを搭載することで食品製造において、異物検査だけでなく、商品表示法の検査にも利用できるようになりました。また、「MMEye」のラインナップを拡充し、ユーザがＡＩ学習や精度検証可能な「MMEyeBOX」をリリースしました。ＩｏＴソリューションでは、バス事業者向けの「スマートバス停」に電源が設置できない場所（オフグリッド）に対応したハードウエアを新たに２タイプリリースしました。また、バス停以外の用途に適用可能なサイネージ型サービス「MMVision」を開発しました。学校向け情報セキュリティ機器では、文科省のＧＩＧＡスクール構想向けに機能強化した「NetSHAKER　W-NAC」をリリースしました。Ｗｅｂフィルタリングの機能強化とともに、接続可能なＷｉＦｉ機器を拡充しました。本部門に係わる研究開発費は31,593千円であります。 </div><h2>2021</h2><div>
+５ 【研究開発活動】当社グループ（当社及び当社の関係会社）の研究開発活動は当社及び連結子会社にて行っており、先端技術の研究、開発のベースとなる現技術のレベルアップ、先端技術の実用化による新製品・新サービスの開発を旨としております。研究開発テーマに関する方向づけは「経営会議」で、具体的なテーマ選定及び評価は「開発投資審議会」・「開発投資審査会」で行われ、いずれも各部門の代表者で構成されております。研究開発作業は各テーマの申請部門が行っております。なお、当連結会計年度の研究開発費の総額は258,570千円（対売上高比1.9%）であり、事業部門別の研究開発活動及び主なテーマは以下のとおりであります。 〔ＩｏＴソリューション事業〕ＡＩ画像関連では、ＭＯＴ（マルチオブジェクトトラッキング)を応用した、動画内複数物体の高精度追跡技術を開発しました。この技術は、監視対象が重なり合っていても動きを追跡でき、人手に頼っていた豚舎監視などの畜産分野に適用可能です。ＡＩ故障予知関連では、物流倉庫の設備に対して異常部品を特定する技術や、ソーシャル分野向けにＡＩ需要予測技術を開発し、従来の人手による手法と比較し、予測精度を大幅に向上させることができました。物流ＤＸ向けに新サービス「MMLogiStation」をリリースし、物流倉庫の自動化と設備拡張を迅速に実現できるＷＥＳ（Warehouse Execution System）機能とシステム導入効果をシミュレーションできる機能を実装しました。農業ＤＸ向けに新サービス「Milfee」をリリースし、畜産用飼料タンクの残量を高精度に計測できるセンサユニットとタンク残量の見える化、発注システムとの連携、飼料配送ルート計画などの生産性向上に繋がる機能を実装しました。ＡＩ画像判定サービス「MMEye」では、食品製造業の研究開発用途向けに「MMEye Package LAB.」をリリースしました。また、最新ＨＷ（ＧＰＵ、エッジＰＣ）対応などの機能を強化しました。その他、文教ＤＸ向け製品「NetSHAKER」の機能強化をしました。本部門に係わる研究開発費は258,570千円であります。 </div><h2>2022</h2><div>
+５ 【研究開発活動】当社グループ（当社及び当社の関係会社）の研究開発活動は当社及び連結子会社にて行っており、先端技術の研究、開発のベースとなる現技術のレベルアップ、先端技術の実用化による新製品・新サービスの開発を旨としております。研究開発テーマに関する方向づけは「経営会議」で、具体的なテーマ選定及び評価は「開発投資審議会」・「開発投資審査会」で行われ、いずれも各部門の代表者で構成されております。研究開発作業は各テーマの申請部門が行っております。なお、当連結会計年度の研究開発費の総額は258,570千円（対売上高比1.9%）であり、事業部門別の研究開発活動及び主なテーマは以下のとおりであります。 〔ＩｏＴソリューション事業〕ＡＩ画像関連では、ＭＯＴ（マルチオブジェクトトラッキング)を応用した、動画内複数物体の高精度追跡技術を開発しました。この技術は、監視対象が重なり合っていても動きを追跡でき、人手に頼っていた豚舎監視などの畜産分野に適用可能です。ＡＩ故障予知関連では、物流倉庫の設備に対して異常部品を特定する技術や、ソーシャル分野向けにＡＩ需要予測技術を開発し、従来の人手による手法と比較し、予測精度を大幅に向上させることができました。物流ＤＸ向けに新サービス「MMLogiStation」をリリースし、物流倉庫の自動化と設備拡張を迅速に実現できるＷＥＳ（Warehouse Execution System）機能とシステム導入効果をシミュレーションできる機能を実装しました。農業ＤＸ向けに新サービス「Milfee」をリリースし、畜産用飼料タンクの残量を高精度に計測できるセンサユニットとタンク残量の見える化、発注システムとの連携、飼料配送ルート計画などの生産性向上に繋がる機能を実装しました。ＡＩ画像判定サービス「MMEye」では、食品製造業の研究開発用途向けに「MMEye Package LAB.」をリリースしました。また、最新ＨＷ（ＧＰＵ、エッジＰＣ）対応などの機能を強化しました。その他、文教ＤＸ向け製品「NetSHAKER」の機能強化をしました。本部門に係わる研究開発費は258,570千円であります。 </div>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,5927000000,2742939000.0,7174986000.0,19368338500.0],[2019,6016000000,2850965500.0,6729846000.0,20747120250.0],[2020,5411000000,2617526000.0,6525920000.0,20868118000.0],[2021,5898000000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,11191000000,246323000.0,508480000.0,1285449000.0],[2019,22397000000,222781750.0,543709500.0,1308375750.0],[2020,37152000000,227411000.0,583122000.0,1569382000.0],[2021,78667000000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,48440000000,3028000000.0,6976213000.0,20664790000.0],[2019,63004000000,3104853250.0,7586630500.0,22460925250.0],[2020,103313000000,3119784000.0,7470900000.0,23359865000.0],[2021,189677000000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,1.8881390248017547,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,3.722905585106383,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,6.8660136758455,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,13.337911156324179,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.12235755573905863,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,0.09548600088883245,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.052374822142421576,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.031094966706559046,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+ 
+６ 【研究開発活動】
+当社グループの研究開発活動の概要は以下のとおりです。
+(1) 研究開発体制
+当社グループにおいては、基礎研究及び新技術開発等のいわゆる研究開発に相当する活動を行っていないため、独立した研究開発組織を有しておりません。
+しかしながら当社グループにおいては、グループ内で開発しているオンラインゲームコンテンツが企画され商用化に至るまでの過程を「研究開発」と捉えており、グループ内の開発人員による通常の開発業務の中で行われております。
+ 
+(2) 研究開発方針
+当社グループにおける研究開発活動は、グループ内の開発人員による通常の開発業務の中で行われているため、特段の研究開発活動の方針を設定しておりません。
+ 
+(3) 研究開発費
+当社グループにおける研究開発費には、グループ内で開発するオンラインゲームコンテンツの企画承認時から商用化日までの費用(労務費、外注費及びその他経費)を計上しており、当連結会計年度における研究開発費は8,071百万円となっております。
+ 
+当連結会計年度(自　2017年１月１日　至　2017年12月31日)
+当連結会計年度の研究開発費を報告セグメントごとに示すと、下記のとおりであります。なお、当連結会計年度において、研究開発活動の状況に重要な変更はありません。
+ 
+
+
+
+
+
+
+
+
+報告セグメントの名称
+
+
+研究開発費(百万円)
+
+
+
+
+日本
+
+
+1,034
+
+
+
+
+韓国
+
+
+7,014
+
+
+
+
+中国
+
+
+－
+
+
+
+
+北米
+
+
+259
+
+
+
+
+その他
+
+
+－
+
+
+
+
+報告セグメント計
+
+
+8,307
+
+
+
+
+調整額
+
+
+△236
+
+
+
+
+合計(連結)
+
+
+8,071
+
+
+
+ 
+
+ </div><h2>2019</h2><div> ５ 【研究開発活動】当社グループの研究開発活動の概要は以下のとおりです。(1) 研究開発体制当社グループにおいては、基礎研究及び新技術開発等のいわゆる研究開発に相当する活動を行っていないため、独立した研究開発組織を有しておりません。しかしながら当社グループにおいては、グループ内で開発しているオンラインゲームコンテンツが企画され商用化に至るまでの過程を「研究開発」と捉えており、グループ内の開発人員による通常の開発業務の中で行われております。 (2) 研究開発方針当社グループにおける研究開発活動は、グループ内の開発人員による通常の開発業務の中で行われているため、特段の研究開発活動の方針を設定しておりません。 (3) 研究開発費当社グループにおける研究開発費には、グループ内で開発するオンラインゲームコンテンツの企画承認時から商用化日までの費用(労務費、外注費及びその他経費)を計上しており、当連結会計年度における研究開発費は14,895百万円となっております。 当連結会計年度(自　2019年１月１日　至　2019年12月31日)当連結会計年度の研究開発費を報告セグメントごとに示すと、下記のとおりであります。なお、当連結会計年度において、研究開発活動の状況に重要な変更はありません。 
+
+
+
+
+
+
+
+報告セグメントの名称
+
+研究開発費(百万円)
+
+
+
+日本
+
+703
+
+
+
+韓国
+
+12,334
+
+
+
+中国
+
+－
+
+
+
+北米
+
+1,576
+
+
+
+その他
+
+557
+
+
+
+報告セグメント計
+
+15,170
+
+
+
+調整額
+
+△275
+
+
+
+合計(連結)
+
+14,895
+
+
+ 
+ </div><h2>2020</h2><div> ５ 【研究開発活動】当社グループの研究開発活動の概要は以下のとおりです。(1) 研究開発体制当社グループにおいては、基礎研究及び新技術開発等のいわゆる研究開発に相当する活動を行っていないため、独立した研究開発組織を有しておりません。しかしながら当社グループにおいては、グループ内で開発しているオンラインゲームコンテンツが企画され商用化に至るまでの過程を「研究開発」と捉えており、グループ内の開発人員による通常の開発業務の中で行われております。 (2) 研究開発方針当社グループにおける研究開発活動は、グループ内の開発人員による通常の開発業務の中で行われているため、特段の研究開発活動の方針を設定しておりません。 (3) 研究開発費当社グループにおける研究開発費には、グループ内で開発するオンラインゲームコンテンツの企画承認時から商用化日までの費用（労務費、外注費及びその他経費）を計上しており、当連結会計年度における研究開発費は16,545百万円となっております。 当連結会計年度（自　2020年１月１日　至　2020年12月31日）当連結会計年度の研究開発費を報告セグメントごとに示すと、下記のとおりであります。なお、当連結会計年度において、研究開発活動の状況に重要な変更はありません。 
+
+
+
+
+
+
+
+報告セグメントの名称
+
+研究開発費(百万円)
+
+
+
+日本
+
+40
+
+
+
+韓国
+
+14,123
+
+
+
+中国
+
+－
+
+
+
+北米
+
+974
+
+
+
+その他
+
+1,697
+
+
+
+報告セグメント計
+
+16,834
+
+
+
+調整額
+
+△289
+
+
+
+合計(連結)
+
+16,545
+
+
+ 
+ </div><h2>2021</h2><div> ５ 【研究開発活動】当社グループの研究開発活動の概要は以下のとおりです。(1) 研究開発体制当社グループにおいては、基礎研究及び新技術開発等のいわゆる研究開発に相当する活動を行っていないため、独立した研究開発組織を有しておりません。しかしながら当社グループにおいては、グループ内で開発しているオンラインゲームコンテンツが企画され商用化に至るまでの過程を「研究開発」と捉えており、グループ内の開発人員による通常の開発業務の中で行われております。 (2) 研究開発方針当社グループにおける研究開発活動は、グループ内の開発人員による通常の開発業務の中で行われているため、特段の研究開発活動の方針を設定しておりません。 (3) 研究開発費当社グループにおける研究開発費には、グループ内で開発するオンラインゲームコンテンツの企画承認時から商用化日までの費用（労務費、外注費及びその他経費）を計上しており、当連結会計年度における研究開発費は20,996百万円となっております。 当連結会計年度（自　2021年１月１日　至　2021年12月31日）当連結会計年度の研究開発費を報告セグメントごとに示すと、下記のとおりであります。なお、当連結会計年度において、研究開発活動の状況に重要な変更はありません。 
+
+
+
+
+
+
+
+報告セグメントの名称
+
+研究開発費(百万円)
+
+
+
+日本
+
+－
+
+
+
+韓国
+
+18,262
+
+
+
+中国
+
+－
+
+
+
+北米
+
+795
+
+
+
+その他
+
+2,282
+
+
+
+報告セグメント計
+
+21,339
+
+
+
+調整額
+
+△343
+
+
+
+合計(連結)
+
+20,996
+
+
+ 
+ </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,45776000000,2742939000.0,7174986000.0,19368338500.0],[2019,45128000000,2850965500.0,6729846000.0,20747120250.0],[2020,37125000000,2617526000.0,6525920000.0,20868118000.0],[2021,32541000000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,4192000000,246323000.0,508480000.0,1285449000.0],[2019,7977000000,222781750.0,543709500.0,1308375750.0],[2020,3048000000,227411000.0,583122000.0,1569382000.0],[2021,2414000000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,77326000000,3028000000.0,6976213000.0,20664790000.0],[2019,85833000000,3104853250.0,7586630500.0,22460925250.0],[2020,80814000000,3119784000.0,7470900000.0,23359865000.0],[2021,83280000000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.09157637189793778,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.17676387165396207,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.0821010101010101,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.0741833379429028,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.5919871711972687,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,0.5257651486025189,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.4593882248125325,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.3907420749279539,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５【研究開発活動】
+
+　当社グループは「どの時代においても、沢山のユーザに受け入れられる、新しいエンターテインメントを作り続ける」というビジョンを掲げ、ビジョン実現のために研究開発活動を積極的に行っています。
+
+
+　特に将来が大きく期待されているVR（仮想現実）を具現化するHMD端末（頭部装着型表示端末）向けサービスへの注力を進めており、様々な開発実験を行っています。VR専門のチームも発足させ、これまでにない画期的なユーザ体験をもたらすVR市場の拡大を見据え、市場の成長が当社グループの成長となるよう今から着々と準備をしております。
+
+
+　その他にも、新タイトルの開発と平行し新しいユーザ体験を実現するための新技術の研究等を行っております。
+
+
+　なお、当連結会計年度における研究開発費の総額は、2,516百万円であります。
+
+</div><h2>2019</h2><div>
+５【研究開発活動】
+
+　当社グループは「最新のテクノロジーと、独創的なアイデアで“新しい体験”を届ける」というVisionを掲げ、Vision実現のために研究開発活動を積極的に行っています。
+
+
+　特に将来が大きく期待されているVRを具現化するHMD端末（頭部装着型表示端末）向けサービス等への様々な開発実験を行っています。これまでにない画期的なユーザ体験をもたらすVR市場等の拡大を見据え、市場の成長が当社グループの成長となるよう今から着々と準備をしております。
+
+
+　その他にも、新タイトルの開発と平行し新しいユーザ体験を実現するための新技術の研究等を行っております。
+
+
+　なお、当連結会計年度における研究開発費の総額は、3,402百万円であります。
+
+</div><h2>2020</h2><div>
+５【研究開発活動】
+　当社グループは「最新のテクノロジーと、独創的なアイデアで“新しい体験”を届ける」というVisionを掲げ、Vision実現のためにエンターテインメント事業において研究開発活動を積極的に行っています。
+　特に将来が大きく期待されているVRを具現化するHMD向けサービス等への様々な開発実験を行っています。これまでにない画期的なユーザー体験をもたらすVR市場等の拡大を見据え、市場の成長が当社グループの成長となるよう今から着々と準備をしております。
+　その他にも、新タイトルの開発と平行し新しいユーザー体験を実現するための新技術の研究等を行っております。
+　なお、当連結会計年度における研究開発費の総額は、3,396百万円であります。
+</div><h2>2021</h2><div>
+５【研究開発活動】
+　当社グループは「最新のテクノロジーと、独創的なアイデアで“新しい体験”を届ける」というVisionを掲げ、エンターテインメント事業において新タイトルの開発と平行し新しいユーザー体験を実現するための新技術の研究等を行っております。
+　なお、当連結会計年度における研究開発費の総額は、2,209百万円であります。
+</div>
+</body>
+</html>

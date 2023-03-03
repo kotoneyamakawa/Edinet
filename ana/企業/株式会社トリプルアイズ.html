@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2021,2424504000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2021,112344000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2021,1788090000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2021,0.04633690024846319,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2021,1.3559183262587453,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2021</h2><div> 
+５ 【研究開発活動】当社グループは、経営理念として掲げる「テクノロジーに想像力を載せる」に基づき、機械学習技術、深層学習技術、画像処理技術を用いたアルゴリズム及びソフトウエアの研究開発に取り組んでおります。メインAIによる画像認識技術のビジネスでの実用化、社会実装にいち早く実績を残し企業活動において欠かせないシステムとして浸透、定着させるべく研究開発を進めてまいりました。当社グループの画像認識技術の特徴である顔画像に対する高い認証精度を実際のビジネスの現場で活用するためには、多様な外部環境への対処が求められ、研究分野は多岐にわたります。2019年８月期の画像認識プラットフォーム・AIZE（アイズ）の提供開始に伴い、画像認識技術の実用が本格始動いたしました。導入企業様のニーズに応じた画像認識技術のカスタマイズ、機材や機材の設置環境に左右されない認証精度の追求を中心に研究開発を行っております。実用上で必要となる精度向上や機能追加の点では、新型コロナウイルス感染症拡大の情勢下においてマスク着用時での顔認証精度のさらなる向上や、テレワークの際の顔認証における写真によるなりすましを防止する機能等の研究を進め、一定の成果を得ております。このうちマスク着用時での顔認証につきましては、当社グループでは新型コロナウイルス感染症の流行以前より、他社に先がけて成果をだしておりました。画像認識プラットフォーム・AIZEは、新型コロナウイルス感染症の流行下における社会貢献を目指して開発した自動検温システムにも搭載しております。さらにアルコールチェッカーとの連携機能、顔認証によるゲートの開閉機能なども開発しております。当社グループの画像認識AIの研究開発の源泉となりますのは、2014年より進めております囲碁AIの研究開発です。2015年に初めてコンピュータ囲碁の国内大会に出場後、国際大会、国内大会で好成績を収めてきました。2019年４月に世界一の囲碁AI開発を目的として、株式会社グロービス（東京都千代田区、代表：堀義人氏）、囲碁AI「AQ」開発者・山口祐氏、公益財団法人日本棋院（東京都千代田区、理事長：小林覚氏）、国立研究開発法人産業技術総合研究所（東京都千代田区、理事長：中鉢良治氏）と協働した「GLOBIS-AQZ」プロジェクトに参画し、2019年12月に開催された第11回UEC杯コンピュータ囲碁大会（主催：電気通信大学エンターテイメントと認知科学研究ステーション）では、中韓を含め国内外から多くのチームが参加するなか準優勝となりました。その後、新型コロナウイルス感染症の感染拡大により各種大会の中止あるいは規模縮小での開催となり、大会参加を断念しておりましたが、2021年９月に囲碁AIの研究開発チームを再編成し、研究を再開しております。なかでも、囲碁AIの手筋の選択は深層学習の特性上、ブラックボックスで人間には理解できない部分があることに注目し、説明可能なAI（XAI）の研究も開始いたしました。説明可能なAIは、AIが導いた解答を人間が理解できるようにする技術であり、AIの社会実装に欠かせない技術と考えられ、社会実装を標榜する当社グループのビジョンにも寄与するものです。画像認識技術は、これまでにも当社グループの事業において、AIによる価格査定（企業向けフリマアプリ）の開発やAI画像認識アプリ、自動運転に向けた技術解析支援システム（航空写真の地図データ化、車載画像の解析）の開発、手書き文字認識・OCR開発等、様々な分野において活用されております。2022年には、交通インフラにおける顔決済プラットフォームでのAIZE活用においては、実際に大手商社と組んで実証実験を行っております。現在は、直近に予定しておりますタイムラプス機能搭載のAIカメラの開発も進んでおります。以前より取り組んでおりました、リテールマーケティングに活用が期待される群衆分析技術、顔画像による決済システムの信頼度を高めうるモーションマグニフィケーション技術についても研究を継続しており、今後、他の機能との相乗効果により実用化が進むものと考えられます。今後も導入企業様のニーズや市場の動向に応じて、AI、ブロックチェーン、IoTといった先端技術を活用した新規プロダクトの研究開発を続けてまいります。なお、当連結会計年度における研究開発費の総額は5,924千円であります。 </div>
+</body>
+</html>

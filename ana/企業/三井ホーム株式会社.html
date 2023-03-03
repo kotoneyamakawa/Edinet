@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,260109000000,19019000000.0,52629034000.0,149649000000.0],[2018,260109000000,28828000000.0,74634000000.0,186874000000.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,3692000000,861545000.0,2307000000.0,6546000000.0],[2018,3692000000,951389000.0,3086451000.0,7918000000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,138696000000,17175987000.0,48142000000.0,138696000000.0],[2018,138696000000,24506000000.0,64483000000.0,170267000000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.0141940494177441,0.030924349441835856,0.039577014168778825,0.058677855219082094],[2018,0.0141940494177441,0.031072925954035355,0.04161303855176716,0.06319902676296472],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,1.8753893407163869,0.893641596175952,1.12094166304527,1.2909456612246364],[2018,1.8753893407163869,0.9255580807185754,1.0999100978745782,1.286668754635347],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５【研究開発活動】
+当社グループ（当社及び連結子会社）は、高性能・高品質な住宅の供給及びスマート設備等の様々な技術の実用化に向け、主として当社の生産技術本部、技術研究所及び三井ホームコンポーネント㈱において住生活向上・エネルギー利用の効率化・環境の低炭素化のための基礎的研究や開発等（住宅部資材・設備・工法・性能等）を行うとともに、当社の商品開発部において新商品に関する研究開発活動を実施しており、当連結会計年度の研究開発費の総額は、３億８千７百万円であります。
+なお、上記の活動は、主に新築事業において行っているため、セグメント情報に関連する研究開発活動の状況は新築事業について記載しております。
+ 
+当連結会計年度における研究開発活動の状況は、次のとおりであります。
+ 
+（新築事業）
+①基礎的研究部門及び応用技術開発部門
+基礎的研究部門では、最先端技術を搭載したスマートハウス実証実験住宅「MIDEAS」（ミディアス）を中心に次世代スマート省エネ技術、創エネ技術等の各メーカー間連携などの検証実験を継続的に実施しております。
+また、その成果を生かし、国土交通省が募集する「平成29年度サステナブル建築物等先導事業（次世代住宅型）」に採択され、実物件での評価・検証を進めております。
+さらに、木造での施設系建築物への対応力強化のための高強度耐力壁などの新技術や、国産材利用促進のためCross Laminated Timber（クロス・ラミネイティド・ティンバー）をモデルハウスで試行するなど実用化検証を進めております。
+
+なお、当連結会計年度におけるこれら基礎的研究部門及び応用技術開発部門の研究開発費は、合計で２億５千３百万円であります。
+
+ 
+②商品開発部門
+商品開発部門では、新しい暮らし提案型商品として「もっと家を楽しむ」をコンセプトに、居心地のよい時間や空間を共有し、自分達らしい暮らしを実現するためのさまざまな提案を盛り込んだ「NATURAL“HYGGE”STYLE」（ナチュラルヒュッゲスタイル）を開発いたしました。
+なお、当連結会計年度におけるこれら商品開発部門の研究開発費は、合計で１億３千３百万円であります。
+</div><h2>2018</h2><div>
+５【研究開発活動】
+当社グループ（当社及び連結子会社）は、高性能・高品質な住宅の供給及びスマート設備等の様々な技術の実用化に向け、主として当社の生産技術本部、技術研究所及び三井ホームコンポーネント㈱において住生活向上・エネルギー利用の効率化・環境の低炭素化のための基礎的研究や開発等（住宅部資材・設備・工法・性能等）を行うとともに、当社の商品開発部において新商品に関する研究開発活動を実施しており、当連結会計年度の研究開発費の総額は、３億８千７百万円であります。
+なお、上記の活動は、主に新築事業において行っているため、セグメント情報に関連する研究開発活動の状況は新築事業について記載しております。
+ 
+当連結会計年度における研究開発活動の状況は、次のとおりであります。
+ 
+（新築事業）
+①基礎的研究部門及び応用技術開発部門
+基礎的研究部門では、最先端技術を搭載したスマートハウス実証実験住宅「MIDEAS」（ミディアス）を中心に次世代スマート省エネ技術、創エネ技術等の各メーカー間連携などの検証実験を継続的に実施しております。
+また、その成果を生かし、国土交通省が募集する「平成29年度サステナブル建築物等先導事業（次世代住宅型）」に採択され、実物件での評価・検証を進めております。
+さらに、木造での施設系建築物への対応力強化のための高強度耐力壁などの新技術や、国産材利用促進のためCross Laminated Timber（クロス・ラミネイティド・ティンバー）をモデルハウスで試行するなど実用化検証を進めております。
+
+なお、当連結会計年度におけるこれら基礎的研究部門及び応用技術開発部門の研究開発費は、合計で２億５千３百万円であります。
+
+ 
+②商品開発部門
+商品開発部門では、新しい暮らし提案型商品として「もっと家を楽しむ」をコンセプトに、居心地のよい時間や空間を共有し、自分達らしい暮らしを実現するためのさまざまな提案を盛り込んだ「NATURAL“HYGGE”STYLE」（ナチュラルヒュッゲスタイル）を開発いたしました。
+なお、当連結会計年度におけるこれら商品開発部門の研究開発費は、合計で１億３千３百万円であります。
+</div>
+</body>
+</html>

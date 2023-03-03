@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,25439270000,2742939000.0,7174986000.0,19368338500.0],[2019,29748560000,2850965500.0,6729846000.0,20747120250.0],[2020,29748560000,2617526000.0,6525920000.0,20868118000.0],[2020,27720200000,2617526000.0,6525920000.0,20868118000.0],[2021,29867142000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,832046000,246323000.0,508480000.0,1285449000.0],[2019,1137152000,222781750.0,543709500.0,1308375750.0],[2020,1137152000,227411000.0,583122000.0,1569382000.0],[2020,1265158000,227411000.0,583122000.0,1569382000.0],[2021,1660559000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,17409034000,3028000000.0,6976213000.0,20664790000.0],[2019,16913543000,3104853250.0,7586630500.0,22460925250.0],[2020,16913543000,3119784000.0,7470900000.0,23359865000.0],[2020,18768782000,3119784000.0,7470900000.0,23359865000.0],[2021,20505173000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.03270714922244231,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.03822544687877329,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.03822544687877329,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2020,0.04564029119559022,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.055598188805611196,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,1.4612683276969876,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,1.7588603404975527,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,1.7588603404975527,0.5965235769806071,0.9009308170378753,1.310139405285049],[2020,1.4769312148225708,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,1.4565662040500706,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５【研究開発活動】
+当社グループは、ますます高度化、多様化する顧客からの情報システムサービスへのニーズに対応し、常に新しい技術・製品及びサービスの提供を目指し、今後の事業分野で中心となる製品・サービス・新技術の研究開発に取り組んでおります。 
+当連結会計年度の研究開発はソリューション分野及びプロダクト分野に係るものであります。主には、小売業における人手不足問題を解決したり、消費者へ新しい購買体験を提供する手段となる「無人店舗」「無人レジ」の実用化に向けた研究開発を推進いたしました。また「ＡＩ」「ロボティクス技術」などの先進テクノロジーの活用にも取り組んでまいりました。
+具体的には、企画本部が中心となり、下記事項を実施いたしました。
+①無人店舗ソリューションの実現に向けた事業化計画の立案
+②ＡＩ技術を活用したサービスモデルの企画、販売・開発計画の立案
+③ロボットデバイス連携の標準化策定
+④無人レジの開発と機能検証
+これらの研究開発費の総額は、39百万円となっております。
+また、これらの研究開発の要件は、今後の事業拡大、製品開発へ活用してまいります。
+　</div><h2>2019</h2><div>
+５【研究開発活動】当社グループは、ますます高度化、多様化する顧客からの情報システムサービスへのニーズに対応し、常に新しい技術・製品及びサービスの提供を目指し、ニューリテールと呼ばれる新技術分野を始め、今後の事業分野で中心となる製品・サービス・新技術の研究開発に取り組んでおります。 当連結会計年度の研究開発はソリューション分野及びプロダクト分野に係るものであります。主には、小売業における人手不足問題への解決や、消費者へ新しい購買体験を提供する手段となる「無人店舗」「無人レジ」の実用化に向けた研究開発を推進いたしました。また「ＡＩ」「ロボティクス技術」「ＥＣプラットフォーム」などの先進テクノロジーの活用にも取り組んでまいりました。主な取り組みとして、下記事項を実施いたしました。①無人店舗・無人レジ等、小売ソリューションの実現に向けた研究と実証実験②ＡＩ技術を活用したサービスモデルの企画、販売・開発計画の立案③ＡＩカメラソリューションの実用化に向けた研究と実証実験④ロボットデバイス連携の標準化策定⑤「ＥＣプラットフォーム」を活用したビジネスモデルの事業化調査これらの研究開発費の総額は、129百万円となっております。また、これらの研究開発の要件は、今後の事業拡大、製品開発へ活用してまいります。　</div><h2>2020</h2><div>
+５【研究開発活動】当社グループは、ますます高度化、多様化する顧客からの情報システムサービスへのニーズに対応し、常に新しい技術・製品及びサービスの提供を目指し、ニューリテールと呼ばれる新技術分野を始め、今後の事業分野で中心となる製品・サービス・新技術の研究開発に取り組んでおります。 当連結会計年度の研究開発はソリューション分野及びプロダクト分野に係るものであります。主には、小売業における人手不足問題への解決や、消費者へ新しい購買体験を提供する手段となる「無人店舗」「無人レジ」の実用化に向けた研究開発を推進いたしました。また「ＡＩ」「ロボティクス技術」「ＥＣプラットフォーム」などの先進テクノロジーの活用にも取り組んでまいりました。主な取り組みとして、下記事項を実施いたしました。①無人店舗・無人レジ等、小売ソリューションの実現に向けた研究と実証実験②ＡＩ技術を活用したサービスモデルの企画、販売・開発計画の立案③ＡＩカメラソリューションの実用化に向けた研究と実証実験④ロボットデバイス連携の標準化策定⑤「ＥＣプラットフォーム」を活用したビジネスモデルの事業化調査これらの研究開発費の総額は、129百万円となっております。また、これらの研究開発の要件は、今後の事業拡大、製品開発へ活用してまいります。　</div><h2>2020</h2><div>
+５【研究開発活動】当社グループは、ますます高度化、多様化する顧客からの情報システムサービスへのニーズに対応し、常に新しい技術・製品及びサービスの提供を目指し、ニューリテールと呼ばれる新技術分野を始め、今後の事業分野で中心となる製品・サービス・新技術の研究開発に取り組んでおります。 当連結会計年度の研究開発はソリューション分野及びプロダクト分野に係るものであります。主には、小売業における人手不足問題への解決や、消費者へ新しい購買体験を提供する手段となる「無人店舗」「非接触型セルフＰＯＳ」の実用化に向けた研究開発を推進いたしました。また「ＡＩ」「ロボティクス技術」「スマートストア」などの先進テクノロジーの活用にも取り組んでまいりました。主な取り組みとして、下記事項を実施いたしました。①無人店舗・非接触型セルフＰＯＳ等、小売ソリューションの実現に向けた研究と実証実験②ＡＩ技術を活用したサービスモデルの企画、販売・開発計画の立案③ＭＤ基幹システムの機能強化に向けた研究開発④ロボットデバイス連携の国際標準化策定⑤スマートストア化に向けたビジネスモデルの事業化調査これらの研究開発費の総額は、49百万円となっております。また、これらの研究開発の要件は、今後の事業拡大、製品開発へ活用してまいります。　</div><h2>2021</h2><div>
+５【研究開発活動】当社グループは、ますます高度化、多様化する顧客からの情報システムサービスへのニーズに対応し、常に新しい技術・製品及びサービスの提供を目指し、ニューリテールと呼ばれる新技術分野を始め、今後の事業分野で中心となる製品・サービス・新技術の研究開発に取り組んでおります。 当連結会計年度の研究開発はソリューション分野及びプロダクト分野に係るものであります。主には、小売業におけるＤＸ（デジタルトランスフォーメーション）を推進するために、「マイクロサービス化」「クラウド技術」「ＡＩ」などの先進テクノロジーの活用にも取り組んでまいりました。主な取り組みとして、下記事項を実施いたしました。①ＭＤ基幹システムの機能強化に向けた研究開発②流通・小売業のデータ活用による新規クラウドサービスの研究③ＡＩ技術を活用したサービスモデルの企画、販売・開発計画の立案これらの研究開発費の総額は、26百万円となっております。また、これらの研究開発の要件は、今後の事業拡大、製品開発へ活用してまいります。　</div>
+</body>
+</html>

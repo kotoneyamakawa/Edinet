@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,302511000000,2742939000.0,7174986000.0,19368338500.0],[2018,301744000000,3037116500.0,8593534000.0,26552707000.0],[2019,293638000000,2850965500.0,6729846000.0,20747120250.0],[2020,264557000000,2617526000.0,6525920000.0,20868118000.0],[2021,298276000000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,16089000000,246323000.0,508480000.0,1285449000.0],[2018,13116000000,228386500.0,578979000.0,1692422500.0],[2019,26559000000,222781750.0,543709500.0,1308375750.0],[2020,12685000000,227411000.0,583122000.0,1569382000.0],[2021,21134000000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,435542000000,3028000000.0,6976213000.0,20664790000.0],[2018,452000000000,3175141500.0,8093000000.0,24401691500.0],[2019,447549000000,3104853250.0,7586630500.0,22460925250.0],[2020,473739000000,3119784000.0,7470900000.0,23359865000.0],[2021,498808000000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.05318484286521812,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2018,0.04346731003764781,0.03877421033147174,0.06133828996282528,0.1193959476792288],[2019,0.09044810276599077,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.0479480792419025,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.07085384006758841,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,0.6945621777004284,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2018,0.6675752212389381,0.6667319029191288,0.9877678356794964,1.4165269135225755],[2019,0.6561024602892644,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,0.5584446287934918,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,0.5979775785472566,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５ 【研究開発活動】
+当社グループにおいて、研究開発活動は、子会社である㈱テレビ朝日が行っております。当社グループの研究開発活動については、下記のとおりであります。
+当社グループは、テレビ放送事業におけるサービス形態の多様化に向け、利用技術の開発・取得に取り組んでおります。総額は1億1百万円であります。
+ </div><h2>2018</h2><div>
+５ 【研究開発活動】当社グループは、公共の電波を活用して視聴者に有用な放送サービスを着実に提供するとともに、益々多様化する視聴者ニーズにお応えするため、放送と通信の融合に関わる幅広い技術の開発に取り組んでおります。当社グループにおいて、研究開発活動は、子会社である㈱テレビ朝日が行っており、テレビ放送事業及びその他事業における主な研究開発活動は、下記のとおりであります。 (1)ビッグデータを解析・利活用するための技術の開発(2)AR/VR・AI・ロボットなど新たなエンターテインメントに関わる技術の開発(3)リアルタイムの映像配信やハイブリッドキャストを応用した放送通信連携に関わる技術の開発(4)音声認識技術の応用やRPAの利活用など業務改善に資する技術の開発 なお、当連結会計年度の研究開発費の総額は243百万円であります。 </div><h2>2019</h2><div>
+５ 【研究開発活動】当社グループは、公共の電波を活用して視聴者に有用な放送サービスを着実に提供するとともに、益々多様化する視聴者ニーズにお応えするため、放送と通信の融合に関わる幅広い技術の開発に取り組んでおります。当社グループにおいて、研究開発活動は、子会社である㈱テレビ朝日が行っており、テレビ放送事業及びその他事業における主な研究開発活動は、下記のとおりであります。 (1)ビッグデータを解析・利活用するための技術の開発(2)AR/VR・AI・ロボットなど新たなエンタテインメントに関わる技術の開発(3)インターネット向け映像配信に関わる技術の開発(4)音声認識技術の応用やRPAの利活用など業務改善に資する技術の開発 なお、当連結会計年度の研究開発費の総額は531百万円であります。 </div><h2>2020</h2><div>
+５ 【研究開発活動】当社グループは、公共の電波を活用して視聴者に有用な放送サービスを着実に提供するとともに、益々多様化する視聴者ニーズにお応えするため、放送と通信の融合に関わる幅広い技術の開発に取り組んでおります。当社グループにおいて、研究開発活動は、子会社である㈱テレビ朝日が行っており、テレビ放送事業及びその他事業における主な研究開発活動は、下記のとおりであります。 (1)ビッグデータを解析・利活用するための技術の開発(2)AR/VR・ロボットなど新たなエンタテインメントに関わる技術の開発・新たな芸術形態である「デジタルアート」、「インタラクティブアート」や、イベントなどのエンタテインメント事業に向けて展開するための調査研究開発・ゲームエンジンのテレビ制作への展開やハイクオリティゲームエンジンである「Unity」「UnrealEngine」でのF/K出力の検証　等(3)インターネット向け映像配信やクラウドを利用した番組制作に関わる技術の開発・インターネット回線を利用した映像音声の伝送技術検証・クラウド上で番組映像制作全般を行うための技術検証（スイッチング、CG・テロップ、音声ミキシング等）・VideoOverIPに関する基礎研究と検証　等(4)AIやRPA、映像・音声認識技術の活用など業務改善に資する技術の開発・AIを利用した自動撮影システムや映像認識技術による自動文字変換システムなど番組制作業務改善に向けた研究開発・音声認識技術を用いた災害情報自動発話システムの研究開発・番組テロップの文字詰め業務省力化に関するカーニング自動アルゴリズム研究開発　等 なお、当連結会計年度の研究開発費の総額は609百万円であります。</div><h2>2021</h2><div>
+５ 【研究開発活動】当社グループは、公共の電波を活用して視聴者に有用な放送サービスを着実に提供するとともに、益々多様化する視聴者ニーズにお応えするため、放送と通信の融合に関わる幅広い技術の開発に取り組んでおります。当社グループにおいて、研究開発活動は、子会社である㈱テレビ朝日が行っており、テレビ放送事業及びその他事業における主な研究開発活動は、下記のとおりであります。 (1)ビッグデータを解析・利活用するための技術の開発(2)AR/VR・ロボットなど新たなエンタテインメントに関わる技術の開発・新たな芸術形態である「デジタルアート」、「インタラクティブアート」や、イベントなどのエンタテインメント事業に向けて展開するための調査研究開発・ハイクオリティゲームエンジンである「Unity」「UnrealEngine」を映像コンテンツ制作に展開するため、F/K出力の検証やカメラ連動技術等についての調査研究　等(3)インターネット向け映像配信やクラウドを利用した番組制作に関わる技術の開発・インターネット回線を利用した映像音声の伝送技術検証・クラウド上で番組映像制作全般を行うための技術検証（スイッチング、CG・テロップ、音声ミキシング等）・VideoOverIPに関する基礎研究と検証　等(4)AIやRPA、映像・音声認識技術の活用など業務改善に資する技術の開発・AIを利用した自動撮影システムや映像認識技術による自動文字変換システムなど番組制作業務改善に向けた研究開発・AIや音声合成技術を利用した深い対話が可能なバーチャルヒューマン研究開発・番組テロップの文字詰め業務省力化に関するカーニング自動アルゴリズム研究開発　等 なお、当連結会計年度の研究開発費の総額は156百万円であります。</div>
+</body>
+</html>

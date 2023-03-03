@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2020,17669678000,2617526000.0,6525920000.0,20868118000.0],[2022,19141826000,2546049000.0,5562488500.0,17786584750.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2020,261337000,227411000.0,583122000.0,1569382000.0],[2022,2154832000,173898000.0,381498000.0,1122213250.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2020,43064287000,3119784000.0,7470900000.0,23359865000.0],[2022,43745562000,2663318500.0,6166607500.0,17227721000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2020,0.014790139356246334,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2022,0.11257191450805164,0.03967641512587309,0.06586391788145754,0.12112679120949958],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2020,0.41030931267943666,0.5965235769806071,0.9009308170378753,1.310139405285049],[2022,0.4375718387158908,0.588049747991468,0.9378736161788688,1.4148965093543149],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2020</h2><div>
+５【研究開発活動】
+
+　当社グループは、「データエンパワーメント事業」を単一の報告セグメントとしておりますので、セグメント別の記載はしておりません。
+
+ 
+
+　当社グループは、主に企業向けソフトウェア及びサービスの開発に係る研究開発を行っており、市場の拡大や技術の進歩により多様化、高度化し、広汎な範囲にわたる顧客ニーズに応える製品を研究、開発し、提供することを基本方針としております。当連結会計年度における研究開発費は2,267百万円であります。
+
+ 
+
+(1）研究の目的
+
+
+　クラウド、ビッグデータ、ＩｏＴ、ＡＩ、働き方改革といった市場の変化に対応した、当社グループ独自のソフトウェア及びサービスの開発を目的としております。
+
+ 
+
+(2）主要な研究課題
+
+
+　集計速度の向上やストリーミングデータのリアルタイム処理、紙文書の電子化、他のソフトウェア及びサービスとの連携等当社グループの事業方針を実現する上で必要となる技術開発に取り組んでおります。
+
+ 
+
+(3）研究体制
+
+
+　本社、札幌、新潟の各拠点の開発部門において、研究開発活動を行っております。
+
+ 
+
+(4）研究成果
+
+
+　研究開発活動の成果として、新機能や性能を向上させたソフトウェア及びサービスのリリースを随時行っております。
+
+ 
+ 
+</div><h2>2022</h2><div>
+５【研究開発活動】
+　当社グループは、「データエンパワーメント事業」を単一の報告セグメントとしておりますので、セグメント別の記載はしておりません。
+ 
+　当社グループは、主に企業向けソフトウェア及びサービスの開発に係る研究開発を行っており、市場の拡大や技術の進歩により多様化、高度化し、広汎な範囲にわたる顧客ニーズに応える製品を研究、開発し、提供することを基本方針としております。当連結会計年度における研究開発費は2,446百万円であります。
+ 
+(1）研究の目的
+　クラウド、ビッグデータ、ＩｏＴ、ＡＩ、働き方改革といった市場の変化に対応した、当社グループ独自のソフトウェア及びサービスの開発を目的としております。
+ 
+(2）主要な研究課題
+　集計速度の向上やストリーミングデータのリアルタイム処理、紙文書の電子化、他のソフトウェア及びサービスとの連携等当社グループの事業方針を実現する上で必要となる技術開発に取り組んでおります。
+ 
+(3）研究体制
+　本社、札幌、新潟の各拠点の開発部門において、研究開発活動を行っております。
+ 
+(4）研究成果
+　研究開発活動の成果として、新機能や性能を向上させたソフトウェア及びサービスのリリースを随時行っております。
+ 
+ 
+</div>
+</body>
+</html>

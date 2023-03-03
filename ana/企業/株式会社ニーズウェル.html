@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>売上高</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高', '第1四分位','中央値','第3四分位'],
+				[2017,5140791000,2742939000.0,7174986000.0,19368338500.0],[2019,5364010000,2850965500.0,6729846000.0,20747120250.0],[2020,5752353000,2617526000.0,6525920000.0,20868118000.0],[2021,6730166000,2652336500.0,6505502500.0,19927118500.0],
+			]);
+			var options = {
+				title: '売上高',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriage'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>純利益</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '純利益', '第1四分位','中央値','第3四分位'],
+				[2017,325723000,246323000.0,508480000.0,1285449000.0],[2019,347981000,222781750.0,543709500.0,1308375750.0],[2020,421104000,227411000.0,583122000.0,1569382000.0],[2021,499152000,217422750.0,573529000.0,1656336000.0],
+			]);
+			var options = {
+				title: '純利益',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_jyunrieki'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>資産</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資産', '第1四分位','中央値','第3四分位'],
+				[2017,2697556000,3028000000.0,6976213000.0,20664790000.0],[2019,2997551000,3104853250.0,7586630500.0,22460925250.0],[2020,4360047000,3119784000.0,7470900000.0,23359865000.0],[2021,4608224000,3000754500.0,7803625500.0,24362483000.0],
+			]);
+			var options = {
+				title: '資産',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shisan'));
+			chart.draw(data, options);
+		}
+	</script>
+	
+	<title>売上高利益率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '売上高利益率', '第1四分位','中央値','第3四分位'],
+				[2017,0.06336048285176347,0.04015663781093183,0.0655559646539028,0.11886690532642263],[2019,0.06487329441965992,0.04031989041038515,0.07014691623913852,0.12546430755936863],[2020,0.07320552128841884,0.045301909529547935,0.07861214036975551,0.14225266733569528],[2021,0.0741663727165125,0.04391320201867674,0.07714890633224092,0.13271258411378287],
+			]);
+			var options = {
+				title: '売上高利益率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_uriagedakariekiritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+	
+	<title>資本回転率</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['年度', '資本回転率', '第1四分位','中央値','第3四分位'],
+				[2017,1.9057216977145237,0.6635935599587253,1.0111111409821787,1.3986184304727196],[2019,1.7894641325535412,0.6452614775999851,0.9943771906158944,1.3855089761993198],[2020,1.3193327961831605,0.5965235769806071,0.9009308170378753,1.310139405285049],[2021,1.4604685015311756,0.5833868969965725,0.9166717213573184,1.2857667064817404],
+			]);
+			var options = {
+				title: '資本回転率',
+				gridlines:{color:'transparent'},
+				legend: { position: 'bottom' }
+			};
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart_shihonkaitenritu'));
+			chart.draw(data, options);
+		}
+	</script>	
+		
+</head>
+<body>
+	<h1>BS,PL</h1>
+	<h2>売上</h2>
+	<div id="curve_chart_uriage" style="width: 900px; height: 400px"></div>
+	<h2>純利益</h2>
+	<div id="curve_chart_jyunrieki" style="width: 900px; height: 400px"></div>
+	<h2>資産</h2>
+	<div id="curve_chart_shisan" style="width: 900px; height: 400px"></div>
+	<h2>売上高利益率</h2>
+	<div id="curve_chart_uriagedakariekiritu" style="width: 900px; height: 400px"></div>
+	<h2>資本回転率</h2>
+	<div id="curve_chart_shihonkaitenritu" style="width: 900px; height: 400px"></div>
+	
+	<h1>研究開発費</h1>
+	<h2>2017</h2><div>
+５【研究開発活動】
+
+当事業年度は、前期に開発した自社ソリューション「NW Security Police」の機能強化として、外部からのウイルスの検出、自動遮断を可能とする機能を開発し、「NWSP with CheckPoint」として販売を開始しました。
+
+
+この結果、当該の研究開発費は11,563千円となりました。
+
+
+また、株式会社エヌ・ティ・ティ・データのRPAパッケージである「WinActor」を代理店として販売しておりますが、さらなる拡販のために当社が独自に他社ソリューションと連携機能の開発を行いました。
+
+
+この結果、当該の研究開発費は650千円となりました。
+
+
+以上により、当事業年度の研究開発費の総額は12,213千円となりました。
+
+
+なお、当社は情報サービス事業並びにこれらの付帯業務の単一セグメントのため、セグメントごとの記載はしておりません。
+
+ 
+ 
+</div><h2>2019</h2><div>
+５【研究開発活動】
+
+当事業年度は、不正端末の接続を防止するセキュリティシステム「NW Security Police」の機能強化、AI技術を用いてビジネストークの分析評価を行う「Speak Analyzer」の開発、AI技術を用いて請求書管理クラウドに請求書を自動登録する「Invoice Process Automation（Invoice PA）サービス」の開発等を行いました。
+
+
+当事業年度において当社が支出した研究開発費の総額は21,934千円であります。
+
+
+なお、当社は情報サービス事業並びにこれらの付帯業務の単一セグメントのため、セグメントごとの記載はしておりません。
+
+</div><h2>2020</h2><div>
+５【研究開発活動】
+当事業年度は、主に当社の中期経営計画の成長戦略の１つである物流・AI分野に重点を置いた研究開発を行いました。
+物流分野では、自社ソリューション「SmartWMS」（倉庫管理システム）の研究開発を行い、物流センター内の一連の作業のペーパーレス化と高度な分析機能を実現、販売開始しました。
+AI分野では、当社独自の「Work AIサービス」において橋梁の建築に使用するゴム支承の概算価格をAIで算出するシステム等の研究開発を行い、顧客と共に実証実験を開始しました。
+このほかに、前事業年度に引き続き請求書入力業務をAIで自動化する「Invoice PAサービス」におけるAI-OCRの読取精度向上のための研究開発等を行いました。
+以上の結果、当事業年度において当社が支出した研究開発費の総額は15,247千円であります。
+ 
+なお、当社は情報サービス事業並びにこれらの付帯業務の単一セグメントのため、セグメントごとの記載はしておりません。
+ 
+</div><h2>2021</h2><div>
+５【研究開発活動】
+当事業年度は、当社の中期経営計画の成長戦略の１つである物流・AI分野に重点を置いた研究開発を行いました。
+物流分野では、物流センター内の一連の作業のペーパーレス化と高度な分析機能を実現する倉庫管理システム「SmartWMS」にピッキング方式やデータ分析等に関する機能追加を行いました。
+AI分野では、ユーザーがどのシステムやアプリケーションを使用するかを意識することなく、チャットツールに指示を入力することでRPAを起動し、目的の作業のアウトプットを得ることが可能となる「Chat Director」を開発しました。
+以上の結果、当事業年度において当社が支出した研究開発費の総額は7,751千円となりました。
+ 
+なお、当社は情報サービス事業並びにこれらの付帯業務の単一セグメントのため、セグメントごとの記載はしておりません。
+ 
+</div>
+</body>
+</html>
